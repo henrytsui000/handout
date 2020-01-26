@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="oxolane">
+  <title>時間複雜度</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="/home/henrytsui/reveal.js/css/reset.css">
+  <link rel="stylesheet" href="/home/henrytsui/reveal.js/css/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="/home/henrytsui/reveal.js/css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? '/home/henrytsui/reveal.js/css/print/pdf.css' : '/home/henrytsui/reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="/home/henrytsui/reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">時間複雜度</h1>
+  <p class="author">oxolane</p>
+</section>
+
+<section id="複雜度" class="slide level1">
+<h1>複雜度？</h1>
+<h2 id="時間複雜度">時間複雜度</h2>
+<p>對於處理一個程式所需要的時間多項式</p>
+<p>紀錄最高項次的級數</p>
+<p>因為我們考慮的是輸入非常龐大時演算法的表現</p>
+<p>O(100<em>N<sup>3</sup>+20</em>N+15)=O(N<sup>3</sup>)</p>
+<h2 id="空間複雜度">空間複雜度</h2>
+<p>對於處理一個程式所需要的空間多項式</p>
+<p>觀念如同時間複雜度</p>
+</section>
+<section id="計算時間複雜度" class="slide level1">
+<h1>計算時間複雜度</h1>
+<h2 id="o1">O(1)</h2>
+<p>加減乘除 判斷式</p>
+<h2 id="on">O(N)</h2>
+<p>N次加減乘除</p>
+</section>
+<section id="趨勢圖" class="slide level1">
+<h1>趨勢圖</h1>
+<p><img data-src="https://i.imgur.com/hQI6utR.png" /></p>
+</section>
+    </div>
+  </div>
+
+  <script src="/home/henrytsui/reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: '/home/henrytsui/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '/home/henrytsui/reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: '/home/henrytsui/reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>

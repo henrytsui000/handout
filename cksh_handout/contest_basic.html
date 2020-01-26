@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
+  <meta name="author" content="oxolane">
   <title>競賽入門</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="https://revealjs.com/css/reset.css">
-  <link rel="stylesheet" href="https://revealjs.com/css/reveal.css">
+  <link rel="stylesheet" href="/home/henrytsui/reveal.js/css/reset.css">
+  <link rel="stylesheet" href="/home/henrytsui/reveal.js/css/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -79,17 +80,17 @@
     code span.vs { color: #4070a0; } /* VerbatimString */
     code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="https://revealjs.com/css/theme/black.css" id="theme">
+  <link rel="stylesheet" href="/home/henrytsui/reveal.js/css/theme/black.css" id="theme">
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? 'https://revealjs.com/css/print/pdf.css' : 'https://revealjs.com/css/print/paper.css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? '/home/henrytsui/reveal.js/css/print/pdf.css' : '/home/henrytsui/reveal.js/css/print/paper.css';
     document.getElementsByTagName( 'head' )[0].appendChild( link );
   </script>
   <!--[if lt IE 9]>
-  <script src="https://revealjs.com/lib/js/html5shiv.js"></script>
+  <script src="/home/henrytsui/reveal.js/lib/js/html5shiv.js"></script>
   <![endif]-->
 </head>
 <body>
@@ -98,6 +99,7 @@
 
 <section id="title-slide">
   <h1 class="title">競賽入門</h1>
+  <p class="author">oxolane</p>
 </section>
 
 <section>
@@ -137,7 +139,9 @@
 </section>
 <section id="if" class="slide level2">
 <h2>IF</h2>
-<p>形式 if(判斷條件) <strong>特殊用法 if(判斷式&amp;&amp;k++) 短路結構</strong></p>
+<p>形式 if(判斷條件){</p>
+<p>}</p>
+<p>特殊用法 if(判斷式&amp;&amp;k++) 短路結構</p>
 </section>
 </section>
 <section>
@@ -147,11 +151,13 @@
 </section>
 <section id="for迴圈" class="slide level2">
 <h2>FOR迴圈</h2>
-<p>形式 for(初始化;結束條件;更動項目) for(初始化 : 對應陣列) 之後教</p>
+<p>形式 for(初始化;結束條件;更動項目)</p>
+<p>for(初始化 : 對應陣列) 之後教</p>
 </section>
 <section id="while迴圈" class="slide level2">
 <h2>WHILE迴圈</h2>
-<p>形式 while(判斷條件) <strong>特殊用法while(cin&gt;&gt;n)</strong></p>
+<p>形式 while(判斷條件)</p>
+<p>特殊用法while(cin&gt;&gt;n)</p>
 </section>
 </section>
 <section>
@@ -162,7 +168,8 @@
 <section id="d" class="slide level2">
 <h2>1D</h2>
 <p>一維陣列</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="dt">int</span> arr[n];</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="dt">int</span> arr[n];</span>
+<span id="cb1-2"><a href="#cb1-2"></a>array&lt;<span class="dt">int</span>,<span class="dv">2</span>(<span class="at">const</span>)&gt; arr;</span></code></pre></div>
 </section>
 <section id="d-1" class="slide level2">
 <h2>2D</h2>
@@ -188,7 +195,7 @@
     </div>
   </div>
 
-  <script src="https://revealjs.com/js/reveal.js"></script>
+  <script src="/home/henrytsui/reveal.js/js/reveal.js"></script>
 
   <script>
 
@@ -200,9 +207,9 @@
 
         // Optional reveal.js plugins
         dependencies: [
-          { src: 'https://revealjs.com/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'https://revealjs.com/plugin/zoom-js/zoom.js', async: true },
-          { src: 'https://revealjs.com/plugin/notes/notes.js', async: true }
+          { src: '/home/henrytsui/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '/home/henrytsui/reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: '/home/henrytsui/reveal.js/plugin/notes/notes.js', async: true }
         ]
       });
     </script>

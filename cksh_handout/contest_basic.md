@@ -1,4 +1,5 @@
 ---
+author: oxolane
 title: 競賽入門
 ---
 
@@ -14,7 +15,6 @@ title: 競賽入門
 - Zero Judge
 - TIOJ
 - TPOJ(現在死ㄌ)
-
 
 ## 上傳結果
 
@@ -32,8 +32,11 @@ title: 競賽入門
 ## IF
 
 形式
-if(判斷條件)
-**特殊用法 if(判斷式&&k++) 短路結構**
+if(判斷條件){
+
+}
+
+特殊用法 if(判斷式&&k++) 短路結構
 
 # 迴圈
 
@@ -41,13 +44,15 @@ if(判斷條件)
 
 形式
 for(初始化;結束條件;更動項目)
+
 for(初始化 : 對應陣列) 之後教
 
 ## WHILE迴圈
 
 形式
 while(判斷條件)
-**特殊用法while(cin>>n)**
+
+特殊用法while(cin>>n)
 
 # 資料結構
 
@@ -55,6 +60,7 @@ while(判斷條件)
 一維陣列
 ```cpp
 int arr[n];
+array<int,2(const)> arr;
 ```
 
 ## 2D
