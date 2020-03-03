@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="oxolane">
-  <title>競賽入門</title>
+  <title>searching</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -98,99 +98,83 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">競賽入門</h1>
+  <h1 class="title">searching</h1>
   <p class="author">oxolane</p>
 </section>
 
 <section>
-<section id="競賽程式" class="title-slide slide level1">
-<h1>競賽程式</h1>
+<section id="一個嚴格遞增的數列" class="title-slide slide level1">
+<h1>一個嚴格遞增的數列</h1>
 
 </section>
-<section id="競賽程式-1" class="slide level2">
-<h2>競賽程式</h2>
-<p>輸入 -&gt; 輸出-&gt; accpet</p>
-</section>
-<section id="online-judge" class="slide level2">
-<h2>online-judge</h2>
-<ul>
-<li>Codeforces</li>
-<li>Zero Judge</li>
-<li>TIOJ</li>
-<li>TPOJ(現在死ㄌ)</li>
-</ul>
-</section>
-<section id="上傳結果" class="slide level2">
-<h2>上傳結果</h2>
-<ul>
-<li>AC-&gt;答對!</li>
-<li>WA-&gt;答案錯誤-&gt;debug 檢查邏輯</li>
-<li>TLE-&gt;時間超過限制-&gt;減少時間複雜度</li>
-<li>MLE-&gt;記憶體超過限制-&gt;滾動等方式解決</li>
-<li>CE-&gt;編譯錯誤-&gt;先在本機確認程式能用</li>
-<li>RE-&gt;各種形式的壞掉</li>
-</ul>
+<section id="找出a在第幾項" class="slide level2">
+<h2>找出A在第幾項</h2>
 </section>
 </section>
 <section>
-<section id="if判斷式" class="title-slide slide level1">
-<h1>IF判斷式</h1>
+<section id="從第一項往後找-直到找到他" class="title-slide slide level1">
+<h1>從第一項往後找 直到找到他</h1>
 
 </section>
-<section id="if" class="slide level2">
-<h2>IF</h2>
-<p>形式 if(判斷條件){</p>
-<p>}</p>
-<p>特殊用法 if(判斷式&amp;&amp;k++) 短路結構</p>
-</section>
-</section>
-<section>
-<section id="迴圈" class="title-slide slide level1">
-<h1>迴圈</h1>
-
-</section>
-<section id="for迴圈" class="slide level2">
-<h2>FOR迴圈</h2>
-<p>形式 for(初始化;結束條件;更動項目)</p>
-<p>for(初始化 : 對應陣列) 之後教</p>
-</section>
-<section id="while迴圈" class="slide level2">
-<h2>WHILE迴圈</h2>
-<p>形式 while(判斷條件)</p>
-<p>特殊用法while(cin&gt;&gt;n)</p>
-</section>
-</section>
-<section>
-<section id="資料結構" class="title-slide slide level1">
-<h1>資料結構</h1>
-
-</section>
-<section id="d" class="slide level2">
-<h2>1D</h2>
-<p>一維陣列</p>
+<section id="code" class="slide level2">
+<h2>CODE</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="dt">int</span> arr[n];</span>
-<span id="cb1-2"><a href="#cb1-2"></a>array&lt;<span class="dt">int</span>,<span class="dv">2</span>(<span class="at">const</span>)&gt; arr;</span></code></pre></div>
+<span id="cb1-2"><a href="#cb1-2"></a>rep(i,n){</span>
+<span id="cb1-3"><a href="#cb1-3"></a>    <span class="cf">if</span>(arr[i]==A)</span>
+<span id="cb1-4"><a href="#cb1-4"></a>        cout&lt;&lt;<span class="st">&quot;i&quot;</span>&lt;&lt;endl;</span>
+<span id="cb1-5"><a href="#cb1-5"></a>}</span></code></pre></div>
 </section>
-<section id="d-1" class="slide level2">
-<h2>2D</h2>
-<p>二維陣列</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="dt">int</span> arr[n][n];</span></code></pre></div>
-</section>
-<section id="more" class="slide level2">
-<h2>MORE…</h2>
-<p>Standard Template Library (STL)</p>
-<ul>
-<li>pair, tuple</li>
-<li>vector, string</li>
-<li>set, map, multiset, multimap</li>
-<li>priority_queue</li>
-<li>queue, stack, deque</li>
-</ul>
+<section id="on" class="slide level2">
+<h2>O(N)</h2>
 </section>
 </section>
-<section id="可以打競賽了" class="title-slide slide level1">
-<h1>可以打競賽了!</h1>
+<section id="section" class="title-slide slide level1">
+<h1><img data-src="https://i.imgur.com/WrcSigs.jpg" /></h1>
 
+</section>
+
+<section>
+<section id="二分搜" class="title-slide slide level1">
+<h1>二分搜?</h1>
+
+</section>
+<section id="作法" class="slide level2">
+<h2>作法</h2>
+<p>先查詢數列中間的值</p>
+<p>if &gt;A 答案在(中間,最後]</p>
+<p>否則 答案在[開始,中間)</p>
+<p>不斷做這動作</p>
+</section>
+<section id="code-1" class="slide level2">
+<h2>CODE</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="dt">int</span> l=<span class="dv">0</span>,r=n;</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="cf">while</span>(l&lt;r-<span class="dv">1</span>){</span>
+<span id="cb2-3"><a href="#cb2-3"></a>    <span class="dt">int</span> mid=(r+l)/<span class="dv">2</span>;</span>
+<span id="cb2-4"><a href="#cb2-4"></a>    <span class="cf">if</span>(arr[mid]==A){</span>
+<span id="cb2-5"><a href="#cb2-5"></a>        cout&lt;&lt;mid&lt;&lt;endl;</span>
+<span id="cb2-6"><a href="#cb2-6"></a>    }<span class="cf">else</span> <span class="cf">if</span>(arr[mid]&gt;A){</span>
+<span id="cb2-7"><a href="#cb2-7"></a>        r=mid;</span>
+<span id="cb2-8"><a href="#cb2-8"></a>    }<span class="cf">else</span>{</span>
+<span id="cb2-9"><a href="#cb2-9"></a>        l=mid;</span>
+<span id="cb2-10"><a href="#cb2-10"></a>    }</span>
+<span id="cb2-11"><a href="#cb2-11"></a>}</span></code></pre></div>
+</section>
+<section id="olog-n" class="slide level2">
+<h2>O(log N)</h2>
+</section>
+</section>
+<section>
+<section id="題外話題目" class="title-slide slide level1">
+<h1>題外話&amp;題目</h1>
+
+</section>
+<section id="題目" class="slide level2">
+<h2>題目</h2>
+<p>有單調性的東西都可以二分搜</p>
+<p><a href="https://zerojudge.tw/ShowProblem?problemid=d732">ZJ-d732</a></p>
+<p><a href="https://zerojudge.tw/ShowProblem?problemid=c575">APCS-基地台</a></p>
+<p><a href="https://codeforces.com/contest/1260/problem/B">CF-1260B</a></p>
+</section>
 </section>
     </div>
   </div>
