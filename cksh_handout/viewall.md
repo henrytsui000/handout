@@ -10,7 +10,6 @@ date: 2020 未知月
 
 崔浩堂
 
-
 - 高三6班
 
 - 去年學科能力競賽 全國31
@@ -42,7 +41,7 @@ FB:崔浩堂
 
 ## 活動
 
-[\<slides>](https://hackmd.io/@henrytsui/ryrQ2_Zx8#/)
+[\<slides>](https://github.com/henrytsui000/handout/blob/master/cksh_handout/activity.html)
 
 # 基礎
 

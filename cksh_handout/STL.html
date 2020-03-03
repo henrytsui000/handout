@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="oxolane">
+  <title>STL</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://revealjs.com/css/reset.css">
+  <link rel="stylesheet" href="https://revealjs.com/css/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="https://revealjs.com/css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https://revealjs.com/css/print/pdf.css' : 'https://revealjs.com/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="https://revealjs.com/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">STL</h1>
+  <p class="author">oxolane</p>
+  <p class="date">2020 未知</p>
+</section>
+
+<section id="standard-template-library" class="title-slide slide level1">
+<h1>Standard Template Library</h1>
+
+</section>
+
+<section>
+<section id="pair" class="title-slide slide level1">
+<h1>pair</h1>
+
+</section>
+<section id="宣告" class="slide level2">
+<h2>宣告</h2>
+<p>pair&lt;型態,型態&gt; 資料名稱;</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a>cin&gt;&gt;p.first;</span>
+<span id="cb1-2"><a href="#cb1-2"></a>cout&lt;&lt;p.first&lt;&lt;<span class="ch">&#39; &#39;</span>&lt;&lt;p.second&lt;&lt;endl;</span></code></pre></div>
+</section>
+<section id="優點" class="slide level2">
+<h2>優點</h2>
+<p>一次紀錄兩個東西 就是爽阿 可記錄x,y座標等等 <em>sort函式處理方便</em></p>
+</section>
+<section id="題目" class="slide level2">
+<h2>題目</h2>
+<p><a href="https://zerojudge.tw/ShowProblem?problemid=a915">ZJ-a915</a></p>
+</section>
+</section>
+<section>
+<section id="vector" class="title-slide slide level1">
+<h1>vector</h1>
+
+</section>
+<section id="一個可改變大小的陣列" class="slide level2">
+<h2>一個可改變大小的陣列</h2>
+<p>-&gt;陣列升級版</p>
+</section>
+<section id="宣告-1" class="slide level2">
+<h2>宣告</h2>
+<p>vector<型態> 資料名稱;</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a>vector&lt;<span class="dt">int</span>&gt; vec;</span></code></pre></div>
+</section>
+<section id="輸入" class="slide level2">
+<h2>輸入</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1"></a>vector&lt;<span class="dt">int</span>&gt; vec;</span>
+<span id="cb3-2"><a href="#cb3-2"></a>rep(i,n){</span>
+<span id="cb3-3"><a href="#cb3-3"></a>    <span class="dt">int</span> a;cin&gt;&gt;a;</span>
+<span id="cb3-4"><a href="#cb3-4"></a>    vec.push_back(a);</span>
+<span id="cb3-5"><a href="#cb3-5"></a></span>
+<span id="cb3-6"><a href="#cb3-6"></a>}</span></code></pre></div>
+</section>
+<section id="輸出" class="slide level2">
+<h2>輸出</h2>
+<p>跟陣列一樣使用 vec[5];</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1"></a>vector&lt;<span class="dt">int</span>&gt; vec;</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="cf">for</span>(<span class="dt">int</span> x:vec){</span>
+<span id="cb4-3"><a href="#cb4-3"></a>    cout&lt;&lt;x&lt;&lt;<span class="ch">&#39; &#39;</span>;</span>
+<span id="cb4-4"><a href="#cb4-4"></a>}</span>
+<span id="cb4-5"><a href="#cb4-5"></a>cout&lt;&lt;endl;</span></code></pre></div>
+</section>
+<section id="其他功能" class="slide level2">
+<h2>其他功能</h2>
+<p>常見的: 1. vec.begin() 開頭元素 2. vec.end() 末端元素 3. vec.push_back(Α) 在尾端新增Α這個數 3. vec.emplace_back(Α) 在尾端新增Α這個數(較快) 4. vec.size() 查大小 5. vec.push_back(mack_pair(a,b)) 6. <a href="https://www.google.com/">更多</a></p>
+</section>
+<section id="優點-1" class="slide level2">
+<h2>優點</h2>
+<p>伸縮自如</p>
+</section>
+</section>
+<section>
+<section id="stack" class="title-slide slide level1">
+<h1>stack</h1>
+
+</section>
+<section id="如同一碟盤子" class="slide level2">
+<h2>如同一碟盤子</h2>
+</section>
+<section id="後進去先出來" class="slide level2">
+<h2>後進去先出來</h2>
+</section>
+<section id="宣告-2" class="slide level2">
+<h2>宣告</h2>
+<p>stack<型態> 資料名稱;</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb5-1"><a href="#cb5-1"></a>stack&lt;<span class="dt">int</span>&gt; st;</span></code></pre></div>
+</section>
+<section id="輸入-1" class="slide level2">
+<h2>輸入</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb6-1"><a href="#cb6-1"></a>stack&lt;<span class="dt">int</span>&gt; st;</span>
+<span id="cb6-2"><a href="#cb6-2"></a>rep(i,n){</span>
+<span id="cb6-3"><a href="#cb6-3"></a>    <span class="dt">int</span> a;cin&gt;&gt;a;</span>
+<span id="cb6-4"><a href="#cb6-4"></a>    st.push(a);   </span>
+<span id="cb6-5"><a href="#cb6-5"></a>}</span></code></pre></div>
+</section>
+<section id="輸出-1" class="slide level2">
+<h2>輸出</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb7-1"><a href="#cb7-1"></a>stack&lt;<span class="dt">int</span>&gt; st;</span>
+<span id="cb7-2"><a href="#cb7-2"></a>rep(i,n){</span>
+<span id="cb7-3"><a href="#cb7-3"></a>    <span class="dt">int</span> r=st.top();</span>
+<span id="cb7-4"><a href="#cb7-4"></a>    st.pop();</span>
+<span id="cb7-5"><a href="#cb7-5"></a>    cout&lt;&lt;r&lt;&lt;<span class="ch">&#39; &#39;</span>;    </span>
+<span id="cb7-6"><a href="#cb7-6"></a>}</span>
+<span id="cb7-7"><a href="#cb7-7"></a>cout&lt;&lt;endl;</span></code></pre></div>
+</section>
+<section id="其他功能-1" class="slide level2">
+<h2>其他功能</h2>
+<p>常見的: 1. st.push(A) 在上面加上數字A 2. st.pop() 移除最上面數字 3. st.top() 回傳最上面的數字 4. st.size() 查大小 5. <a href="https://www.google.com/">更多</a></p>
+</section>
+<section id="題目-1" class="slide level2">
+<h2>題目</h2>
+<p><a href="https://onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3778">UVa-12345</a> <a href="https://onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=455">UVa-514</a> <a href="https://zerojudge.tw/ShowProblem?problemid=d016">ZJ-d016</a> <a href="https://onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=614">UVa-673</a> <a href="http://poj.org/problem?id=3250">POJ-3250</a></p>
+</section>
+</section>
+<section>
+<section id="queue" class="title-slide slide level1">
+<h1>queue</h1>
+
+</section>
+<section id="羽球筒" class="slide level2">
+<h2>羽球筒</h2>
+<p>先進先出-&gt;FIFO</p>
+</section>
+<section id="宣告-3" class="slide level2">
+<h2>宣告</h2>
+<p>queue<型態> 資料名稱;</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb8-1"><a href="#cb8-1"></a>queue&lt;<span class="dt">int</span>&gt; qu;</span></code></pre></div>
+</section>
+<section id="輸入-2" class="slide level2">
+<h2>輸入</h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb9-1"><a href="#cb9-1"></a>queue&lt;<span class="dt">int</span>&gt; qu;</span>
+<span id="cb9-2"><a href="#cb9-2"></a>rep(i,n){</span>
+<span id="cb9-3"><a href="#cb9-3"></a>    <span class="dt">int</span> a;cin&gt;&gt;a;</span>
+<span id="cb9-4"><a href="#cb9-4"></a>    qu.emplace(a);   </span>
+<span id="cb9-5"><a href="#cb9-5"></a>}</span></code></pre></div>
+</section>
+<section id="輸出-2" class="slide level2">
+<h2>輸出</h2>
+<p>跟陣列一樣使用 vec[5];</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb10-1"><a href="#cb10-1"></a>queue&lt;<span class="dt">int</span>&gt; qu;</span>
+<span id="cb10-2"><a href="#cb10-2"></a>rep(i,n){</span>
+<span id="cb10-3"><a href="#cb10-3"></a>    <span class="dt">int</span> r=qu.front();</span>
+<span id="cb10-4"><a href="#cb10-4"></a>    qu.pop();</span>
+<span id="cb10-5"><a href="#cb10-5"></a>    cout&lt;&lt;r&lt;&lt;<span class="ch">&#39; &#39;</span>;    </span>
+<span id="cb10-6"><a href="#cb10-6"></a>}</span>
+<span id="cb10-7"><a href="#cb10-7"></a>cout&lt;&lt;endl;</span></code></pre></div>
+</section>
+<section id="其他功能-2" class="slide level2">
+<h2>其他功能</h2>
+<p>常見的: 1. qu.push(A) 在後面加上數字A 2. qu.pop() 移除最前面數字 3. qu.front() 回傳最前面的數字 4. qu.size() 查大小 5. <a href="https://www.google.com/">更多</a></p>
+</section>
+<section id="題目-2" class="slide level2">
+<h2>題目</h2>
+<p><a href="https://www.google.com/">TIOJ-1013</a></p>
+</section>
+</section>
+<section>
+<section id="string" class="title-slide slide level1">
+<h1>string</h1>
+
+</section>
+<section id="小孩才用char" class="slide level2">
+<h2>小孩才用char</h2>
+<p>升級版的char[] 不限字串長度大小</p>
+</section>
+<section id="宣告-4" class="slide level2">
+<h2>宣告</h2>
+<p>string 名稱;</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb11-1"><a href="#cb11-1"></a>string str;</span>
+<span id="cb11-2"><a href="#cb11-2"></a>string str[<span class="dv">10</span>];</span></code></pre></div>
+</section>
+<section id="輸入-3" class="slide level2">
+<h2>輸入</h2>
+<div class="sourceCode" id="cb12"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb12-1"><a href="#cb12-1"></a>string str;</span>
+<span id="cb12-2"><a href="#cb12-2"></a>cin&gt;&gt;str;</span></code></pre></div>
+<p>以空格為段落</p>
+</section>
+<section id="輸出-3" class="slide level2">
+<h2>輸出</h2>
+<div class="sourceCode" id="cb13"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb13-1"><a href="#cb13-1"></a><span class="co">//cout all</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a>cout&lt;&lt;str&lt;&lt;endl;</span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="co">//cout 指定位置</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a>cout&lt;&lt;str[a]&lt;&lt;endl;</span></code></pre></div>
+</section>
+<section id="其他功能-3" class="slide level2">
+<h2>其他功能</h2>
+<div class="sourceCode" id="cb14"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb14-1"><a href="#cb14-1"></a>str.size() 輸出大小</span>
+<span id="cb14-2"><a href="#cb14-2"></a>str1+str2 字串相加</span></code></pre></div>
+</section>
+<section id="優點-2" class="slide level2">
+<h2>優點</h2>
+<p>不用多開未知大小的char陣列 可以字串相加</p>
+</section>
+</section>
+<section>
+<section id="map" class="title-slide slide level1">
+<h1>map</h1>
+
+</section>
+<section id="宣告-5" class="slide level2">
+<h2>宣告</h2>
+<p>map&lt;型態,型態&gt; 名稱;</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb15-1"><a href="#cb15-1"></a>map&lt;string,<span class="dt">int</span>&gt; m;</span>
+<span id="cb15-2"><a href="#cb15-2"></a>m[<span class="st">&quot;hihi&quot;</span>]=<span class="dv">2</span>;</span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="co">//hihi 對應到2</span></span></code></pre></div>
+</section>
+<section id="其他功能-4" class="slide level2">
+<h2>其他功能</h2>
+<p>很沒效率的離散化</p>
+</section>
+</section>
+<section>
+<section id="set" class="title-slide slide level1">
+<h1>set</h1>
+
+</section>
+<section id="介紹" class="slide level2">
+<h2>介紹</h2>
+<p>不重覆元素集合 按照大小排序</p>
+</section>
+<section id="宣告-6" class="slide level2">
+<h2>宣告</h2>
+<p>set<型態> 名稱;</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb16-1"><a href="#cb16-1"></a>set&lt;<span class="dt">int</span>&gt; s;</span></code></pre></div>
+</section>
+<section id="輸入-4" class="slide level2">
+<h2>輸入</h2>
+<div class="sourceCode" id="cb17"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb17-1"><a href="#cb17-1"></a>set&lt;<span class="dt">int</span>&gt; s;</span>
+<span id="cb17-2"><a href="#cb17-2"></a><span class="dt">int</span> a;cin&gt;&gt;a;</span>
+<span id="cb17-3"><a href="#cb17-3"></a>s.insert(s);</span></code></pre></div>
+</section>
+<section id="其他功能-5" class="slide level2">
+<h2>其他功能</h2>
+<div class="sourceCode" id="cb18"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb18-1"><a href="#cb18-1"></a>s.size() 查詢大小</span>
+<span id="cb18-2"><a href="#cb18-2"></a>*s.begin() 最小元素</span></code></pre></div>
+</section>
+</section>
+<section>
+<section id="基本stl結束" class="title-slide slide level1">
+<h1>基本STL結束!</h1>
+
+</section>
+<section id="遺珠之憾" class="slide level2">
+<h2>遺珠之憾</h2>
+<p>另外還priority_queue以及deque(ㄉㄟˋㄎㄜˇ) <a href="https://www.google.com/">Google</a></p>
+</section>
+<section id="qa" class="slide level2">
+<h2><strong>Q&amp;A</strong></h2>
+</section>
+</section>
+    </div>
+  </div>
+
+  <script src="https://revealjs.com/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'https://revealjs.com/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://revealjs.com/plugin/zoom-js/zoom.js', async: true },
+          { src: 'https://revealjs.com/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
