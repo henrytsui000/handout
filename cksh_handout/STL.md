@@ -4,8 +4,6 @@ title: STL
 date: 2020 未知
 ---
 
-# Standard Template Library
-
 # pair
 
 ## 宣告

@@ -4,11 +4,7 @@ title: DSU
 date: 2020 未知
 ---
 
-# DSU併查集
-
-## disjoinset and union???
-
-## 來看看題目ㄅ
+# 先來看看題目ㄅ
 
 所有元素P編號1,2,3...,N
 
