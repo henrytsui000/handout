@@ -12,7 +12,7 @@
     DP：
         基礎dp
     圖論：
-        DFS/BFS
+        基礎圖論
         LCA
         BCC
     資料結構2：
@@ -37,9 +37,10 @@
     Sparse table
     指標線段樹
     基礎dp
+    基礎圖論
 未完成：
 還沒寫：
-    DFS/BFS
+    LCA
     BCC
     分塊
     BIT
