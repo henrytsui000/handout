@@ -183,8 +183,8 @@ struct Node{
 
 ## 題目
 
-經典RMQ
+- 經典RMQ
 
-[ZJ-d539](https://zerojudge.tw/ShowProblem?problemid=d539)
+- [ZJ-d539](https://zerojudge.tw/ShowProblem?problemid=d539)
 
 ## Q&A

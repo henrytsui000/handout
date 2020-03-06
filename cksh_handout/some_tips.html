@@ -218,6 +218,34 @@
 </section>
 </section>
 <section>
+<section id="const-int-maxn" class="title-slide slide level1">
+<h1>const int maxn</h1>
+
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<p>因為main函數可以用的記憶體不多</p>
+<p>所以我們應該先把需要用到的陣列開在全域</p>
+<p>但因為還不知道要開多大</p>
+<p>故會選擇題目給的資料範圍中(最大者+5)開</p>
+<p>因為可能會手殘用到陣列邊緣</p>
+<p>所以通常建議+5開</p>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<p>題目一定會給最機車的測資</p>
+<p>所以就直接坦蕩蕩的開最大</p>
+<p>不要因為客家空間反而吃虧ㄌ</p>
+</section>
+<section id="code-1" class="slide level2">
+<h2>CODE</h2>
+<p>為了修改陣列大小方便</p>
+<p>會用const int</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb10-1"><a href="#cb10-1"></a><span class="at">const</span> <span class="dt">int</span> maxn= xxx;</span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="dt">int</span> arr[maxn],cnt[maxn],ans[maxn];</span></code></pre></div>
+</section>
+</section>
+<section>
 <section id="一些建議" class="title-slide slide level1">
 <h1>一些建議</h1>
 
@@ -246,7 +274,7 @@
 </section>
 <section id="為什麼要打競程" class="slide level2">
 <h2>為什麼要打競程？</h2>
-<p>總是會有心類的時候</p>
+<p>總是會有心累的時候</p>
 <p>思考一下可以幫助你喔</p>
 </section>
 </section>

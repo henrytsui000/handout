@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="oxolane">
-  <title>競賽入門</title>
+  <title>math</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -98,128 +98,141 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">競賽入門</h1>
+  <h1 class="title">math</h1>
   <p class="author">oxolane</p>
+  <p class="date">2020 未知</p>
 </section>
 
 <section>
-<section id="競賽程式" class="title-slide slide level1">
-<h1>競賽程式</h1>
+<section id="模mod" class="title-slide slide level1">
+<h1>模MOD</h1>
 
 </section>
-<section id="競賽程式-1" class="slide level2">
-<h2>競賽程式</h2>
-<p>輸入 -&gt; 輸出-&gt; accpet</p>
+<section id="基礎知識" class="slide level2">
+<h2>基礎知識</h2>
+<p>mod稱作模</p>
+<p>在c++中跟%功能類似</p>
+<p>因為有一些定理 可使得計算題目更簡單</p>
+<p>-&gt;當答案會超過int範圍 常常題目會要求%1e9+7</p>
+<p>以下定義mod=1e9+7</p>
 </section>
-<section id="online-judge" class="slide level2">
-<h2>online-judge</h2>
+<section id="section" class="slide level2">
+<h2></h2>
+<p>以下為合法的模運算</p>
 <ul>
-<li>Codeforces</li>
-<li>Zero Judge</li>
-<li>TIOJ</li>
-<li>TPOJ(現在死ㄌ)</li>
+<li><p>(a±b)%mod=(a%mod±b%mod)%mod</p></li>
+<li><p>(a×b)%mod=(a%mod×b%mod)%mod</p></li>
 </ul>
 </section>
-<section id="上傳結果" class="slide level2">
-<h2>上傳結果</h2>
+<section id="費馬小定理" class="slide level2">
+<h2>費馬小定理</h2>
 <ul>
-<li>AC-&gt;答對!</li>
-<li>WA-&gt;答案錯誤-&gt;debug 檢查邏輯</li>
-<li>TLE-&gt;時間超過限制-&gt;減少時間複雜度</li>
-<li>MLE-&gt;記憶體超過限制-&gt;滾動等方式解決</li>
-<li>CE-&gt;編譯錯誤-&gt;先在本機確認程式能用</li>
-<li>RE-&gt;各種形式的壞掉</li>
+<li><p>a<sup>p</sup> ≡ a (mod p) (p∈質數)</p></li>
+<li><p>a<sup>p-1</sup> ≡ 1 (mod p)</p></li>
+<li><p>a<sup>p-2</sup> ≡ a<sup>-1</sup> (mod p)</p></li>
 </ul>
 </section>
-</section>
-<section id="複習時間" class="title-slide slide level1">
-<h1>複習時間</h1>
-
-</section>
-
-<section>
-<section id="宣告" class="title-slide slide level1">
-<h1>宣告</h1>
-
-</section>
-<section id="int" class="slide level2">
-<h2>int</h2>
-<p>宣告一個或多個變數且在±2<sup>31</sup>-1之間</p>
-<p>且數值範圍大約為正負2*1e9左右</p>
+<section id="費馬小定理-延伸" class="slide level2">
+<h2>費馬小定理-延伸</h2>
 <ul>
-<li><strong>1eX代表10<sup>x</sup></strong></li>
-</ul>
-<p><em>注意：若大於數字範圍 將會變成不可預知的數字</em></p>
-<p><em>若宣告在main函式中 將會不可預知他的初始數字</em></p>
-</section>
-<section id="其他" class="slide level2">
-<h2>其他</h2>
-<ul>
-<li><p>long long 在±2<sup>63</sup>-1之間</p></li>
-<li><p>unsigned long long 在0~2<sup>64</sup>-1之間</p></li>
-<li><p>double 15位數且可帶小數點</p></li>
+<li><p>a/b=a*b<sup>-1</sup></p></li>
+<li><p>a*b<sup>-1</sup> ≡ a*b<sup>p-2</sup> (mod p)</p></li>
+<li><p>a<sup>p-2</sup>是a模b為模逆原</p></li>
 </ul>
 </section>
 </section>
 <section>
-<section id="if判斷式" class="title-slide slide level1">
-<h1>IF判斷式</h1>
+<section id="cnk" class="title-slide slide level1">
+<h1>C(n,k)</h1>
 
 </section>
-<section id="if" class="slide level2">
-<h2>IF</h2>
-<p>形式 if(判斷條件){</p>
-<p>}</p>
-<p>特殊用法 if(判斷式&amp;&amp;k++) 短路結構</p>
-</section>
-</section>
-<section>
-<section id="迴圈" class="title-slide slide level1">
-<h1>迴圈</h1>
-
-</section>
-<section id="for迴圈" class="slide level2">
-<h2>FOR迴圈</h2>
-<p>形式 for(初始化;結束條件;更動項目)</p>
-<p>for(初始化 : 對應陣列) 之後教</p>
-</section>
-<section id="while迴圈" class="slide level2">
-<h2>WHILE迴圈</h2>
-<p>形式 while(判斷條件)</p>
-<p>特殊用法while(cin&gt;&gt;n)</p>
-</section>
-</section>
-<section>
-<section id="資料結構" class="title-slide slide level1">
-<h1>資料結構</h1>
-
-</section>
-<section id="d" class="slide level2">
-<h2>1D</h2>
-<p>一維陣列</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="dt">int</span> arr[n];</span>
-<span id="cb1-2"><a href="#cb1-2"></a>array&lt;<span class="dt">int</span>,<span class="dv">2</span>(<span class="at">const</span>)&gt; arr;</span></code></pre></div>
-</section>
-<section id="d-1" class="slide level2">
-<h2>2D</h2>
-<p>二維陣列</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="dt">int</span> arr[n][n];</span></code></pre></div>
-</section>
-<section id="more" class="slide level2">
-<h2>MORE…</h2>
-<p>Standard Template Library (STL)</p>
+<section id="計算組合數的方法" class="slide level2">
+<h2>計算組合數的方法</h2>
 <ul>
-<li>pair, tuple</li>
-<li>vector, string</li>
-<li>set, map, multiset, multimap</li>
-<li>priority_queue</li>
-<li>queue, stack, deque</li>
+<li>C(n,k)=C(n-1,k-1)+C(n-1,k) 遞迴</li>
+<li>C(n,k)=n!/(k!(n-k)!) 相乘</li>
+</ul>
+</section>
+<section id="遞迴法" class="slide level2">
+<h2>遞迴法</h2>
+<ul>
+<li><p>n&lt;3000時</p></li>
+<li><p>利用C(n,k)=C(n-1,k-1)+C(n-1,k)性質</p></li>
+<li><p>開一個n*n的陣列預處理所有的C(n,k)</p></li>
+<li><p>時間複雜度 建表O(N<sup>2</sup>) 詢問O(1)</p></li>
+</ul>
+</section>
+<section id="相乘法" class="slide level2">
+<h2>相乘法</h2>
+<ul>
+<li><p>當n&gt;3000時 且要mod p時</p></li>
+<li><p>開一個陣列紀錄1~n!以及1<sup>p-2</sup>~(n<sup>p-2</sup>)!</p></li>
+<li><p>直接計算n!×k!<sup>p-2</sup>×(n-k)!<sup>p-2</sup></p></li>
+<li><p>時間複雜度 建表O(N) 詢問O(1)</p></li>
+</ul>
+</section>
+<section id="相乘法-2" class="slide level2">
+<h2>相乘法-2</h2>
+<ul>
+<li><p>可將建立模逆元階乘表從O(NlogN)降至O(N)</p></li>
+<li><p>快速冪計算n<sup>p-2</sup>!%p</p></li>
+<li><p>n<sup>p-2</sup>!×n=(n-1)<sup>p-2</sup>!×n<sup>p-2</sup>×n=(n-1)<sup>p-2</sup>!</p></li>
 </ul>
 </section>
 </section>
-<section id="可以打競賽了" class="title-slide slide level1">
-<h1>可以打競賽了!</h1>
+<section>
+<section id="質數" class="title-slide slide level1">
+<h1>質數</h1>
 
+</section>
+<section id="線性篩表" class="slide level2">
+<h2>線性篩表</h2>
+<p>對於一個合數N</p>
+<p>可找到最大質因數P</p>
+<p>合數將會是(N/P)*P</p>
+<p>且N/P &lt; P</p>
+<p>那我總是將P×{小於P的質數}刪掉時</p>
+<p>一定可以把所有和數剔除</p>
+</section>
+<section id="時間複雜度" class="slide level2">
+<h2>時間複雜度</h2>
+<p>當我把小於MAXN的所有的合數藉由他的最大質因數刪除時</p>
+<p>只需要O(MAXN)的時間</p>
+<p>並且會建立一個表格內容為所有數字是否為質數</p>
+</section>
+<section id="code" class="slide level2">
+<h2>CODE</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="at">const</span> <span class="dt">int</span> N = <span class="dv">20000000</span>;</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="dt">bool</span> sieve[N];</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="dt">void</span> linear_sieve(){</span>
+<span id="cb1-4"><a href="#cb1-4"></a>    vector&lt;<span class="dt">int</span>&gt; prime;</span>
+<span id="cb1-5"><a href="#cb1-5"></a>    <span class="cf">for</span> (<span class="dt">int</span> i=<span class="dv">2</span>; i&lt;N; i++){</span>
+<span id="cb1-6"><a href="#cb1-6"></a>        <span class="cf">if</span> (!sieve[i]) prime.push_back(i);</span>
+<span id="cb1-7"><a href="#cb1-7"></a>        <span class="cf">for</span> (<span class="dt">int</span> j=<span class="dv">0</span>; i*prime[j]&lt;N; j++){</span>
+<span id="cb1-8"><a href="#cb1-8"></a>            sieve[i*prime[j]] = <span class="kw">true</span>;</span>
+<span id="cb1-9"><a href="#cb1-9"></a>            <span class="cf">if</span> (i % prime[j] == <span class="dv">0</span>) <span class="cf">break</span>;</span>
+<span id="cb1-10"><a href="#cb1-10"></a>        }</span>
+<span id="cb1-11"><a href="#cb1-11"></a>    }</span>
+<span id="cb1-12"><a href="#cb1-12"></a>}</span></code></pre></div>
+</section>
+</section>
+<section id="計算幾何" class="title-slide slide level1">
+<h1>計算幾何</h1>
+
+</section>
+
+<section>
+<section id="fft" class="title-slide slide level1">
+<h1>FFT</h1>
+
+</section>
+<section id="快速傅立葉變換" class="slide level2">
+<h2>快速傅立葉變換</h2>
+<p>可將乘法從O(N<sup>2</sup>)-&gt;O(NlogN)</p>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+</section>
 </section>
     </div>
   </div>
