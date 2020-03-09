@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="oxolane">
-  <title>math</title>
+  <title>質數</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -98,95 +98,41 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">math</h1>
+  <h1 class="title">質數</h1>
   <p class="author">oxolane</p>
   <p class="date">2020 未知</p>
 </section>
 
-<section>
-<section id="模mod" class="title-slide slide level1">
-<h1>模MOD</h1>
+<section id="找範圍內的所有質數" class="title-slide slide level1">
+<h1>找範圍內的所有質數</h1>
 
 </section>
-<section id="基礎知識" class="slide level2">
-<h2>基礎知識</h2>
-<p>mod稱作模</p>
-<p>在c++中跟%功能類似</p>
-<p>因為有一些定理 可使得計算題目更簡單</p>
-<p>-&gt;當答案會超過int範圍 常常題目會要求%1e9+7</p>
-<p>以下定義mod=1e9+7</p>
+
+<section>
+<section id="暴力窮舉" class="title-slide slide level1">
+<h1>暴力窮舉</h1>
+
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
-<p>以下為合法的模運算</p>
-<ul>
-<li><p>(a±b)%mod=(a%mod±b%mod)%mod</p></li>
-<li><p>(a×b)%mod=(a%mod×b%mod)%mod</p></li>
-</ul>
+<p>對於每一個數N</p>
+<p>可知道他的質因數一定小於sqrt(N)</p>
+<p>所以我建立一個陣列紀錄質數們</p>
+<p>且對於每一個點N 去計算他們是否為質數</p>
 </section>
-<section id="費馬小定理" class="slide level2">
-<h2>費馬小定理</h2>
-<ul>
-<li><p>a<sup>p</sup> ≡ a (mod p) (p∈質數)</p></li>
-<li><p>a<sup>p-1</sup> ≡ 1 (mod p)</p></li>
-<li><p>a<sup>p-2</sup> ≡ a<sup>-1</sup> (mod p)</p></li>
-</ul>
-</section>
-<section id="費馬小定理-延伸" class="slide level2">
-<h2>費馬小定理-延伸</h2>
-<ul>
-<li><p>a/b=a*b<sup>-1</sup></p></li>
-<li><p>a*b<sup>-1</sup> ≡ a*b<sup>p-2</sup> (mod p)</p></li>
-<li><p>a<sup>p-2</sup>是a模b為模逆原</p></li>
-</ul>
+<section id="時間複雜度" class="slide level2">
+<h2>時間複雜度</h2>
+<p>O(N<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msqrt><mi>N</mi></msqrt><annotation encoding="application/x-tex">\sqrt{N}</annotation></semantics></math>)</p>
+<p>蠻糟的…</p>
 </section>
 </section>
 <section>
-<section id="cnk" class="title-slide slide level1">
-<h1>C(n,k)</h1>
+<section id="線性篩表" class="title-slide slide level1">
+<h1>線性篩表</h1>
 
 </section>
-<section id="計算組合數的方法" class="slide level2">
-<h2>計算組合數的方法</h2>
-<ul>
-<li>C(n,k)=C(n-1,k-1)+C(n-1,k) 遞迴</li>
-<li>C(n,k)=n!/(k!(n-k)!) 相乘</li>
-</ul>
-</section>
-<section id="遞迴法" class="slide level2">
-<h2>遞迴法</h2>
-<ul>
-<li><p>n&lt;3000時</p></li>
-<li><p>利用C(n,k)=C(n-1,k-1)+C(n-1,k)性質</p></li>
-<li><p>開一個n*n的陣列預處理所有的C(n,k)</p></li>
-<li><p>時間複雜度 建表O(N<sup>2</sup>) 詢問O(1)</p></li>
-</ul>
-</section>
-<section id="相乘法" class="slide level2">
-<h2>相乘法</h2>
-<ul>
-<li><p>當n&gt;3000時 且要mod p時</p></li>
-<li><p>開一個陣列紀錄1~n!以及1<sup>p-2</sup>~(n<sup>p-2</sup>)!</p></li>
-<li><p>直接計算n!×k!<sup>p-2</sup>×(n-k)!<sup>p-2</sup></p></li>
-<li><p>時間複雜度 建表O(N) 詢問O(1)</p></li>
-</ul>
-</section>
-<section id="相乘法-2" class="slide level2">
-<h2>相乘法-2</h2>
-<ul>
-<li><p>可將建立模逆元階乘表從O(NlogN)降至O(N)</p></li>
-<li><p>快速冪計算n<sup>p-2</sup>!%p</p></li>
-<li><p>n<sup>p-2</sup>!×n=(n-1)<sup>p-2</sup>!×n<sup>p-2</sup>×n=(n-1)<sup>p-2</sup>!</p></li>
-</ul>
-</section>
-</section>
-<section>
-<section id="質數" class="title-slide slide level1">
-<h1>質數</h1>
-
-</section>
-<section id="線性篩表" class="slide level2">
-<h2>線性篩表</h2>
+<section id="section-1" class="slide level2">
+<h2></h2>
 <p>對於一個合數N</p>
 <p>可找到最大質因數P</p>
 <p>合數將會是(N/P)*P</p>
@@ -194,7 +140,7 @@
 <p>那我總是將P×{小於P的質數}刪掉時</p>
 <p>一定可以把所有和數剔除</p>
 </section>
-<section id="時間複雜度" class="slide level2">
+<section id="時間複雜度-1" class="slide level2">
 <h2>時間複雜度</h2>
 <p>當我把小於MAXN的所有的合數藉由他的最大質因數刪除時</p>
 <p>只需要O(MAXN)的時間</p>
@@ -216,23 +162,9 @@
 <span id="cb1-12"><a href="#cb1-12"></a>}</span></code></pre></div>
 </section>
 </section>
-<section id="計算幾何" class="title-slide slide level1">
-<h1>計算幾何</h1>
+<section id="qa" class="title-slide slide level1">
+<h1>Q&amp;A</h1>
 
-</section>
-
-<section>
-<section id="fft" class="title-slide slide level1">
-<h1>FFT</h1>
-
-</section>
-<section id="快速傅立葉變換" class="slide level2">
-<h2>快速傅立葉變換</h2>
-<p>可將乘法從O(N<sup>2</sup>)-&gt;O(NlogN)</p>
-</section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-</section>
 </section>
     </div>
   </div>

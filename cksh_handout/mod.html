@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="oxolane">
+  <title>math</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://revealjs.com/css/reset.css">
+  <link rel="stylesheet" href="https://revealjs.com/css/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="https://revealjs.com/css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https://revealjs.com/css/print/pdf.css' : 'https://revealjs.com/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="https://revealjs.com/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">math</h1>
+  <p class="author">oxolane</p>
+  <p class="date">2020 未知</p>
+</section>
+
+<section>
+<section id="模mod" class="title-slide slide level1">
+<h1>模MOD</h1>
+
+</section>
+<section id="基礎知識" class="slide level2">
+<h2>基礎知識</h2>
+<p>mod稱作模 在c++中跟%功能類似</p>
+<p>a ≡ b (mod c)</p>
+<p>-&gt;a/c的餘數=b/c的餘數</p>
+<p>若b為最小正整數 則a%c=b</p>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<p>因為有一些定理 可使得計算題目更簡單</p>
+<p>-&gt;當答案會超過int範圍 常常題目會要求%1e9+7</p>
+<p>以下定義mod=1e9+7</p>
+</section>
+<section id="合法的模運算" class="slide level2">
+<h2>合法的模運算</h2>
+<ul>
+<li><p>(a±b)%mod=(a%mod±b%mod)%mod</p></li>
+<li><p>(a×b)%mod=(a%mod×b%mod)%mod</p></li>
+</ul>
+</section>
+</section>
+<section>
+<section id="費馬小定理" class="title-slide slide level1">
+<h1>費馬小定理</h1>
+
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<ul>
+<li><p>a<sup>p</sup> ≡ a (mod p) (p∈質數)</p></li>
+<li><p>a<sup>p-1</sup> ≡ 1 (mod p)</p></li>
+<li><p>a<sup>p-2</sup> ≡ a<sup>-1</sup> (mod p)</p></li>
+</ul>
+</section>
+<section id="費馬小定理-延伸" class="slide level2">
+<h2>費馬小定理-延伸</h2>
+<ul>
+<li><p>a/b=a*b<sup>-1</sup></p></li>
+<li><p>a*b<sup>-1</sup> ≡ a*b<sup>p-2</sup> (mod p)</p></li>
+<li><p>a<sup>p-2</sup>是a模b為模逆原</p></li>
+</ul>
+</section>
+</section>
+<section>
+<section id="cnk" class="title-slide slide level1">
+<h1>C(n,k)</h1>
+
+</section>
+<section id="計算組合數的方法" class="slide level2">
+<h2>計算組合數的方法</h2>
+<ul>
+<li>C(n,k)=C(n-1,k-1)+C(n-1,k) 遞迴</li>
+<li>C(n,k)=n!/(k!(n-k)!) 相乘</li>
+</ul>
+</section>
+</section>
+<section>
+<section id="cnk-遞迴法" class="title-slide slide level1">
+<h1>C(n,k) 遞迴法</h1>
+
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<ul>
+<li><p>常用於n&lt;3000時</p></li>
+<li><p>利用C(n,k)=C(n-1,k-1)+C(n-1,k)性質</p></li>
+<li><p>開一個n*n的陣列預處理所有的C(n,k)</p></li>
+<li><p>時間複雜度 建表O(N<sup>2</sup>) 詢問O(1)</p></li>
+</ul>
+</section>
+</section>
+<section>
+<section id="cnk-相乘法" class="title-slide slide level1">
+<h1>C(n,k) 相乘法</h1>
+
+</section>
+<section id="section-3" class="slide level2">
+<h2></h2>
+<ul>
+<li><p>常用於n&gt;3000時 且要mod p時</p></li>
+<li><p>開一個陣列紀錄1~n!以及1<sup>p-2</sup>~(n<sup>p-2</sup>)!</p></li>
+<li><p>直接計算n!×k!<sup>p-2</sup>×(n-k)!<sup>p-2</sup></p></li>
+<li><p>時間複雜度 建表O(N) 詢問O(1)</p></li>
+</ul>
+</section>
+<section id="相乘法-2" class="slide level2">
+<h2>相乘法-2</h2>
+<ul>
+<li><p>可將建立模逆元階乘表從O(NlogN)降至O(N)</p></li>
+<li><p>快速冪計算n<sup>p-2</sup>!%p</p></li>
+<li><p>n<sup>p-2</sup>!×n=(n-1)<sup>p-2</sup>!×n<sup>p-2</sup>×n=(n-1)<sup>p-2</sup>!</p></li>
+</ul>
+</section>
+</section>
+    </div>
+  </div>
+
+  <script src="https://revealjs.com/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'https://revealjs.com/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://revealjs.com/plugin/zoom-js/zoom.js', async: true },
+          { src: 'https://revealjs.com/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
