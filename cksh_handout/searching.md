@@ -1,10 +1,15 @@
 ---
 author: oxolane
-title: searching
+title: searching&sort
+date: 2020 未知
 ---
 
-# 一個嚴格遞增的數列
-## 找出A在第幾項
+# 先來看看題目吧
+
+## 
+給你一個遞增數列a[n]跟數字A
+
+找出A在第幾項
 
 # 從第一項往後找 直到找到他
 
@@ -50,13 +55,19 @@ while(l<r-1){
 
 ## O(log N)
 
-# 題外話&題目
+# 題目 Q&A
 
 ## 題目
 有單調性的東西都可以二分搜
 
-[ZJ-d732](https://zerojudge.tw/ShowProblem?problemid=d732)
+若沒有順序性 通常會利用sort使數列單調
 
-[APCS-基地台](https://zerojudge.tw/ShowProblem?problemid=c575)
+- [ZJ-d732](https://zerojudge.tw/ShowProblem?problemid=d732)
 
-[CF-1260B](https://codeforces.com/contest/1260/problem/B)
+- [APCS-基地台](https://zerojudge.tw/ShowProblem?problemid=c575)
+
+- [ZJ-b966](https://zerojudge.tw/ShowProblem?problemid=b966)
+
+- [ZJ-c268](https://zerojudge.tw/ShowProblem?problemid=c268)
+
+- [CF-1260B](https://codeforces.com/contest/1260/problem/B)

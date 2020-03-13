@@ -124,12 +124,61 @@ int qry(int c){
 }
 ```
 
+# 逆序數對
+
+## 給你一個數列
+請找出有多少組 $a_i>a_j$且$i<j$
+
+也就是說 求有多少組前面的比後面的數字小
+
+## 前情提要-離散化
+
+給你一些數字
+
+請按照順序輸出他們的是第幾小的數字
+
+## 作法
+
+1. 複製原本的陣列成陣列tmp
+1. 先將tmp中重複的數字刪除
+2. 將tmp按照大小排列
+3. 可以知道第N大的數字會出現在tmp的第N項
+4. 查詢原本的陣列每一項在tmp中的順序
+
+## CODE
+
+```c++
+#define all(a) a.begin(),a.end()
+// vec是要排列陣列
+vector<int> tmp=vec;
+tmp.resize(tmp.unique(all(tmp))-tmp.begin);
+sort(tmp.begin(),tmp.end());
+rep(i,sz(vec))
+    vec[i]=lower_bound(all(tmp),vec[i])-tmp.begin();
+```
+
+## 逆序數對想法
+1. 先把所有數字離散化
+2. 從數列後往前掃過
+2. 同時開一個陣列K 紀錄離散化後的數字是否出現
+3. 遇到每一個數字只需要查看在K中 該數字的位置之前的合數字
+4. 可以BIT查詢數字!
+
+## 時間複雜度
+
+離散化：O(NlogN)
+
+計算逆序數對：O(NlogN)
+
+(另有merge作法)
+
 # 題目QA
 
 ## 題目
+- [逆序數對](https://tioj.ck.tp.edu.tw/problems/1080)
 
 - [ZJ-d788](https://zerojudge.tw/ShowProblem?problemid=d788)
 
-- 離散化
+- [CF-61E](https://codeforces.com/problemset/problem/61/E)
 
 ## Q&A

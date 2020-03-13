@@ -69,13 +69,12 @@ O(NlogN)
 
 O(1)
 
-
 # 題目 QA
 
 ## 題目
 
-經典RMQ
-[ZJ-b687](https://zerojudge.tw/ShowProblem?problemid=b687)
-[ZJ-d539](https://zerojudge.tw/ShowProblem?problemid=d539)
+- 經典RMQ
+- [ZJ-d539](https://zerojudge.tw/ShowProblem?problemid=d539)
+- [ZJ-b687](https://zerojudge.tw/ShowProblem?problemid=b687)
 
 ## Q&A

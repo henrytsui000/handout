@@ -310,3 +310,11 @@ void dfs(int cnt,int ans){
 
 ## Q&A
 
+# 題目
+
+## 
+- 2020TOI初選pB
+- [ZJ-b967](https://zerojudge.tw/ShowProblem?problemid=b967)
+- [POJ-2378](http://poj.org/problem?id=2378)
+- [ZJ-d375](https://zerojudge.tw/ShowProblem?problemid=d375)
+- [UVa-10400](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1341)

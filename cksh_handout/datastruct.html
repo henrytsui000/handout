@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="oxolane">
+  <title>進階資料結構all</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://revealjs.com/css/reset.css">
+  <link rel="stylesheet" href="https://revealjs.com/css/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="https://revealjs.com/css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https://revealjs.com/css/print/pdf.css' : 'https://revealjs.com/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="https://revealjs.com/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">進階資料結構all</h1>
+  <p class="author">oxolane</p>
+  <p class="date">2020 未知月</p>
+</section>
+
+<section>
+<section id="各種資料結構" class="title-slide slide level1">
+<h1>各種資料結構</h1>
+
+</section>
+<section id="大家比一比" class="slide level2">
+<h2>大家比一比</h2>
+<table>
+<thead>
+<tr class="header">
+<th>資料結構</th>
+<th>分塊</th>
+<th>線段樹</th>
+<th>sparse table</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>建造</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false" form="prefix">(</mo><msqrt><mi>N</mi></msqrt><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">O(\sqrt{N})</annotation></semantics></math></td>
+<td>O(NlogN)</td>
+<td>O(NlogN)</td>
+</tr>
+<tr class="even">
+<td>查詢</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false" form="prefix">(</mo><msqrt><mi>N</mi></msqrt><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">O(\sqrt{N})</annotation></semantics></math></td>
+<td>O(logN)</td>
+<td>O(1)</td>
+</tr>
+<tr class="odd">
+<td>修改</td>
+<td>O(1)</td>
+<td>O(logN)</td>
+<td>不支援</td>
+</tr>
+<tr class="even">
+<td>大小</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false" form="prefix">(</mo><mi>N</mi><msqrt><mi>N</mi></msqrt><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">O(N\sqrt{N})</annotation></semantics></math></td>
+<td>O(NlogN)</td>
+<td>O(NlogN)</td>
+</tr>
+<tr class="odd">
+<td>實作難度</td>
+<td>較容易</td>
+<td>較複雜</td>
+<td>中等</td>
+</tr>
+<tr class="even">
+<td>可持久化</td>
+<td>X</td>
+<td>O</td>
+<td>X</td>
+</tr>
+<tr class="odd">
+<td>懶人標記</td>
+<td>O</td>
+<td>O</td>
+<td>X</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="線段樹" class="slide level2">
+<h2>線段樹</h2>
+<table>
+<thead>
+<tr class="header">
+<th>資料結構</th>
+<th>指標</th>
+<th>陣列</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>運作速度</td>
+<td>慢</td>
+<td>快</td>
+</tr>
+<tr class="even">
+<td>空間</td>
+<td>大</td>
+<td>小</td>
+</tr>
+<tr class="odd">
+<td>實作</td>
+<td>較直觀</td>
+<td>較複雜</td>
+</tr>
+<tr class="even">
+<td>可持久化</td>
+<td>O</td>
+<td>X</td>
+</tr>
+<tr class="odd">
+<td>懶人標記</td>
+<td>O</td>
+<td>O</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section>
+<section id="分塊" class="title-slide slide level1">
+<h1>分塊</h1>
+
+</section>
+<section id="支援" class="slide level2">
+<h2>支援</h2>
+<ul>
+<li>單點修改 區間最小值</li>
+<li>單點修改 區間總和</li>
+<li>單點修改 區間積</li>
+<li>單點修改 區間最大公因數</li>
+<li>單點修改 區間最大連續和</li>
+</ul>
+</section>
+<section id="運作模式" class="slide level2">
+<h2>運作模式</h2>
+<ul>
+<li>建造：按照順序把原本的陣列切成N塊</li>
+<li>查詢：將範圍內的塊遍歷</li>
+<li>修改：修改該塊數值</li>
+</ul>
+</section>
+</section>
+<section>
+<section id="線段樹-1" class="title-slide slide level1">
+<h1>線段樹</h1>
+
+</section>
+<section id="支援-1" class="slide level2">
+<h2>支援</h2>
+<p>單點修改： - 區間最小值 - 區間總和 - 區間積 - 區間最大公因數 - 區間最大連續和</p>
+</section>
+<section id="運作方式" class="slide level2">
+<h2>運作方式</h2>
+<ul>
+<li>建造：用遞迴類似二分樹</li>
+<li>查詢：向下遞迴查詢</li>
+<li>修改：遞迴下去之後往上修改</li>
+</ul>
+</section>
+</section>
+<section>
+<section id="懶標線段樹" class="title-slide slide level1">
+<h1>懶標線段樹</h1>
+
+</section>
+<section id="支援-2" class="slide level2">
+<h2>支援</h2>
+<p>單點/區間修改：</p>
+<ul>
+<li>區間最小值</li>
+<li>區間總和</li>
+<li>區間積</li>
+<li>區間最大公因數</li>
+<li>區間最大連續和</li>
+</ul>
+</section>
+<section id="運作方式-1" class="slide level2">
+<h2>運作方式</h2>
+<ul>
+<li>區間查詢：遇到查詢跟節點範圍相同時 使用節點上的標記</li>
+<li>區間修改：遇到查詢跟節點範圍相同時 在節點上標記</li>
+</ul>
+</section>
+</section>
+<section>
+<section id="持久化線段樹" class="title-slide slide level1">
+<h1>持久化線段樹</h1>
+
+</section>
+<section id="支援-3" class="slide level2">
+<h2>支援</h2>
+<p>單點不同時間修改：</p>
+<ul>
+<li>區間最小值</li>
+<li>區間總和</li>
+<li>區間積</li>
+<li>區間最大公因數</li>
+<li>區間最大連續和</li>
+</ul>
+</section>
+<section id="運作方式-2" class="slide level2">
+<h2>運作方式</h2>
+<ul>
+<li>新增：多開一個節點紀錄新的值</li>
+</ul>
+</section>
+</section>
+<section>
+<section id="sparse-table" class="title-slide slide level1">
+<h1>sparse table</h1>
+
+</section>
+<section id="支援-4" class="slide level2">
+<h2>支援</h2>
+<ul>
+<li>區間最大最小值</li>
+</ul>
+</section>
+<section id="運作方式-3" class="slide level2">
+<h2>運作方式</h2>
+<ul>
+<li>建造：利用2的冪次的範圍紀錄數值</li>
+<li>查詢：左界+右界＝區建答案</li>
+</ul>
+</section>
+</section>
+<section>
+<section id="其他資料結構" class="title-slide slide level1">
+<h1>其他資料結構</h1>
+
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<ul>
+<li>treap</li>
+<li>BIT</li>
+</ul>
+</section>
+</section>
+<section id="qa進入課程" class="title-slide slide level1">
+<h1>QA/進入課程!</h1>
+
+</section>
+    </div>
+  </div>
+
+  <script src="https://revealjs.com/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'https://revealjs.com/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://revealjs.com/plugin/zoom-js/zoom.js', async: true },
+          { src: 'https://revealjs.com/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>

@@ -157,7 +157,9 @@
 </section>
 <section id="初始化" class="slide level2">
 <h2>初始化</h2>
-<p>用struct當作節點 裡面紀錄 左節點 右節點 值域 資料 <em>pull函數稍後用到</em></p>
+<p>用struct當作節點</p>
+<p>裡面紀錄 左節點 右節點 值域 資料</p>
+<p><em>pull函數稍後用到</em></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">struct</span> Node{</span>
 <span id="cb1-2"><a href="#cb1-2"></a>    Node *lc,*rc;</span>
 <span id="cb1-3"><a href="#cb1-3"></a>    <span class="dt">int</span> l,r;</span>
@@ -169,7 +171,9 @@
 </section>
 <section id="建立" class="slide level2">
 <h2>建立</h2>
-<p>若為子節點 則填上數值 否則遞迴完成子節點 子節點完成後再利用pull函數合併</p>
+<p>若為子節點 則填上數值</p>
+<p>否則遞迴完成子節點</p>
+<p>子節點完成後再利用pull函數合併</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a>Node *build(<span class="dt">int</span> l,<span class="dt">int</span> r){</span>
 <span id="cb2-2"><a href="#cb2-2"></a>    <span class="cf">if</span>(l==r-<span class="dv">1</span>)</span>
 <span id="cb2-3"><a href="#cb2-3"></a>        <span class="cf">return</span> <span class="kw">new</span> Node{<span class="dv">0</span>,<span class="dv">0</span>,l,r,arr[l]};</span>
@@ -181,7 +185,8 @@
 </section>
 <section id="單點修改" class="slide level2">
 <h2>單點修改</h2>
-<p>先遞迴走到子節點 改值後再往上回推完成</p>
+<p>先遞迴走到子節點</p>
+<p>改值後再往上回推完成</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1"></a><span class="dt">void</span> add (<span class="dt">int</span> x, <span class="dt">int</span> val, node *nd) {</span>
 <span id="cb3-2"><a href="#cb3-2"></a>    <span class="cf">if</span>(nd-&gt;l==x&amp;&amp;nd-&gt;r==x+<span class="dv">1</span>){</span>
 <span id="cb3-3"><a href="#cb3-3"></a>        nd-&gt;data+=val;</span>
@@ -198,7 +203,9 @@
 </section>
 <section id="查詢" class="slide level2">
 <h2>查詢</h2>
-<p>從根節點往下走 若查詢區域跟節點一樣則回傳 若區域全都在右邊就往右走//區域全左就往左走 否則左右分別找答案</p>
+<p>從根節點往下走 若查詢區域跟節點一樣則回傳</p>
+<p>若區域全都在右邊就往右走//區域全左就往左走</p>
+<p>否則左右分別找答案</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1"></a><span class="dt">int</span> qry(<span class="dt">int</span> l,<span class="dt">int</span> r,node *nd){</span>
 <span id="cb4-2"><a href="#cb4-2"></a>    <span class="cf">if</span>(l==nd-&gt;l&amp;&amp;r==nd-&gt;r){</span>
 <span id="cb4-3"><a href="#cb4-3"></a>        <span class="cf">return</span> nd-&gt;data;</span>
@@ -249,7 +256,12 @@
 </section>
 <section id="lazy_tag" class="slide level2">
 <h2>lazy_tag</h2>
-<p>在節點多紀錄一個值 若修改蓋過此節點所有值域 則不繼續更改子節點 選擇紀錄在此點上 <img data-src="https://i.imgur.com/mLytQ62.png" alt="imgur" /></p>
+<p>在節點多紀錄一個值</p>
+<p>若修改蓋過此節點所有值域</p>
+<p>則不繼續更改子節點 選擇紀錄在此點上</p>
+<figure>
+<img data-src="https://i.imgur.com/mLytQ62.png" alt="" /><figcaption>imgur</figcaption>
+</figure>
 </section>
 <section id="new-struct" class="slide level2">
 <h2>new struct</h2>
@@ -281,8 +293,14 @@
 </section>
 <section id="題目" class="slide level2">
 <h2>題目</h2>
-<p>經典RMQ</p>
-<p><a href="https://zerojudge.tw/ShowProblem?problemid=d539">ZJ-d539</a></p>
+<ul>
+<li><p>經典RMQ</p></li>
+<li><p><a href="https://zerojudge.tw/ShowProblem?problemid=d539">ZJ-d539</a></p></li>
+<li><p><a href="https://pc2.tfcis.org/dev/index.php/problem/view/52/">SKY-52</a></p></li>
+<li><p><a href="https://pc2.tfcis.org/dev/index.php/problem/view/39/">SKY-39</a></p></li>
+<li><p><a href="https://pc2.tfcis.org/dev/index.php/problem/view/58/">SKY-58</a></p></li>
+<li><p><a href="https://pc2.tfcis.org/dev/index.php/problem/view/86/">SKY-86</a></p></li>
+</ul>
 </section>
 <section id="qa" class="slide level2">
 <h2>Q&amp;A</h2>

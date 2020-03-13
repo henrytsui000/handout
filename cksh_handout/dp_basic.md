@@ -439,8 +439,11 @@ $[尾數是 8][含 “87”]$ ： 符合條件的數字數量
 
 # 題目 QA
 
-## 
-1. [好題庫](https://atcoder.jp/contests/dp)
+## 題目-1
+- [好題庫](https://atcoder.jp/contests/dp)
+- [ZJ-c878](https://zerojudge.tw/ShowProblem?problemid=c878)
+
+## 題目-2
 1. Codeforces 811 C. Vladik and Memorable Trip
 2. Codeforces 51 D. Beautiful numbers
 3. ARC 073 D - Simple Knapsack
@@ -448,7 +451,7 @@ $[尾數是 8][含 “87”]$ ： 符合條件的數字數量
 5. ARC 071 F - Infinite Sequence
 6. Codeforces 244 B. Undoubtedly Lucky Numbers
 
-## 
+## 題目-3
 
 7. Codeforces 768 D. Jon and Orbs
 8. Codeforces 767 C. Garland

@@ -34,7 +34,6 @@ date: 2020 未知
 
 ## BIT(X
 
-
 # 什麼是線段樹
 
 
@@ -50,8 +49,11 @@ date: 2020 未知
 ## 初始化
 
 用struct當作節點
+
 裡面紀錄 左節點 右節點 值域 資料
+
 *pull函數稍後用到*
+
 ```cpp
 struct Node{
     Node *lc,*rc;
@@ -67,8 +69,11 @@ struct Node{
 ## 建立
 
 若為子節點 則填上數值
+
 否則遞迴完成子節點
+
 子節點完成後再利用pull函數合併
+
 ```cpp
 Node *build(int l,int r){
     if(l==r-1)
@@ -84,7 +89,9 @@ Node *build(int l,int r){
 ## 單點修改
 
 先遞迴走到子節點
+
 改值後再往上回推完成
+
 ```cpp
 void add (int x, int val, node *nd) {
     if(nd->l==x&&nd->r==x+1){
@@ -105,7 +112,9 @@ void add (int x, int val, node *nd) {
 ## 查詢
 
 從根節點往下走  若查詢區域跟節點一樣則回傳
+
 若區域全都在右邊就往右走//區域全左就往左走
+
 否則左右分別找答案
 ```cpp
 int qry(int l,int r,node *nd){
@@ -135,6 +144,7 @@ int qry(int l,int r,node *nd){
 ## 查詢O(logN)
 
 ## 時間/空間比陣列線段樹慢
+
 ->但好實做
 
 # 區間加值
@@ -151,8 +161,11 @@ int qry(int l,int r,node *nd){
 ## lazy_tag
 
 在節點多紀錄一個值
+
 若修改蓋過此節點所有值域
+
 則不繼續更改子節點 選擇紀錄在此點上
+
 ![imgur](https://i.imgur.com/mLytQ62.png)
 
 
@@ -186,5 +199,9 @@ struct Node{
 - 經典RMQ
 
 - [ZJ-d539](https://zerojudge.tw/ShowProblem?problemid=d539)
+- [SKY-52](https://pc2.tfcis.org/dev/index.php/problem/view/52/)
+- [SKY-39](https://pc2.tfcis.org/dev/index.php/problem/view/39/)
+- [SKY-58](https://pc2.tfcis.org/dev/index.php/problem/view/58/)
+- [SKY-86](https://pc2.tfcis.org/dev/index.php/problem/view/86/)
 
 ## Q&A

@@ -8,8 +8,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="/home/henrytsui/reveal.js/css/reset.css">
-  <link rel="stylesheet" href="/home/henrytsui/reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="https://revealjs.com/css/reset.css">
+  <link rel="stylesheet" href="https://revealjs.com/css/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -80,17 +80,17 @@
     code span.vs { color: #4070a0; } /* VerbatimString */
     code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="/home/henrytsui/reveal.js/css/theme/black.css" id="theme">
+  <link rel="stylesheet" href="https://revealjs.com/css/theme/black.css" id="theme">
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? '/home/henrytsui/reveal.js/css/print/pdf.css' : '/home/henrytsui/reveal.js/css/print/paper.css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'https://revealjs.com/css/print/pdf.css' : 'https://revealjs.com/css/print/paper.css';
     document.getElementsByTagName( 'head' )[0].appendChild( link );
   </script>
   <!--[if lt IE 9]>
-  <script src="/home/henrytsui/reveal.js/lib/js/html5shiv.js"></script>
+  <script src="https://revealjs.com/lib/js/html5shiv.js"></script>
   <![endif]-->
 </head>
 <body>
@@ -103,16 +103,8 @@
   <p class="date">2020 未知</p>
 </section>
 
-<section>
-<section id="dsu併查集" class="title-slide slide level1">
-<h1>DSU併查集</h1>
-
-</section>
-<section id="disjoinset-and-union" class="slide level2">
-<h2>disjoinset and union???</h2>
-</section>
-<section id="來看看題目ㄅ" class="slide level2">
-<h2>來看看題目ㄅ</h2>
+<section id="先來看看題目ㄅ" class="slide level1">
+<h1>先來看看題目ㄅ</h1>
 <p>所有元素P編號1,2,3…,N</p>
 <p>對於P中的任意元素p一定恰有一集合包含該元素</p>
 <p>要支援以下兩種操作</p>
@@ -120,52 +112,31 @@
 <li><p>輸入a,b定他們為同一集合</p></li>
 <li><p>請輸出兩數a,b是否為同一集合</p></li>
 </ol>
-</section>
-<section id="section" class="slide level2">
-<h2></h2>
+<h2 id="section"></h2>
 <p>保證a&gt;b 否則swap(a,b)</p>
 <p>開一個陣列arr[]</p>
 <p>arr[n]代表n跟arr[n]為同集合</p>
 <p>並且有老大k,使arr[k]=k</p>
 <p>若a指向的人不斷回朔的結果 = b指向的人不斷回朔的結果 則他們是同集合</p>
 </section>
-</section>
-<section>
-<section id="優化-路徑壓縮" class="title-slide slide level1">
+<section id="優化-路徑壓縮" class="slide level1">
 <h1>優化-路徑壓縮</h1>
-
-</section>
-<section id="如果所有元素形成長長的一條練狀" class="slide level2">
-<h2>如果所有元素形成長長的一條練狀</h2>
+<h2 id="如果所有元素形成長長的一條練狀">如果所有元素形成長長的一條練狀</h2>
 <p>-&gt;那查詢相同則需要O(N)</p>
+<h2 id="那就把所有同群元素指向一個元素">那就把所有同群元素指向一個元素！</h2>
 </section>
-<section id="那就把所有同群元素指向一個元素" class="slide level2">
-<h2>那就把所有同群元素指向一個元素！</h2>
-</section>
-</section>
-<section>
-<section id="啟發式合併" class="title-slide slide level1">
+<section id="啟發式合併" class="slide level1">
 <h1>啟發式合併</h1>
-
-</section>
-<section id="當要合併兩個集合時" class="slide level2">
-<h2>當要合併兩個集合時</h2>
+<h2 id="當要合併兩個集合時">當要合併兩個集合時</h2>
 <p>把小的合併到大的會比較快</p>
 </section>
-</section>
-<section>
-<section id="code" class="title-slide slide level1">
+<section id="code" class="slide level1">
 <h1>CODE</h1>
-
-</section>
-<section id="追朔" class="slide level2">
-<h2>追朔</h2>
+<h2 id="追朔">追朔</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="dt">int</span> fnd(<span class="dt">int</span> a){</span>
 <span id="cb1-2"><a href="#cb1-2"></a>    <span class="cf">return</span> arr[a]==a ? a:arr[a]=fnd[arr[a]]; </span>
 <span id="cb1-3"><a href="#cb1-3"></a>}</span></code></pre></div>
-</section>
-<section id="和併" class="slide level2">
-<h2>和併</h2>
+<h2 id="和併">和併</h2>
 <div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="dt">void</span> uni(<span class="dt">int</span> x,<span class="dt">int</span> y){</span>
 <span id="cb2-2"><a href="#cb2-2"></a>    x=fnd(x),y=fnd(y);</span>
 <span id="cb2-3"><a href="#cb2-3"></a>    <span class="cf">if</span>(f[x]==f[y])</span>
@@ -175,15 +146,11 @@
 <span id="cb2-7"><a href="#cb2-7"></a>    sz[x]+=sz[y];</span>
 <span id="cb2-8"><a href="#cb2-8"></a>    f[y]=x;</span>
 <span id="cb2-9"><a href="#cb2-9"></a>}</span></code></pre></div>
-</section>
-<section id="查詢" class="slide level2">
-<h2>查詢</h2>
+<h2 id="查詢">查詢</h2>
 <div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1"></a><span class="dt">bool</span> same(<span class="dt">int</span> a,<span class="dt">int</span> b){</span>
 <span id="cb3-2"><a href="#cb3-2"></a>    <span class="cf">return</span> fnd(a)==fnd(b);</span>
 <span id="cb3-3"><a href="#cb3-3"></a>}</span></code></pre></div>
-</section>
-<section id="來看看實做吧" class="slide level2">
-<h2>來看看實做吧</h2>
+<h2 id="來看看實做吧">來看看實做吧</h2>
 <div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1"></a><span class="pp">#include </span><span class="im">&lt;bits/stdc++.h&gt;</span><span class="er">using namespace std;</span></span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="pp">#define rep</span>(i,n)<span class="pp"> </span><span class="cf">for</span>(<span class="dt">int</span><span class="pp"> </span>i=<span class="dv">0</span>;i&lt;(<span class="dt">int</span>)n;i++)</span>
 <span id="cb4-3"><a href="#cb4-3"></a></span>
@@ -232,25 +199,17 @@
 <span id="cb4-46"><a href="#cb4-46"></a>    <span class="cf">return</span> <span class="dv">0</span>;</span>
 <span id="cb4-47"><a href="#cb4-47"></a>}</span></code></pre></div>
 </section>
-</section>
-<section>
-<section id="題目們" class="title-slide slide level1">
+<section id="題目們" class="slide level1">
 <h1>題目們</h1>
-
-</section>
-<section id="section-1" class="slide level2">
-<h2></h2>
-<p><a href="https://www.google.com/">SKYOJ-56</a></p>
+<h2 id="section-1"></h2>
+<p><a href="https://pc2.tfcis.org/dev/index.php/problem/view/56/">SKYOJ-56</a></p>
 <p><a href="http://poj.org/problem?id=1182">POJ-1182</a></p>
-</section>
-<section id="qa" class="slide level2">
-<h2>Q&amp;A</h2>
-</section>
+<h2 id="qa">Q&amp;A</h2>
 </section>
     </div>
   </div>
 
-  <script src="/home/henrytsui/reveal.js/js/reveal.js"></script>
+  <script src="https://revealjs.com/js/reveal.js"></script>
 
   <script>
 
@@ -262,9 +221,9 @@
 
         // Optional reveal.js plugins
         dependencies: [
-          { src: '/home/henrytsui/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: '/home/henrytsui/reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: '/home/henrytsui/reveal.js/plugin/notes/notes.js', async: true }
+          { src: 'https://revealjs.com/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'https://revealjs.com/plugin/zoom-js/zoom.js', async: true },
+          { src: 'https://revealjs.com/plugin/notes/notes.js', async: true }
         ]
       });
     </script>

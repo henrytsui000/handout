@@ -132,7 +132,7 @@ int32_t main(){
 
 ## 
 
-[SKYOJ-56](https://www.google.com/)
+[SKYOJ-56](https://pc2.tfcis.org/dev/index.php/problem/view/56/)
 
 [POJ-1182](http://poj.org/problem?id=1182)
 

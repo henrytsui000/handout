@@ -258,6 +258,7 @@ dfs時 紀錄子樹+自己的大小
 
 ## 題目
 
-- MST模板題
+- [POJ 2485](http://poj.org/problem?id=2485)
+
 
 ## Q&A

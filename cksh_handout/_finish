@@ -38,13 +38,13 @@
     DSU
     Sparse table
     指標線段樹
+    陣列線段樹
     基礎dp
     基礎圖論
-    BIT
     LCA
 未完成：
+    BIT
     BCC
 還沒寫：
     分塊
-    陣列線段樹
     計算幾何

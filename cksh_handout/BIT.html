@@ -218,6 +218,58 @@
 </section>
 </section>
 <section>
+<section id="逆序數對" class="title-slide slide level1">
+<h1>逆序數對</h1>
+
+</section>
+<section id="給你一個數列" class="slide level2">
+<h2>給你一個數列</h2>
+<p>請找出有多少組 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>&gt;</mo><msub><mi>a</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">a_i&gt;a_j</annotation></semantics></math>且<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>&lt;</mo><mi>j</mi></mrow><annotation encoding="application/x-tex">i&lt;j</annotation></semantics></math></p>
+<p>也就是說 求有多少組前面的比後面的數字小</p>
+</section>
+<section id="前情提要-離散化" class="slide level2">
+<h2>前情提要-離散化</h2>
+<p>給你一些數字</p>
+<p>請按照順序輸出他們的是第幾小的數字</p>
+</section>
+<section id="作法" class="slide level2">
+<h2>作法</h2>
+<ol type="1">
+<li>複製原本的陣列成陣列tmp</li>
+<li>先將tmp中重複的數字刪除</li>
+<li>將tmp按照大小排列</li>
+<li>可以知道第N大的數字會出現在tmp的第N項</li>
+<li>查詢原本的陣列每一項在tmp中的順序</li>
+</ol>
+</section>
+<section id="code-1" class="slide level2">
+<h2>CODE</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1"></a><span class="pp">#define all</span>(a)<span class="pp"> </span>a.begin(),a.end()</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="co">// vec是要排列陣列</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a>vector&lt;<span class="dt">int</span>&gt; tmp=vec;</span>
+<span id="cb3-4"><a href="#cb3-4"></a>tmp.resize(tmp.unique(all(tmp))-tmp.begin);</span>
+<span id="cb3-5"><a href="#cb3-5"></a>sort(tmp.begin(),tmp.end());</span>
+<span id="cb3-6"><a href="#cb3-6"></a>rep(i,sz(vec))</span>
+<span id="cb3-7"><a href="#cb3-7"></a>    vec[i]=lower_bound(all(tmp),vec[i])-tmp.begin();</span></code></pre></div>
+</section>
+<section id="逆序數對想法" class="slide level2">
+<h2>逆序數對想法</h2>
+<ol type="1">
+<li>先把所有數字離散化</li>
+<li>從數列後往前掃過</li>
+<li>同時開一個陣列K 紀錄離散化後的數字是否出現</li>
+<li>遇到每一個數字只需要查看在K中 該數字的位置之前的合數字</li>
+<li>可以BIT查詢數字!</li>
+</ol>
+</section>
+<section id="時間複雜度-2" class="slide level2">
+<h2>時間複雜度</h2>
+<p>離散化：O(NlogN)</p>
+<p>計算逆序數對：O(NlogN)</p>
+<p>(另有merge作法)</p>
+</section>
+</section>
+<section>
 <section id="題目qa" class="title-slide slide level1">
 <h1>題目QA</h1>
 
@@ -225,8 +277,9 @@
 <section id="題目" class="slide level2">
 <h2>題目</h2>
 <ul>
+<li><p><a href="https://tioj.ck.tp.edu.tw/problems/1080">逆序數對</a></p></li>
 <li><p><a href="https://zerojudge.tw/ShowProblem?problemid=d788">ZJ-d788</a></p></li>
-<li><p>離散化</p></li>
+<li><p><a href="https://codeforces.com/problemset/problem/61/E">CF-61E</a></p></li>
 </ul>
 </section>
 <section id="qa" class="slide level2">

@@ -37,9 +37,9 @@ date: 2020 未知月
 
 [提問箱](https://peing.net/zh-TW/7a7516a2f559a8?event=0)
 
-gmail: henrytsui000@gmail.com
+Gmail: henrytsui000@gmail.com
 
-FB:崔浩堂
+FB:[崔浩堂](https://www.facebook.com/profile.php?id=100000962895905)
 
 ## 活動
 
@@ -53,15 +53,19 @@ FB:崔浩堂
 
 ## 時間複雜度
 
-[slides](https://henrytsui000.000webhostapp.com/)
+[slides](https://henrytsui000.000webhostapp.com/complexity.html)
 
-## searching
+## searching&sort
 
 [slides](https://henrytsui000.000webhostapp.com/searching.html)
 
 ## 一些有的沒的
 
 [slides](https://henrytsui000.000webhostapp.com/some_tips.html)
+
+## greedy
+
+[slides](https://henrytsui000.000webhostapp.com/greedy.html)
 
 # DATA Structure-1
 
@@ -101,6 +105,10 @@ FB:崔浩堂
 
 # DATA Structure-2
 
+## 資料結構總覽
+
+[slides](https://henrytsui000.000webhostapp.com/datastruct.html)
+
 ## 分塊
 
 [slides]()
@@ -121,9 +129,7 @@ FB:崔浩堂
 
 ## segment tree by array
 
-[slides]()
-
-空
+[slides](https://henrytsui000.000webhostapp.com/STbyarray.html)
 
 # 數學
 
@@ -146,3 +152,11 @@ FB:崔浩堂
 [slides]()
 
 空
+
+# 字串
+
+## KMP
+
+## Z-value
+
+## AC自動機

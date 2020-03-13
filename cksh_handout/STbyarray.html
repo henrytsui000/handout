@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="oxolane">
-  <title>searching&amp;sort</title>
+  <title>陣列線段樹</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -98,72 +98,76 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">searching&amp;sort</h1>
+  <h1 class="title">陣列線段樹</h1>
   <p class="author">oxolane</p>
   <p class="date">2020 未知</p>
 </section>
 
 <section>
-<section id="先來看看題目吧" class="title-slide slide level1">
-<h1>先來看看題目吧</h1>
+<section id="陣列版本的線段樹" class="title-slide slide level1">
+<h1>陣列版本的線段樹!</h1>
 
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
-<p>給你一個遞增數列a[n]跟數字A</p>
-<p>找出A在第幾項</p>
+<section id="先蓋一顆樹" class="slide level2">
+<h2>先蓋一顆樹</h2>
+<p>上方為原陣列</p>
+<p>對於N號節點的左節點是編號2*N 右2*N+1</p>
+<p><img data-src="https://i.imgur.com/iMrvaDa.png" /></p>
+</section>
+<section id="建立" class="slide level2">
+<h2>建立</h2>
+<p><em>假設該樹為求min</em></p>
+<p><img data-src="https://i.imgur.com/RJCMhq5.png" /></p>
+</section>
+<section id="查詢" class="slide level2">
+<h2>查詢</h2>
+<p>遞迴找到區間</p>
+<p><img data-src="https://i.imgur.com/t3peo5h.png" /></p>
+</section>
+<section id="修改" class="slide level2">
+<h2>修改</h2>
+<p>從下往上修正 (父節點為子節點[id/2])</p>
+<p><img data-src="https://i.imgur.com/3NAIbQ7.png" /></p>
 </section>
 </section>
 <section>
-<section id="從第一項往後找-直到找到他" class="title-slide slide level1">
-<h1>從第一項往後找 直到找到他</h1>
+<section id="code" class="title-slide slide level1">
+<h1>CODE</h1>
 
 </section>
-<section id="code" class="slide level2">
-<h2>CODE</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="dt">int</span> arr[n];</span>
-<span id="cb1-2"><a href="#cb1-2"></a>rep(i,n){</span>
-<span id="cb1-3"><a href="#cb1-3"></a>    <span class="cf">if</span>(arr[i]==A)</span>
-<span id="cb1-4"><a href="#cb1-4"></a>        cout&lt;&lt;<span class="st">&quot;i&quot;</span>&lt;&lt;endl;</span>
-<span id="cb1-5"><a href="#cb1-5"></a>}</span></code></pre></div>
+<section id="define大法好" class="slide level2">
+<h2>define大法好</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="pp">#define lc</span>(x)<span class="pp"> </span>(<span class="dv">2</span>*x)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="pp">#define rc</span>(x)<span class="pp"> </span>(<span class="dv">2</span>*x+<span class="dv">1</span>)</span></code></pre></div>
 </section>
-<section id="on" class="slide level2">
-<h2>O(N)</h2>
+<section id="建立修改" class="slide level2">
+<h2>建立/修改</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="dt">void</span> build(<span class="dt">int</span> l,<span class="dt">int</span> r,<span class="dt">int</span> id){</span>
+<span id="cb2-2"><a href="#cb2-2"></a>    <span class="cf">if</span>(l==r-<span class="dv">1</span>)</span>
+<span id="cb2-3"><a href="#cb2-3"></a>        st[id]=arr[l];</span>
+<span id="cb2-4"><a href="#cb2-4"></a>    <span class="cf">else</span>{</span>
+<span id="cb2-5"><a href="#cb2-5"></a>        <span class="dt">int</span> mid=(l+r)&gt;&gt;<span class="dv">1</span>;</span>
+<span id="cb2-6"><a href="#cb2-6"></a>        build(l,mid,lc(id));</span>
+<span id="cb2-7"><a href="#cb2-7"></a>        build(mid,r,rc(id));</span>
+<span id="cb2-8"><a href="#cb2-8"></a>        st[id]=min(st[lc(id)],st[rc(id)]);</span>
+<span id="cb2-9"><a href="#cb2-9"></a>    }</span>
+<span id="cb2-10"><a href="#cb2-10"></a>}</span></code></pre></div>
 </section>
-</section>
-<section id="section-1" class="title-slide slide level1">
-<h1><img data-src="https://i.imgur.com/WrcSigs.jpg" /></h1>
-
-</section>
-
-<section>
-<section id="二分搜" class="title-slide slide level1">
-<h1>二分搜?</h1>
-
-</section>
-<section id="作法" class="slide level2">
-<h2>作法</h2>
-<p>先查詢數列中間的值</p>
-<p>if &gt;A 答案在(中間,最後]</p>
-<p>否則 答案在[開始,中間)</p>
-<p>不斷做這動作</p>
-</section>
-<section id="code-1" class="slide level2">
-<h2>CODE</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="dt">int</span> l=<span class="dv">0</span>,r=n;</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="cf">while</span>(l&lt;r-<span class="dv">1</span>){</span>
-<span id="cb2-3"><a href="#cb2-3"></a>    <span class="dt">int</span> mid=(r+l)/<span class="dv">2</span>;</span>
-<span id="cb2-4"><a href="#cb2-4"></a>    <span class="cf">if</span>(arr[mid]==A){</span>
-<span id="cb2-5"><a href="#cb2-5"></a>        cout&lt;&lt;mid&lt;&lt;endl;</span>
-<span id="cb2-6"><a href="#cb2-6"></a>    }<span class="cf">else</span> <span class="cf">if</span>(arr[mid]&gt;A){</span>
-<span id="cb2-7"><a href="#cb2-7"></a>        r=mid;</span>
-<span id="cb2-8"><a href="#cb2-8"></a>    }<span class="cf">else</span>{</span>
-<span id="cb2-9"><a href="#cb2-9"></a>        l=mid;</span>
-<span id="cb2-10"><a href="#cb2-10"></a>    }</span>
-<span id="cb2-11"><a href="#cb2-11"></a>}</span></code></pre></div>
-</section>
-<section id="olog-n" class="slide level2">
-<h2>O(log N)</h2>
+<section id="查詢-1" class="slide level2">
+<h2>查詢</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1"></a><span class="dt">int</span> qry(<span class="dt">int</span> l,<span class="dt">int</span> r,<span class="dt">int</span> L,<span class="dt">int</span> R,<span class="dt">int</span> id){</span>
+<span id="cb3-2"><a href="#cb3-2"></a>    <span class="cf">if</span>(l==L&amp;&amp;r==R){</span>
+<span id="cb3-3"><a href="#cb3-3"></a>        <span class="cf">return</span> st[id];</span>
+<span id="cb3-4"><a href="#cb3-4"></a>    }<span class="cf">else</span>{</span>
+<span id="cb3-5"><a href="#cb3-5"></a>        <span class="dt">int</span> mid=(L+R)&gt;&gt;<span class="dv">1</span>;</span>
+<span id="cb3-6"><a href="#cb3-6"></a>        <span class="cf">if</span>(r&lt;=mid) <span class="cf">return</span> qry(l,r,L,mid,lc(id));</span>
+<span id="cb3-7"><a href="#cb3-7"></a>        <span class="cf">else</span> <span class="cf">if</span>(l&gt;=mid) <span class="cf">return</span> qry(l,r,mid,R,rc(id));</span>
+<span id="cb3-8"><a href="#cb3-8"></a>        <span class="cf">else</span>{</span>
+<span id="cb3-9"><a href="#cb3-9"></a>            <span class="cf">return</span> min( qry(l,mid,L,mid,lc(id)),</span>
+<span id="cb3-10"><a href="#cb3-10"></a>                        qry(mid,r,mid,R,rc(id)) );</span>
+<span id="cb3-11"><a href="#cb3-11"></a>        }</span>
+<span id="cb3-12"><a href="#cb3-12"></a>    }</span>
+<span id="cb3-13"><a href="#cb3-13"></a>}</span></code></pre></div>
 </section>
 </section>
 <section>
@@ -173,14 +177,11 @@
 </section>
 <section id="題目" class="slide level2">
 <h2>題目</h2>
-<p>有單調性的東西都可以二分搜</p>
-<p>若沒有順序性 通常會利用sort使數列單調</p>
 <ul>
-<li><p><a href="https://zerojudge.tw/ShowProblem?problemid=d732">ZJ-d732</a></p></li>
-<li><p><a href="https://zerojudge.tw/ShowProblem?problemid=c575">APCS-基地台</a></p></li>
-<li><p><a href="https://zerojudge.tw/ShowProblem?problemid=b966">ZJ-b966</a></p></li>
-<li><p><a href="https://zerojudge.tw/ShowProblem?problemid=c268">ZJ-c268</a></p></li>
-<li><p><a href="https://codeforces.com/contest/1260/problem/B">CF-1260B</a></p></li>
+<li><a href="https://pc2.tfcis.org/dev/index.php/problem/view/52/">SKY-52</a></li>
+<li><a href="https://pc2.tfcis.org/dev/index.php/problem/view/39/">SKY-39</a></li>
+<li><a href="https://pc2.tfcis.org/dev/index.php/problem/view/58/">SKY-58</a></li>
+<li><a href="https://pc2.tfcis.org/dev/index.php/problem/view/86/">SKY-86</a> ## Q&amp;A</li>
 </ul>
 </section>
 </section>
