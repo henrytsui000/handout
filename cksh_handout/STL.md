@@ -129,11 +129,11 @@ cout<<endl;
 
 ## 題目
 
-[UVa-12345](https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=3778)
-[UVa-514](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=455)
-[ZJ-d016](https://zerojudge.tw/ShowProblem?problemid=d016)
-[UVa-673](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=614)
-[POJ-3250](http://poj.org/problem?id=3250)
+- [UVa-12345](https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=3778)
+- [UVa-514](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=455)
+- [ZJ-d016](https://zerojudge.tw/ShowProblem?problemid=d016)
+- [UVa-673](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=614)
+- [POJ-3250](http://poj.org/problem?id=3250)
 
 # queue
 
@@ -231,6 +231,7 @@ str3=str1+str2 字串相加
 str1="fd",str2"dc"
 
 str3="fddc"
+
 ## 優點
 
 不用多開未知大小的char陣列
@@ -290,4 +291,4 @@ s.size() 查詢大小
 
 [Google](https://www.google.com/)
 
-## **Q&A**
+## **Q&A**  

@@ -52,7 +52,8 @@
 </section>
 <section id="section-1" class="slide level2">
 <h2></h2>
-<p>通過把原問題分解為相對簡單的子問題的方式 求解複雜問題的方法</p>
+<p>通過把原問題分解為相對簡單的子問題的方式</p>
+<p>求解複雜問題的方法</p>
 </section>
 <section id="用空間換取時間" class="slide level2">
 <h2>用空間換取時間</h2>
@@ -60,8 +61,8 @@
 </section>
 </section>
 <section>
-<section id="動態規劃需要以下特性" class="title-slide slide level1">
-<h1>動態規劃需要以下特性：</h1>
+<section id="動態規劃的特性" class="title-slide slide level1">
+<h1>動態規劃的特性：</h1>
 
 </section>
 <section id="section-2" class="slide level2">
@@ -79,13 +80,15 @@
 </section>
 <section id="最佳子結構" class="slide level2">
 <h2>最佳子結構</h2>
-<p>當問題被拆成若干個規模較小的問題時 可以透過這些子問題得到這個問題的最佳解</p>
+<p>當問題被拆成若干個規模較小的問題時</p>
+<p>可以透過這些子問題得到這個問題的最佳解</p>
 <p>否則也沒有計算子問題的必要</p>
 </section>
 <section id="無後效性" class="slide level2">
 <h2>無後效性：</h2>
 <p>決策圖是個 DAG (Directed acyclic graph, 有向無環圖)</p>
-<p>否則無法階段性決策 也就是無法確定當前狀態的結果</p>
+<p>否則無法階段性決策</p>
+<p>也就是無法確定當前狀態的結果</p>
 </section>
 </section>
 <section>
@@ -107,8 +110,8 @@
 </section>
 </section>
 <section>
-<section id="東東爬階梯-zerojudge-d212" class="title-slide slide level1">
-<h1>東東爬階梯 (Zerojudge d212)</h1>
+<section id="東東爬階梯-_zerojudge-d212" class="title-slide slide level1">
+<h1>東東爬階梯 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>Z</mi><mi>e</mi><mi>r</mi><mi>o</mi><mi>j</mi><mi>u</mi><mi>d</mi><mi>g</mi><mi>e</mi><mi>d</mi><mn>212</mn><mo stretchy="false" form="postfix">)</mo></mrow></msub><annotation encoding="application/x-tex">_{(Zerojudge d212)}</annotation></semantics></math></h1>
 
 </section>
 <section id="section-4" class="slide level2">
@@ -140,8 +143,8 @@
 </section>
 </section>
 <section>
-<section id="連續元素的和-zerojudge-d784" class="title-slide slide level1">
-<h1>連續元素的和 (Zerojudge d784)</h1>
+<section id="連續元素的和-_zerojudge-d784" class="title-slide slide level1">
+<h1>連續元素的和 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>Z</mi><mi>e</mi><mi>r</mi><mi>o</mi><mi>j</mi><mi>u</mi><mi>d</mi><mi>g</mi><mi>e</mi><mi>d</mi><mn>784</mn><mo stretchy="false" form="postfix">)</mo></mrow></msub><annotation encoding="application/x-tex">_{(Zerojudge d784)}</annotation></semantics></math></h1>
 
 </section>
 <section id="section-5" class="slide level2">
@@ -171,8 +174,8 @@
 </section>
 </section>
 <section>
-<section id="年亞太數學奧林匹亞競賽-初選第6題-zerojudge-c434" class="title-slide slide level1">
-<h1>2016年亞太數學奧林匹亞競賽 初選第6題 (Zerojudge c434)</h1>
+<section id="apmo第6題-_zerojudge-c434" class="title-slide slide level1">
+<h1>2016APMO第6題 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>Z</mi><mi>e</mi><mi>r</mi><mi>o</mi><mi>j</mi><mi>u</mi><mi>d</mi><mi>g</mi><mi>e</mi><mi>c</mi><mn>434</mn><mo stretchy="false" form="postfix">)</mo></mrow></msub><annotation encoding="application/x-tex">_{(Zerojudge c434)}</annotation></semantics></math></h1>
 
 </section>
 <section id="section-7" class="slide level2">
@@ -186,9 +189,9 @@
 </section>
 <section id="狀態-2" class="slide level2">
 <h2>狀態</h2>
-<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>p</mi><mn>0</mn><mo stretchy="false" form="prefix">[</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo><mo>:=</mo></mrow><annotation encoding="application/x-tex">dp0[i] :=</annotation></semantics></math> 目前 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math> 以前(包含 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math> )的正整數都考慮過了，目前最後有連續 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math> 個數字被選入集合的子集數量</p>
-<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>p</mi><mn>1</mn><mo stretchy="false" form="prefix">[</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo><mo>:=</mo></mrow><annotation encoding="application/x-tex">dp1[i] :=</annotation></semantics></math> 目前 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math> 以前(包含 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math> )的正整數都考慮過了，目前最後有連續 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math> 個數字被選入集合的子集數量</p>
-<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>p</mi><mn>2</mn><mo stretchy="false" form="prefix">[</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo><mo>:=</mo></mrow><annotation encoding="application/x-tex">dp2[i] :=</annotation></semantics></math> 目前 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math> 以前(包含 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math> )的正整數都考慮過了，目前最後有連續 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math> 個數字被選入集合的子集數量</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mi>d</mi><mi>p</mi><mn>0</mn><mo stretchy="false" form="prefix">[</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo><mo>:=</mo><mi>目</mi><mi>前</mi><mi>i</mi><mi>以</mi><mi>前</mi><mo stretchy="false" form="prefix">(</mo><mi>包</mi><mi>含</mi><mi>i</mi><mo stretchy="false" form="postfix">)</mo><mi>的</mi><mi>正</mi><mi>整</mi><mi>數</mi><mi>都</mi><mi>考</mi><mi>慮</mi><mi>過</mi><mi>了</mi><mi>，</mi></mrow></msub><annotation encoding="application/x-tex">_{dp0[i] := 目前 i 以前(包含 i )的正整數都考慮過了，}</annotation></semantics></math> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mi>目</mi><mi>前</mi><mi>最</mi><mi>後</mi><mi>有</mi><mi>連</mi><mi>續</mi><mn>0</mn><mi>個</mi><mi>數</mi><mi>字</mi><mi>被</mi><mi>選</mi><mi>入</mi><mi>集</mi><mi>合</mi><mi>的</mi><mi>子</mi><mi>集</mi><mi>數</mi><mi>量</mi></mrow></msub><annotation encoding="application/x-tex">_{目前最後有連續 0 個數字被選入集合的子集數量}</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mi>d</mi><mi>p</mi><mn>1</mn><mo stretchy="false" form="prefix">[</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo><mo>:=</mo><mi>目</mi><mi>前</mi><mi>i</mi><mi>以</mi><mi>前</mi><mo stretchy="false" form="prefix">(</mo><mi>包</mi><mi>含</mi><mi>i</mi><mo stretchy="false" form="postfix">)</mo><mi>的</mi><mi>正</mi><mi>整</mi><mi>數</mi><mi>都</mi><mi>考</mi><mi>慮</mi><mi>過</mi><mi>了</mi><mi>，</mi></mrow></msub><annotation encoding="application/x-tex">_{dp1[i] := 目前 i 以前(包含 i )的正整數都考慮過了，}</annotation></semantics></math> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mi>目</mi><mi>前</mi><mi>最</mi><mi>後</mi><mi>有</mi><mi>連</mi><mi>續</mi><mn>1</mn><mi>個</mi><mi>數</mi><mi>字</mi><mi>被</mi><mi>選</mi><mi>入</mi><mi>集</mi><mi>合</mi><mi>的</mi><mi>子</mi><mi>集</mi><mi>數</mi><mi>量</mi></mrow></msub><annotation encoding="application/x-tex">_{目前最後有連續 1 個數字被選入集合的子集數量}</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mi>d</mi><mi>p</mi><mn>2</mn><mo stretchy="false" form="prefix">[</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo><mo>:=</mo><mi>目</mi><mi>前</mi><mi>i</mi><mi>以</mi><mi>前</mi><mo stretchy="false" form="prefix">(</mo><mi>包</mi><mi>含</mi><mi>i</mi><mo stretchy="false" form="postfix">)</mo><mi>的</mi><mi>正</mi><mi>整</mi><mi>數</mi><mi>都</mi><mi>考</mi><mi>慮</mi><mi>過</mi><mi>了</mi><mi>，</mi></mrow></msub><annotation encoding="application/x-tex">_{dp2[i] := 目前 i 以前(包含 i )的正整數都考慮過了，}</annotation></semantics></math> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mi>目</mi><mi>前</mi><mi>最</mi><mi>後</mi><mi>有</mi><mi>連</mi><mi>續</mi><mn>2</mn><mi>個</mi><mi>數</mi><mi>字</mi><mi>被</mi><mi>選</mi><mi>入</mi><mi>集</mi><mi>合</mi><mi>的</mi><mi>子</mi><mi>集</mi><mi>數</mi><mi>量</mi></mrow></msub><annotation encoding="application/x-tex">_{目前最後有連續 2 個數字被選入集合的子集數量}</annotation></semantics></math></p>
 </section>
 <section id="轉移-2" class="slide level2">
 <h2>轉移</h2>
@@ -209,13 +212,14 @@
 </section>
 <section id="section-9" class="slide level2">
 <h2></h2>
-<p>==L==ongest</p>
-<p>==C==ommon</p>
-<p>==S==ubsequence</p>
+<p><strong>L</strong>ongest</p>
+<p><strong>C</strong>ommon</p>
+<p><strong>S</strong>ubsequence</p>
 </section>
 <section id="section-10" class="slide level2">
 <h2></h2>
-<p>問題： 給你兩個字串，問兩個字串的最長公共子序列。</p>
+<p>問題：</p>
+<p>給你兩個字串，問兩個字串的最長公共子序列。</p>
 </section>
 <section id="狀態-3" class="slide level2">
 <h2>狀態</h2>
@@ -228,24 +232,25 @@
 <section id="邊界條件-2" class="slide level2">
 <h2>邊界條件</h2>
 <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>p</mi><mo stretchy="false" form="prefix">[</mo><mn>0</mn><mo stretchy="false" form="postfix">]</mo><mo stretchy="false" form="prefix">[</mo><mn>0</mn><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">dp[0][0] = 0</annotation></semantics></math>，超界不理</p>
-<ul>
-<li></li>
-</ul>
 <p><img data-src="https://i.imgur.com/YLZLNls.png" /></p>
 </section>
 </section>
 <section>
-<section id="背包問題-zerojudge-a587" class="title-slide slide level1">
-<h1>0/1 背包問題 (Zerojudge a587)</h1>
+<section id="背包問題-_zerojudge-a587" class="title-slide slide level1">
+<h1>0/1 背包問題 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>Z</mi><mi>e</mi><mi>r</mi><mi>o</mi><mi>j</mi><mi>u</mi><mi>d</mi><mi>g</mi><mi>e</mi><mi>a</mi><mn>587</mn><mo stretchy="false" form="postfix">)</mo></mrow></msub><annotation encoding="application/x-tex">_{(Zerojudge a587)}</annotation></semantics></math></h1>
 
 </section>
-<section id="section-11" class="slide level2">
-<h2></h2>
-<p>問題： 你有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math> 個物品，第 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math> 個物品的價值為 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mi>i</mi></msub><annotation encoding="application/x-tex">V_i</annotation></semantics></math>，重量為 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>W</mi><mi>i</mi></msub><annotation encoding="application/x-tex">W_i</annotation></semantics></math>。 每個物品只能選擇取或不取。 你的背包至多只能裝下 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math> 的重量，問你最大總價值。</p>
+<section id="問題" class="slide level2">
+<h2>問題</h2>
+<p>你有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math> 個物品，第 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math> 個物品的價值為 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mi>i</mi></msub><annotation encoding="application/x-tex">V_i</annotation></semantics></math>，重量為 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>W</mi><mi>i</mi></msub><annotation encoding="application/x-tex">W_i</annotation></semantics></math></p>
+<p>每個物品只能選擇取或不取。</p>
+<p>你的背包至多只能裝下 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math> 的重量，問你最大總價值。</p>
 </section>
 <section id="狀態-4" class="slide level2">
 <h2>狀態</h2>
-<p>令 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>p</mi><mo stretchy="false" form="prefix">[</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo><mo stretchy="false" form="prefix">[</mo><mi>j</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">dp[i][j]</annotation></semantics></math>: 已考慮前 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math> 個物品， 且背包重量為 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math> 的情況下的最大總價值。</p>
+<p>令 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>p</mi><mo stretchy="false" form="prefix">[</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo><mo stretchy="false" form="prefix">[</mo><mi>j</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">dp[i][j]</annotation></semantics></math>:</p>
+<p>已考慮前 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math> 個物品，</p>
+<p>且背包重量為 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math> 的情況下的最大總價值。</p>
 <p><img data-src="https://i.imgur.com/zhWxmSt.png" /></p>
 </section>
 </section>
@@ -254,7 +259,7 @@
 <h1>無限背包問題</h1>
 
 </section>
-<section id="section-12" class="slide level2">
+<section id="section-11" class="slide level2">
 <h2></h2>
 <p>問題： 你有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math> 個物品， 第 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math> 個物品的價值為 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mi>i</mi></msub><annotation encoding="application/x-tex">V_i</annotation></semantics></math>，重量為 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>W</mi><mi>i</mi></msub><annotation encoding="application/x-tex">W_i</annotation></semantics></math>。 每個物品都可以選擇 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math> ~ <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>∞</mi><annotation encoding="application/x-tex">∞</annotation></semantics></math> 個。 你的背包至多只能裝下 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math> 的重量，問你最大總價值。</p>
 </section>
@@ -269,7 +274,7 @@
 <h1>多重背包問題</h1>
 
 </section>
-<section id="section-13" class="slide level2">
+<section id="section-12" class="slide level2">
 <h2></h2>
 <p>問題： 你有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math> 個物品， 第 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math> 個物品的價值為 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mi>i</mi></msub><annotation encoding="application/x-tex">V_i</annotation></semantics></math>，重量為 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>W</mi><mi>i</mi></msub><annotation encoding="application/x-tex">W_i</annotation></semantics></math>。 每個物品都可以選擇 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math> ~ <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mi>i</mi></msub><annotation encoding="application/x-tex">C_i</annotation></semantics></math> 個。 你的背包至多只能裝下 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math> 的重量，問你最大總價值。</p>
 <p>基於二分拆解的解法：</p>
@@ -287,7 +292,7 @@
 <h1>最大子方陣</h1>
 
 </section>
-<section id="section-14" class="slide level2">
+<section id="section-13" class="slide level2">
 <h2></h2>
 <p>問題： 給你一個 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mi>/</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">0/1</annotation></semantics></math> 矩陣。 求一個最大的方陣，使得整個方陣都只由 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math> 構成。</p>
 </section>
@@ -298,19 +303,23 @@
 </section>
 </section>
 <section>
-<section id="狀態壓縮-2015年亞太數學奧林匹亞競賽-初選第4題" class="title-slide slide level1">
-<h1>狀態壓縮 (2015年亞太數學奧林匹亞競賽 初選第4題)</h1>
+<section id="狀態壓縮-_2015apmo-初選第4題" class="title-slide slide level1">
+<h1>狀態壓縮 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>2015</mn><mi>A</mi><mi>P</mi><mi>M</mi><mi>O</mi><mi>初</mi><mi>選</mi><mi>第</mi><mn>4</mn><mi>題</mi><mo stretchy="false" form="postfix">)</mo></mrow></msub><annotation encoding="application/x-tex">_{(2015APMO 初選第4題)}</annotation></semantics></math></h1>
 
 </section>
-<section id="section-15" class="slide level2">
+<section id="section-14" class="slide level2">
 <h2></h2>
-<p>問題： 在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>×</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">2 × N</annotation></semantics></math> 的方格 (方格的編號為 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>∼</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">1 ∼ N</annotation></semantics></math>) 中選取若干個格子塗成黑色(也可以全部不選)，使得任兩個黑色的格子都不共邊的方法有幾種？</p>
+<p>問題：</p>
+<p>在 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>×</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">2 × N</annotation></semantics></math> 的方格 (方格的編號為 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>∼</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">1 ∼ N</annotation></semantics></math>) 中選取若干個格子塗成黑色(也可以全部不選)，</p>
+<p>使得任兩個黑色的格子都不共邊的方法有幾種？</p>
 <p>原題 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">N = 7</annotation></semantics></math> ，答案為 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>577</mn><annotation encoding="application/x-tex">577</annotation></semantics></math> ，有興趣可以自己手算看看。</p>
 </section>
 <section id="狀態-8" class="slide level2">
 <h2>狀態</h2>
-<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>p</mi><mo stretchy="false" form="prefix">[</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">dp[i]</annotation></semantics></math><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo stretchy="false" form="prefix">[</mo><annotation encoding="application/x-tex">[</annotation></semantics></math>黑白<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">]</mo><mo>:=</mo></mrow><annotation encoding="application/x-tex">] :=</annotation></semantics></math> 前i行的方法已經考慮完，且第i行的兩個格子是依序是「黑白」的方法數。 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>p</mi><mo stretchy="false" form="prefix">[</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">dp[i]</annotation></semantics></math><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo stretchy="false" form="prefix">[</mo><annotation encoding="application/x-tex">[</annotation></semantics></math>白黑<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">]</mo><mo>:=</mo></mrow><annotation encoding="application/x-tex">] :=</annotation></semantics></math> 前i行的方法已經考慮完，且第i行的兩個格子是依序是「白黑」的方法數。 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>p</mi><mo stretchy="false" form="prefix">[</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">dp[i]</annotation></semantics></math><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo stretchy="false" form="prefix">[</mo><annotation encoding="application/x-tex">[</annotation></semantics></math>白白<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="postfix">]</mo><mo>:=</mo></mrow><annotation encoding="application/x-tex">] :=</annotation></semantics></math> 前i行的方法已經考慮完，且第i行的兩個格子是依序是「白白」的方法數。</p>
-<p>*注：直行橫列</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mi>d</mi><mi>p</mi><mo stretchy="false" form="prefix">[</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo><mo stretchy="false" form="prefix">[</mo><mi>黑</mi><mi>白</mi><mo stretchy="false" form="postfix">]</mo><mo>:=</mo><mi>前</mi><mi>i</mi><mi>行</mi><mi>的</mi><mi>方</mi><mi>法</mi><mi>已</mi><mi>經</mi><mi>考</mi><mi>慮</mi><mi>完</mi><mi>，</mi></mrow></msub><annotation encoding="application/x-tex">_{dp[i][黑白] := 前i行的方法已經考慮完，}</annotation></semantics></math> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mi>且</mi><mi>第</mi><mi>i</mi><mi>行</mi><mi>的</mi><mi>兩</mi><mi>個</mi><mi>格</mi><mi>子</mi><mi>是</mi><mi>依</mi><mi>序</mi><mi>是</mi><mi>「</mi><mi>黑</mi><mi>白</mi><mi>」</mi><mi>的</mi><mi>方</mi><mi>法</mi><mi>數</mi><mi>。</mi></mrow></msub><annotation encoding="application/x-tex">_{且第i行的兩個格子是依序是「黑白」的方法數。}</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mi>d</mi><mi>p</mi><mo stretchy="false" form="prefix">[</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo><mo stretchy="false" form="prefix">[</mo><mi>白</mi><mi>黑</mi><mo stretchy="false" form="postfix">]</mo><mo>:=</mo><mi>前</mi><mi>i</mi><mi>行</mi><mi>的</mi><mi>方</mi><mi>法</mi><mi>已</mi><mi>經</mi><mi>考</mi><mi>慮</mi><mi>完</mi><mi>，</mi></mrow></msub><annotation encoding="application/x-tex">_{dp[i][白黑] := 前i行的方法已經考慮完，}</annotation></semantics></math> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mi>且</mi><mi>第</mi><mi>i</mi><mi>行</mi><mi>的</mi><mi>兩</mi><mi>個</mi><mi>格</mi><mi>子</mi><mi>是</mi><mi>依</mi><mi>序</mi><mi>是</mi><mi>「</mi><mi>白</mi><mi>黑</mi><mi>」</mi><mi>的</mi><mi>方</mi><mi>法</mi><mi>數</mi><mi>。</mi></mrow></msub><annotation encoding="application/x-tex">_{且第i行的兩個格子是依序是「白黑」的方法數。}</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mi>d</mi><mi>p</mi><mo stretchy="false" form="prefix">[</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo><mo stretchy="false" form="prefix">[</mo><mi>白</mi><mi>白</mi><mo stretchy="false" form="postfix">]</mo><mo>:=</mo><mi>前</mi><mi>i</mi><mi>行</mi><mi>的</mi><mi>方</mi><mi>法</mi><mi>已</mi><mi>經</mi><mi>考</mi><mi>慮</mi><mi>完</mi><mi>，</mi></mrow></msub><annotation encoding="application/x-tex">_{dp[i][白白] := 前i行的方法已經考慮完，}</annotation></semantics></math> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mi>且</mi><mi>第</mi><mi>i</mi><mi>行</mi><mi>的</mi><mi>兩</mi><mi>個</mi><mi>格</mi><mi>子</mi><mi>是</mi><mi>依</mi><mi>序</mi><mi>是</mi><mi>「</mi><mi>白</mi><mi>白</mi><mi>」</mi><mi>的</mi><mi>方</mi><mi>法</mi><mi>數</mi><mi>。</mi></mrow></msub><annotation encoding="application/x-tex">_{且第i行的兩個格子是依序是「白白」的方法數。}</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mo>*</mo><mi>注</mi><mi>：</mi><mi>直</mi><mi>行</mi><mi>橫</mi><mi>列</mi></mrow></msub><annotation encoding="application/x-tex">_{*注：直行橫列}</annotation></semantics></math></p>
 </section>
 </section>
 <section>
@@ -318,7 +327,7 @@
 <h1>TIOJ 1908 大根蘿蔔</h1>
 
 </section>
-<section id="section-16" class="slide level2">
+<section id="section-15" class="slide level2">
 <h2></h2>
 <p>題意： 你有一個 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>*</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">N * N</annotation></semantics></math> 的矩陣， 每個格子都有價值。 你選一個格子後， 周圍九宮格的格子都不可以取。 問最大總價值。</p>
 <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>≤</mo><mn>22</mn><mo>,</mo><mi>T</mi><mi>L</mi><mo>:</mo><mn>4000</mn><mi>m</mi><mi>s</mi><mo>,</mo><mi>M</mi><mi>L</mi><mo>:</mo><mn>128</mn><mi>M</mi><mi>B</mi></mrow><annotation encoding="application/x-tex">N ≤ 22, TL: 4000 ms, ML: 128 MB</annotation></semantics></math></p>
@@ -327,29 +336,29 @@
 <h2>狀態</h2>
 <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>p</mi><mo stretchy="false" form="prefix">[</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo><mo stretchy="false" form="prefix">[</mo><mi>j</mi><mo stretchy="false" form="postfix">]</mo><mo>:=</mo><mi>已</mi><mi>考</mi><mi>慮</mi><mi>前</mi><mi>i</mi><mi>行</mi><mi>，</mi><mi>並</mi><mi>且</mi><mi>最</mi><mi>後</mi><mi>一</mi><mi>行</mi><mi>可</mi><mi>以</mi><mi>用</mi><mspace width="0.222em"></mspace><mi>j</mi><mspace width="0.222em"></mspace><mi>二</mi><mi>進</mi><mi>位</mi><mi>描</mi><mi>述</mi></mrow><annotation encoding="application/x-tex">dp[i][j] := 已考慮前 i 行，並且最後一行可以用\ j\ 二進位描述</annotation></semantics></math></p>
 </section>
-<section id="section-17" class="slide level2">
+<section id="section-16" class="slide level2">
 <h2></h2>
 <p>因為記憶體卡的有點緊， 我們要用「滾動陣列」技巧。</p>
 <p>注意到我們只在意前一行， 所以我們不需要特別開很大的記憶體 紀錄我們考慮了幾行。</p>
 </section>
-<section id="section-18" class="slide level2">
+<section id="section-17" class="slide level2">
 <h2></h2>
 <p>但是狀態數還是有 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false" form="prefix">(</mo><msup><mn>2</mn><mn>22</mn></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">O(2^{22})</annotation></semantics></math>。</p>
 </section>
-<section id="section-19" class="slide level2">
+<section id="section-18" class="slide level2">
 <h2></h2>
 <p>真的有那麼多狀態嗎?</p>
 </section>
-<section id="section-20" class="slide level2">
+<section id="section-19" class="slide level2">
 <h2></h2>
 <p>考慮一行，由左到右。 如果決定這格要拿，下次拿就是兩格後。 否則不拿，下一格開始可以拿。</p>
 </section>
-<section id="section-21" class="slide level2">
+<section id="section-20" class="slide level2">
 <h2></h2>
 <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>N</mi><mo stretchy="false" form="postfix">)</mo><mo>:=</mo><mi>N</mi><mi>個</mi><mi>元</mi><mi>素</mi><mi>一</mi><mi>排</mi><mi>，</mi><mi>合</mi><mi>法</mi><mi>的</mi><mi>取</mi><mi>法</mi><mi>數</mi><mi>量</mi></mrow><annotation encoding="application/x-tex">T(N) := N 個元素一排，合法的取法數量</annotation></semantics></math> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>N</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>N</mi><mo>−</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">= T(N - 1) + T(N - 2)</annotation></semantics></math> -&gt; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mn>22</mn><mo stretchy="false" form="postfix">)</mo><mo>&lt;</mo><mn>20000</mn></mrow><annotation encoding="application/x-tex">T(22) &lt; 20000</annotation></semantics></math></p>
 <p>實際上狀態很少嘛!</p>
 </section>
-<section id="section-22" class="slide level2">
+<section id="section-21" class="slide level2">
 <h2></h2>
 <p>所以我們一開始就可以進行預處理， 哪些行的狀態是可能的， 往後都只考慮這些狀態。</p>
 </section>
@@ -359,7 +368,7 @@
 <h1>數位統計 (延伸閱讀)</h1>
 
 </section>
-<section id="section-23" class="slide level2">
+<section id="section-22" class="slide level2">
 <h2></h2>
 <p>例題： 給你 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>，<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>L</mi><mo>≤</mo><mi>R</mi><mo>≤</mo><mn>1</mn><mi>e</mi><mn>18</mn></mrow><annotation encoding="application/x-tex">1 ≤ L ≤ R ≤ 1e18</annotation></semantics></math>， 問 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>L</mi><mo>,</mo><mi>R</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[L, R]</annotation></semantics></math> 中不含 “87” 的數字有多少個？</p>
 <p>如果可以計算 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mn>1</mn><mo>,</mo><mi>x</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[1, x]</annotation></semantics></math> 中含 “87” 的數字數量， 那 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>L</mi><mo>,</mo><mi>R</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[L, R]</annotation></semantics></math> 中含 “87” 的數字數量就可以被計算。</p>
@@ -379,7 +388,7 @@
 <h1>遺珠之憾</h1>
 
 </section>
-<section id="section-24" class="slide level2">
+<section id="section-23" class="slide level2">
 <h2></h2>
 <ol type="1">
 <li>斜率優化</li>

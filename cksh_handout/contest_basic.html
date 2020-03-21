@@ -170,9 +170,20 @@
 </section>
 <section id="if" class="slide level2">
 <h2>IF</h2>
-<p>形式 if(判斷條件){</p>
-<p>}</p>
-<p>特殊用法 if(判斷式&amp;&amp;k++) 短路結構</p>
+<p>形式</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="cf">if</span>(判斷條件){</span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a>}<span class="cf">else</span>{</span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a>}</span></code></pre></div>
+<p>若判斷事唯一行則可省大括弧</p>
+</section>
+<section id="特殊用法" class="slide level2">
+<h2>特殊用法</h2>
+<p>在c++中 任何成功執行的事情都會回傳true</p>
+<p>因為判斷事可以會按照先後順序</p>
+<p>因此可以寫出if(判斷式&amp;&amp;k++)的程式</p>
+<p>意思與if(判斷式)k++;相同</p>
 </section>
 </section>
 <section>
@@ -188,7 +199,30 @@
 <section id="while迴圈" class="slide level2">
 <h2>WHILE迴圈</h2>
 <p>形式 while(判斷條件)</p>
-<p>特殊用法while(cin&gt;&gt;n)</p>
+</section>
+<section id="n比輸入" class="slide level2">
+<h2>n比輸入</h2>
+<p>常常可以在題目上看到 「此題共有n比輸入」</p>
+<p>除了可以用for迴圈以外，也可以用底下的形式</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="dt">int</span> main(){</span>
+<span id="cb2-2"><a href="#cb2-2"></a>    <span class="dt">int</span> n;cin&gt;&gt;n;</span>
+<span id="cb2-3"><a href="#cb2-3"></a>    <span class="cf">while</span>(n--){</span>
+<span id="cb2-4"><a href="#cb2-4"></a>        <span class="co">//對於每筆資料你要做的事情</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>    }</span>
+<span id="cb2-6"><a href="#cb2-6"></a>}</span></code></pre></div>
+<p>省下一個變數名稱可以用</p>
+</section>
+<section id="多筆輸入" class="slide level2">
+<h2>多筆輸入</h2>
+<p>有也時候題目會不跟你說有多少比資料</p>
+<p>ex.zerojudge很常幹這種事</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1"></a><span class="dt">int</span> main(){</span>
+<span id="cb3-2"><a href="#cb3-2"></a>    <span class="dt">int</span> n;cin&gt;&gt;n;</span>
+<span id="cb3-3"><a href="#cb3-3"></a>    <span class="cf">while</span>(cin&gt;&gt;n){</span>
+<span id="cb3-4"><a href="#cb3-4"></a>        <span class="co">//對於每筆資料你要做的事情</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a>    }</span>
+<span id="cb3-6"><a href="#cb3-6"></a>}</span></code></pre></div>
+<p>如果是當n=0時結束 則改成while(cin&gt;&gt;n&amp;&amp;n)即可</p>
 </section>
 </section>
 <section>
@@ -199,13 +233,14 @@
 <section id="d" class="slide level2">
 <h2>1D</h2>
 <p>一維陣列</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="dt">int</span> arr[n];</span>
-<span id="cb1-2"><a href="#cb1-2"></a>array&lt;<span class="dt">int</span>,<span class="dv">2</span>(<span class="at">const</span>)&gt; arr;</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1"></a><span class="dt">int</span> arr[n];</span>
+<span id="cb4-2"><a href="#cb4-2"></a>array&lt;<span class="dt">int</span>,<span class="dv">2</span>(<span class="at">const</span>)&gt; arr;</span></code></pre></div>
 </section>
 <section id="d-1" class="slide level2">
 <h2>2D</h2>
 <p>二維陣列</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="dt">int</span> arr[n][n];</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb5-1"><a href="#cb5-1"></a><span class="dt">int</span> arr[n][n];</span></code></pre></div>
+<p>表格狀結構</p>
 </section>
 <section id="more" class="slide level2">
 <h2>MORE…</h2>
@@ -219,8 +254,78 @@
 </ul>
 </section>
 </section>
-<section id="可以打競賽了" class="title-slide slide level1">
-<h1>可以打競賽了!</h1>
+<section>
+<section id="函式" class="title-slide slide level1">
+<h1>函式</h1>
+
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<p>除了main以外 也可以自訂函式</p>
+<p>因為自訂函式內的變數是獨立的</p>
+<p>(即使相同名稱 也跟main中的是不同變數)</p>
+<p>因此可以完成讓程式碼更容易debug</p>
+<p>另外也可以遞迴喔</p>
+</section>
+<section id="結構" class="slide level2">
+<h2>結構</h2>
+<p>回傳的資料型態 函式名稱(傳入資料型態 變數名稱){</p>
+<pre><code>你要做的事情
+
+return 上面規定的資料型態;</code></pre>
+<p>}</p>
+</section>
+<section id="範例" class="slide level2">
+<h2>範例</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb7-1"><a href="#cb7-1"></a><span class="dt">int</span> add(<span class="dt">int</span> a,<span class="dt">int</span> b){</span>
+<span id="cb7-2"><a href="#cb7-2"></a>    <span class="dt">int</span> re=a+b;</span>
+<span id="cb7-3"><a href="#cb7-3"></a>    <span class="cf">return</span> re;</span>
+<span id="cb7-4"><a href="#cb7-4"></a>}</span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="dt">int</span> main(){</span>
+<span id="cb7-6"><a href="#cb7-6"></a>    <span class="dt">int</span> x,y;cin&gt;&gt;x&gt;&gt;y;</span>
+<span id="cb7-7"><a href="#cb7-7"></a>    cout&lt;&lt;add(x,y)&lt;&lt;endl;</span>
+<span id="cb7-8"><a href="#cb7-8"></a>}</span></code></pre></div>
+<p><em>下頁有講解</em></p>
+</section>
+<section id="講解" class="slide level2">
+<h2>講解(?)</h2>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mi>可</mi><mi>以</mi><mi>注</mi><mi>意</mi><mi>到</mi><mi>m</mi><mi>a</mi><mi>i</mi><mi>n</mi><mi>函</mi><mi>式</mi><mi>傳</mi><mi>出</mi><mi>是</mi><mi>變</mi><mi>數</mi><mi>x</mi><mo>,</mo><mi>y</mi><mi>，</mi><mi>但</mi><mi>a</mi><mi>d</mi><mi>d</mi><mi>是</mi><mi>用</mi><mi>a</mi><mo>,</mo><mi>b</mi><mi>代</mi><mi>替</mi></mrow></msub><annotation encoding="application/x-tex">_{可以注意到main函式傳出是變數x,y，但add是用a,b代替}</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mi>可</mi><mi>以</mi><mi>想</mi><mi>像</mi><mi>為</mi><mi>在</mi><mi>m</mi><mi>a</mi><mi>i</mi><mi>n</mi><mi>中</mi><mi>x</mi><mo>,</mo><mi>y</mi><mi>只</mi><mi>是</mi><mi>兩</mi><mi>個</mi><mi>數</mi><mi>字</mi><mi>a</mi><mi>d</mi><mi>d</mi><mi>函</mi><mi>式</mi><mi>稱</mi><mi>那</mi><mi>兩</mi><mi>個</mi><mi>數</mi><mi>字</mi><mi>為</mi><mi>a</mi><mo>,</mo><mi>b</mi></mrow></msub><annotation encoding="application/x-tex">_{可以想像為在main中x,y只是兩個數字 add函式稱那兩個數字為a,b}</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mi>因</mi><mi>此</mi><mi>就</mi><mi>算</mi><mi>在</mi><mi>a</mi><mi>d</mi><mi>d</mi><mi>中</mi><mi>加</mi><mi>入</mi><mi>a</mi><mo>=</mo><mn>4</mn><mi>，</mi><mi>也</mi><mi>不</mi><mi>會</mi><mi>讓</mi><mi>m</mi><mi>a</mi><mi>i</mi><mi>n</mi><mi>中</mi><mi>的</mi><mi>x</mi><mi>或</mi><mi>y</mi><mi>改</mi><mi>變</mi></mrow></msub><annotation encoding="application/x-tex">_{因此就算在add中 加入a=4，也不會讓main中的x或y改變}</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mi>為</mi><mi>了</mi><mi>提</mi><mi>昇</mi><mi>可</mi><mi>讀</mi><mi>性</mi><mi>建</mi><mi>議</mi><mi>盡</mi><mi>量</mi><mi>讓</mi><mi>傳</mi><mi>出</mi><mi>跟</mi><mi>傳</mi><mi>入</mi><mi>想</mi><mi>同</mi><mi>名</mi><mi>字</mi></mrow></msub><annotation encoding="application/x-tex">_{為了提昇可讀性 建議盡量讓傳出跟傳入想同名字}</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mi>除</mi><mi>非</mi><mi>是</mi><mi>在</mi><mi>f</mi><mi>o</mi><mi>r</mi><mi>迴</mi><mi>圈</mi><mi>中</mi><mi>傳</mi><mi>出</mi><mi>i</mi><mo>,</mo><mi>j</mi><mi>等</mi><mi>迴</mi><mi>圈</mi><mi>條</mi><mi>件</mi></mrow></msub><annotation encoding="application/x-tex">_{除非是在for迴圈中傳出i,j等迴圈條件}</annotation></semantics></math></p>
+</section>
+<section id="遞迴" class="slide level2">
+<h2>遞迴</h2>
+<p>在函式中再次呼叫函式稱為遞迴</p>
+<p>在實做遞迴時 需要格外小心中止條件</p>
+<p>以免發生stack overflow停不下來</p>
+</section>
+<section id="遞迴範例" class="slide level2">
+<h2>遞迴範例</h2>
+<p>回傳k!</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb8-1"><a href="#cb8-1"></a><span class="dt">int</span> muti(<span class="dt">int</span> a){</span>
+<span id="cb8-2"><a href="#cb8-2"></a>    <span class="cf">if</span>(a==<span class="dv">1</span>) <span class="cf">return</span> <span class="dv">1</span>;</span>
+<span id="cb8-3"><a href="#cb8-3"></a>    <span class="cf">else</span> <span class="cf">return</span> a*muti(a-<span class="dv">1</span>);</span>
+<span id="cb8-4"><a href="#cb8-4"></a>}</span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="dt">int</span> main{</span>
+<span id="cb8-6"><a href="#cb8-6"></a>    <span class="dt">int</span> a;cin&gt;&gt;a;</span>
+<span id="cb8-7"><a href="#cb8-7"></a>    <span class="dt">int</span> answer=muti(a);</span>
+<span id="cb8-8"><a href="#cb8-8"></a>    cout&lt;&lt;answer&lt;&lt;endl;</span>
+<span id="cb8-9"><a href="#cb8-9"></a>}</span></code></pre></div>
+<p><em>下頁有講解</em></p>
+</section>
+<section id="講解-1" class="slide level2">
+<h2>講解(?)</h2>
+<p>在muti函式中我不斷讓a*muti(a-1)</p>
+<p>所以會不斷的進到新的muti函式-&gt;muti(a-1)</p>
+<p>直到a=1 因為muti(1)計算完了</p>
+<p>因此muti(2)拿到muti(1)的答案而計算2*1結束</p>
+<p>最終往上完成muti(a)的遞迴計算，回傳a!到main</p>
+</section>
+</section>
+<section id="可以寫題目了" class="title-slide slide level1">
+<h1>可以寫題目了!</h1>
 
 </section>
     </div>
