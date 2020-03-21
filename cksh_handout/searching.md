@@ -18,7 +18,7 @@ date: 2020 未知
 int arr[n];
 rep(i,n){
     if(arr[i]==A)
-        cout<<"i"<<endl;
+        cout<<"i"<<endl;//按照順序找到a
 }
 ```
 
@@ -40,15 +40,16 @@ if >A 答案在(中間,最後]
 
 ## CODE
 ```cpp
-int l=0,r=n;
+int l=0,r=n;//下界是0,上界是最大
+//另外
 while(l<r-1){
-    int mid=(r+l)/2;
-    if(arr[mid]==A){
+    int mid=(r+l)/2;//mid是中間
+    if(arr[mid]==A){//中間＝要找到的->輸出
         cout<<mid<<endl;
     }else if(arr[mid]>A){
-        r=mid;
+        r=mid;//中間的數字比較大 所以我們把上界改成中間
     }else{
-        l=mid;
+        l=mid;//中間數字小 所以我們把下界提昇
     }
 }
 ```

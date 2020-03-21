@@ -124,7 +124,7 @@
 <div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="dt">int</span> arr[n];</span>
 <span id="cb1-2"><a href="#cb1-2"></a>rep(i,n){</span>
 <span id="cb1-3"><a href="#cb1-3"></a>    <span class="cf">if</span>(arr[i]==A)</span>
-<span id="cb1-4"><a href="#cb1-4"></a>        cout&lt;&lt;<span class="st">&quot;i&quot;</span>&lt;&lt;endl;</span>
+<span id="cb1-4"><a href="#cb1-4"></a>        cout&lt;&lt;<span class="st">&quot;i&quot;</span>&lt;&lt;endl;<span class="co">//按照順序找到a</span></span>
 <span id="cb1-5"><a href="#cb1-5"></a>}</span></code></pre></div>
 </section>
 <section id="on" class="slide level2">
@@ -150,17 +150,18 @@
 </section>
 <section id="code-1" class="slide level2">
 <h2>CODE</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="dt">int</span> l=<span class="dv">0</span>,r=n;</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="cf">while</span>(l&lt;r-<span class="dv">1</span>){</span>
-<span id="cb2-3"><a href="#cb2-3"></a>    <span class="dt">int</span> mid=(r+l)/<span class="dv">2</span>;</span>
-<span id="cb2-4"><a href="#cb2-4"></a>    <span class="cf">if</span>(arr[mid]==A){</span>
-<span id="cb2-5"><a href="#cb2-5"></a>        cout&lt;&lt;mid&lt;&lt;endl;</span>
-<span id="cb2-6"><a href="#cb2-6"></a>    }<span class="cf">else</span> <span class="cf">if</span>(arr[mid]&gt;A){</span>
-<span id="cb2-7"><a href="#cb2-7"></a>        r=mid;</span>
-<span id="cb2-8"><a href="#cb2-8"></a>    }<span class="cf">else</span>{</span>
-<span id="cb2-9"><a href="#cb2-9"></a>        l=mid;</span>
-<span id="cb2-10"><a href="#cb2-10"></a>    }</span>
-<span id="cb2-11"><a href="#cb2-11"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="dt">int</span> l=<span class="dv">0</span>,r=n;<span class="co">//下界是0,上界是最大</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="co">//另外</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="cf">while</span>(l&lt;r-<span class="dv">1</span>){</span>
+<span id="cb2-4"><a href="#cb2-4"></a>    <span class="dt">int</span> mid=(r+l)/<span class="dv">2</span>;<span class="co">//mid是中間</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>    <span class="cf">if</span>(arr[mid]==A){<span class="co">//中間＝要找到的-&gt;輸出</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>        cout&lt;&lt;mid&lt;&lt;endl;</span>
+<span id="cb2-7"><a href="#cb2-7"></a>    }<span class="cf">else</span> <span class="cf">if</span>(arr[mid]&gt;A){</span>
+<span id="cb2-8"><a href="#cb2-8"></a>        r=mid;<span class="co">//中間的數字比較大 所以我們把上界改成中間</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>    }<span class="cf">else</span>{</span>
+<span id="cb2-10"><a href="#cb2-10"></a>        l=mid;<span class="co">//中間數字小 所以我們把下界提昇</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a>    }</span>
+<span id="cb2-12"><a href="#cb2-12"></a>}</span></code></pre></div>
 </section>
 <section id="olog-n" class="slide level2">
 <h2>O(log N)</h2>

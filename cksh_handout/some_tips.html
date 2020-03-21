@@ -186,23 +186,23 @@
 <section id="define" class="slide level2">
 <h2>define</h2>
 <div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb7-1"><a href="#cb7-1"></a><span class="pp">#define IOS </span>ios_base::sync_with_stdio(<span class="dv">0</span>);<span class="pp"> </span>cin.tie(<span class="dv">0</span>)</span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="pp">#define endl </span><span class="ch">&#39;</span><span class="sc">\n</span><span class="ch">&#39;</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a><span class="pp">#define all</span>(a)<span class="pp"> </span>a.begin(),a.end()</span>
-<span id="cb7-4"><a href="#cb7-4"></a><span class="pp">#define sz</span>(a)<span class="pp"> </span>((<span class="dt">int</span>)a.size())</span>
-<span id="cb7-5"><a href="#cb7-5"></a><span class="pp">#define F </span>first</span>
-<span id="cb7-6"><a href="#cb7-6"></a><span class="pp">#define S </span>second</span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="pp">#define endl </span><span class="ch">&#39;</span><span class="sc">\n</span><span class="ch">&#39;</span><span class="co">//這兩行為輸入輸出優話</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="pp">#define all</span>(a)<span class="pp"> </span>a.begin(),a.end()<span class="co">//回傳資料結構的開頭跟結尾</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="pp">#define sz</span>(a)<span class="pp"> </span>((<span class="dt">int</span>)a.size())<span class="co">//回傳資料結構的大小</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="pp">#define F </span>first<span class="co">//給pair用</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a><span class="pp">#define S </span>second<span class="co">//給pair用</span></span>
 <span id="cb7-7"><a href="#cb7-7"></a><span class="pp">#define rep</span>(i,n)<span class="pp"> </span><span class="cf">for</span>(<span class="dt">int</span><span class="pp"> </span>i=<span class="dv">0</span>;i&lt;(<span class="dt">int</span>)n;i++)</span>
 <span id="cb7-8"><a href="#cb7-8"></a><span class="pp">#define rep1</span>(i,n)<span class="pp"> </span><span class="cf">for</span>(<span class="dt">int</span><span class="pp"> </span>i=<span class="dv">1</span>;i&lt;(<span class="dt">int</span>)n;i++)</span>
-<span id="cb7-9"><a href="#cb7-9"></a><span class="pp">#define pb </span>push_back</span>
-<span id="cb7-10"><a href="#cb7-10"></a><span class="pp">#define eb </span>emplace_back</span>
-<span id="cb7-11"><a href="#cb7-11"></a><span class="pp">#define mp</span>(a,b)<span class="pp"> </span>make_pair(a,b)</span>
+<span id="cb7-9"><a href="#cb7-9"></a><span class="pp">#define pb </span>push_back<span class="co">//給vector用</span></span>
+<span id="cb7-10"><a href="#cb7-10"></a><span class="pp">#define eb </span>emplace_back<span class="co">//給vector用</span></span>
+<span id="cb7-11"><a href="#cb7-11"></a><span class="pp">#define mp</span>(a,b)<span class="pp"> </span>make_pair(a,b)<span class="co">//給vector用 暫不用到</span></span>
 <span id="cb7-12"><a href="#cb7-12"></a><span class="pp">#define cans </span>cout&lt;&lt;ans&lt;&lt;endl</span>
-<span id="cb7-13"><a href="#cb7-13"></a><span class="pp">#define in </span>cout&lt;&lt;<span class="st">&quot;in lar&quot;</span>&lt;&lt;endl</span>
+<span id="cb7-13"><a href="#cb7-13"></a><span class="pp">#define in </span>cout&lt;&lt;<span class="st">&quot;in lar&quot;</span>&lt;&lt;endl<span class="pp"> </span><span class="co">//debug方便</span></span>
 <span id="cb7-14"><a href="#cb7-14"></a><span class="pp">#define GET_POS</span>(c,x)<span class="pp"> </span>(lower_bound(c.begin(),c.end(),x)-c.begin())</span></code></pre></div>
 </section>
 <section id="usingconst" class="slide level2">
 <h2>using/const</h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">using</span> ll = <span class="dt">long</span> <span class="dt">long</span>;</span>
+<div class="sourceCode" id="cb8"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">using</span> ll = <span class="dt">long</span> <span class="dt">long</span>;<span class="co">//省下打long long時間</span></span>
 <span id="cb8-2"><a href="#cb8-2"></a><span class="kw">using</span> pii = pair&lt;<span class="dt">int</span>,<span class="dt">int</span>&gt;;</span>
 <span id="cb8-3"><a href="#cb8-3"></a><span class="kw">using</span> ld = <span class="dt">long</span> <span class="dt">double</span>;</span>
 <span id="cb8-4"><a href="#cb8-4"></a></span>
@@ -215,6 +215,18 @@
 <span id="cb9-2"><a href="#cb9-2"></a><span class="dt">int32_t</span> main(){</span>
 <span id="cb9-3"><a href="#cb9-3"></a>    <span class="cf">return</span> <span class="dv">0</span>;</span>
 <span id="cb9-4"><a href="#cb9-4"></a>}</span></code></pre></div>
+</section>
+<section id="講義公約" class="slide level2">
+<h2>講義公約(?</h2>
+<p>為了方便 預設有以下範例</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb10-1"><a href="#cb10-1"></a><span class="pp">#define rep</span>(i,n)<span class="pp"> </span><span class="cf">for</span>(<span class="dt">int</span><span class="pp"> </span>i=<span class="dv">0</span>;i&lt;(<span class="dt">int</span>)n;i++)</span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="co">//for迴圈 變數i從0到n </span></span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="pp">#define sz</span>(a)<span class="pp"> </span>((<span class="dt">int</span>)a.size())</span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="co">//回傳資料結構a的大小</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a><span class="pp">#define all</span>(a)<span class="pp"> </span>a.begin(),a.end()</span>
+<span id="cb10-6"><a href="#cb10-6"></a><span class="co">//資料結構a 的頭尾</span></span>
+<span id="cb10-7"><a href="#cb10-7"></a><span class="kw">using</span> pii = pair&lt;<span class="dt">int</span>,<span class="dt">int</span>&gt;;</span>
+<span id="cb10-8"><a href="#cb10-8"></a><span class="kw">using</span> ll = <span class="dt">long</span> <span class="dt">long</span>;</span></code></pre></div>
 </section>
 </section>
 <section>
@@ -241,8 +253,9 @@
 <h2>CODE</h2>
 <p>為了修改陣列大小方便</p>
 <p>會用const int</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb10-1"><a href="#cb10-1"></a><span class="at">const</span> <span class="dt">int</span> maxn= xxx;</span>
-<span id="cb10-2"><a href="#cb10-2"></a><span class="dt">int</span> arr[maxn],cnt[maxn],ans[maxn];</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb11-1"><a href="#cb11-1"></a><span class="at">const</span> <span class="dt">int</span> maxn= <span class="fl">1e5</span>+<span class="dv">5</span>;</span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="dt">int</span> arr[maxn],cnt[maxn],ans[maxn];</span></code></pre></div>
+<p>同樣的 之後也會預設maxn是資料最大值</p>
 </section>
 </section>
 <section>

@@ -116,7 +116,9 @@
 </section>
 <section id="優點" class="slide level2">
 <h2>優點</h2>
-<p>一次紀錄兩個東西 就是爽阿 可記錄x,y座標等等 <em>sort函式處理方便</em></p>
+<p>一次紀錄兩個東西 就是爽阿</p>
+<p>可記錄x,y座標等等</p>
+<p><em>sort函式處理方便</em></p>
 </section>
 <section id="題目" class="slide level2">
 <h2>題目</h2>
@@ -143,21 +145,34 @@
 <span id="cb3-2"><a href="#cb3-2"></a>rep(i,n){</span>
 <span id="cb3-3"><a href="#cb3-3"></a>    <span class="dt">int</span> a;cin&gt;&gt;a;</span>
 <span id="cb3-4"><a href="#cb3-4"></a>    vec.push_back(a);</span>
-<span id="cb3-5"><a href="#cb3-5"></a></span>
-<span id="cb3-6"><a href="#cb3-6"></a>}</span></code></pre></div>
+<span id="cb3-5"><a href="#cb3-5"></a>    <span class="co">//將a個數字放入vec中</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a>    cout&lt;&lt;vec[<span class="dv">0</span>]&lt;&lt;endl;</span>
+<span id="cb3-7"><a href="#cb3-7"></a>}</span></code></pre></div>
+<p>會輸出 剛剛輸入的a</p>
 </section>
 <section id="輸出" class="slide level2">
 <h2>輸出</h2>
 <p>跟陣列一樣使用 vec[5];</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1"></a>vector&lt;<span class="dt">int</span>&gt; vec;</span>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1"></a>vector&lt;<span class="dt">int</span>&gt; vec;<span class="co">//宣告</span></span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="cf">for</span>(<span class="dt">int</span> x:vec){</span>
-<span id="cb4-3"><a href="#cb4-3"></a>    cout&lt;&lt;x&lt;&lt;<span class="ch">&#39; &#39;</span>;</span>
-<span id="cb4-4"><a href="#cb4-4"></a>}</span>
-<span id="cb4-5"><a href="#cb4-5"></a>cout&lt;&lt;endl;</span></code></pre></div>
+<span id="cb4-3"><a href="#cb4-3"></a>    <span class="co">//一個變數x 他會按照順序等於vec內的數字</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a>    cout&lt;&lt;x&lt;&lt;<span class="ch">&#39; &#39;</span>;輸出x</span>
+<span id="cb4-5"><a href="#cb4-5"></a>}</span>
+<span id="cb4-6"><a href="#cb4-6"></a>cout&lt;&lt;endl;</span></code></pre></div>
+<p>輸出結果：按照順輸出vec裡面的元素</p>
 </section>
 <section id="其他功能" class="slide level2">
 <h2>其他功能</h2>
-<p>常見的: 1. vec.begin() 開頭元素 2. vec.end() 末端元素 3. vec.push_back(Α) 在尾端新增Α這個數 3. vec.emplace_back(Α) 在尾端新增Α這個數(較快) 4. vec.size() 查大小 5. vec.push_back(mack_pair(a,b)) 6. <a href="https://www.google.com/">更多</a></p>
+<p>常見的:</p>
+<ul>
+<li>vec.begin() 開頭元素</li>
+<li>vec.end() 末端元素</li>
+<li>vec.push_back(Α) 在尾端新增Α這個數</li>
+<li>vec.emplace_back(Α) 在尾端新增Α這個數(較快)</li>
+<li>vec.size() 查大小</li>
+<li>vec.push_back(mack_pair(a,b))</li>
+<li><a href="https://www.google.com/">更多</a></li>
+</ul>
 </section>
 <section id="優點-1" class="slide level2">
 <h2>優點</h2>
@@ -178,29 +193,36 @@
 <section id="宣告-2" class="slide level2">
 <h2>宣告</h2>
 <p>stack<型態> 資料名稱;</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb5-1"><a href="#cb5-1"></a>stack&lt;<span class="dt">int</span>&gt; st;</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb5-1"><a href="#cb5-1"></a>stack&lt;<span class="dt">int</span>&gt; st;<span class="co">//宣告放盤子的空間 名稱為st</span></span></code></pre></div>
 </section>
 <section id="輸入-1" class="slide level2">
 <h2>輸入</h2>
 <div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb6-1"><a href="#cb6-1"></a>stack&lt;<span class="dt">int</span>&gt; st;</span>
 <span id="cb6-2"><a href="#cb6-2"></a>rep(i,n){</span>
 <span id="cb6-3"><a href="#cb6-3"></a>    <span class="dt">int</span> a;cin&gt;&gt;a;</span>
-<span id="cb6-4"><a href="#cb6-4"></a>    st.push(a);   </span>
+<span id="cb6-4"><a href="#cb6-4"></a>    st.push(a);<span class="co">//將數字a放入這碟盤子最上層</span></span>
 <span id="cb6-5"><a href="#cb6-5"></a>}</span></code></pre></div>
 </section>
 <section id="輸出-1" class="slide level2">
 <h2>輸出</h2>
 <div class="sourceCode" id="cb7"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb7-1"><a href="#cb7-1"></a>stack&lt;<span class="dt">int</span>&gt; st;</span>
 <span id="cb7-2"><a href="#cb7-2"></a>rep(i,n){</span>
-<span id="cb7-3"><a href="#cb7-3"></a>    <span class="dt">int</span> r=st.top();</span>
-<span id="cb7-4"><a href="#cb7-4"></a>    st.pop();</span>
+<span id="cb7-3"><a href="#cb7-3"></a>    <span class="dt">int</span> r=st.top();<span class="co">//r=這碟盤子最上面的數字</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>    st.pop();<span class="co">//從這碟盤子最上面拿掉一個盤子</span></span>
 <span id="cb7-5"><a href="#cb7-5"></a>    cout&lt;&lt;r&lt;&lt;<span class="ch">&#39; &#39;</span>;    </span>
 <span id="cb7-6"><a href="#cb7-6"></a>}</span>
 <span id="cb7-7"><a href="#cb7-7"></a>cout&lt;&lt;endl;</span></code></pre></div>
 </section>
 <section id="其他功能-1" class="slide level2">
 <h2>其他功能</h2>
-<p>常見的: 1. st.push(A) 在上面加上數字A 2. st.pop() 移除最上面數字 3. st.top() 回傳最上面的數字 4. st.size() 查大小 5. <a href="https://www.google.com/">更多</a></p>
+<p>常見的:</p>
+<ol type="1">
+<li>st.push(A) 在上面加上數字A</li>
+<li>st.pop() 移除最上面數字</li>
+<li>st.top() 回傳最上面的數字</li>
+<li>st.size() 查大小</li>
+<li><a href="https://www.google.com/">更多</a></li>
+</ol>
 </section>
 <section id="題目-1" class="slide level2">
 <h2>題目</h2>
@@ -242,7 +264,14 @@
 </section>
 <section id="其他功能-2" class="slide level2">
 <h2>其他功能</h2>
-<p>常見的: 1. qu.push(A) 在後面加上數字A 2. qu.pop() 移除最前面數字 3. qu.front() 回傳最前面的數字 4. qu.size() 查大小 5. <a href="https://www.google.com/">更多</a></p>
+<p>常見的:</p>
+<ol type="1">
+<li>qu.push(A) 在後面加上數字A</li>
+<li>qu.pop() 移除最前面數字</li>
+<li>qu.front() 回傳最前面的數字</li>
+<li>qu.size() 查大小</li>
+<li><a href="https://www.google.com/">更多</a></li>
+</ol>
 </section>
 <section id="題目-2" class="slide level2">
 <h2>題目</h2>
@@ -261,8 +290,8 @@
 <section id="宣告-4" class="slide level2">
 <h2>宣告</h2>
 <p>string 名稱;</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb11-1"><a href="#cb11-1"></a>string str;</span>
-<span id="cb11-2"><a href="#cb11-2"></a>string str[<span class="dv">10</span>];</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb11-1"><a href="#cb11-1"></a>string str;<span class="co">//宣告存放字串的結構</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a>string str[<span class="dv">10</span>];<span class="co">//宣告多個</span></span></code></pre></div>
 </section>
 <section id="輸入-3" class="slide level2">
 <h2>輸入</h2>
@@ -276,15 +305,18 @@
 <span id="cb13-2"><a href="#cb13-2"></a>cout&lt;&lt;str&lt;&lt;endl;</span>
 <span id="cb13-3"><a href="#cb13-3"></a><span class="co">//cout 指定位置</span></span>
 <span id="cb13-4"><a href="#cb13-4"></a>cout&lt;&lt;str[a]&lt;&lt;endl;</span></code></pre></div>
+<p>假設str=“hello-world”</p>
+<p>cout&lt;&lt;str[4]&lt;&lt;endl;</p>
+<p>結果為o</p>
 </section>
 <section id="其他功能-3" class="slide level2">
 <h2>其他功能</h2>
 <div class="sourceCode" id="cb14"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb14-1"><a href="#cb14-1"></a>str.size() 輸出大小</span>
-<span id="cb14-2"><a href="#cb14-2"></a>str1+str2 字串相加</span></code></pre></div>
-</section>
-<section id="優點-2" class="slide level2">
-<h2>優點</h2>
-<p>不用多開未知大小的char陣列 可以字串相加</p>
+<span id="cb14-2"><a href="#cb14-2"></a>str3=str1+str2 字串相加</span></code></pre></div>
+<p>str1=“fd”,str2“dc”</p>
+<p>str3=“fddc” ## 優點</p>
+<p>不用多開未知大小的char陣列</p>
+<p>可以字串相加</p>
 </section>
 </section>
 <section>
@@ -311,7 +343,8 @@
 </section>
 <section id="介紹" class="slide level2">
 <h2>介紹</h2>
-<p>不重覆元素集合 按照大小排序</p>
+<p>不重覆元素集合</p>
+<p>按照大小排序</p>
 </section>
 <section id="宣告-6" class="slide level2">
 <h2>宣告</h2>
@@ -337,7 +370,8 @@
 </section>
 <section id="遺珠之憾" class="slide level2">
 <h2>遺珠之憾</h2>
-<p>另外還priority_queue以及deque(ㄉㄟˋㄎㄜˇ) <a href="https://www.google.com/">Google</a></p>
+<p>另外還priority_queue以及deque(ㄉㄟˋㄎㄜˇ)</p>
+<p><a href="https://www.google.com/">Google</a></p>
 </section>
 <section id="qa" class="slide level2">
 <h2><strong>Q&amp;A</strong></h2>

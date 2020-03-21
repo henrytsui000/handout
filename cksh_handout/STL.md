@@ -17,7 +17,9 @@ cout<<p.first<<' '<<p.second<<endl;
 ## 優點
 
 一次紀錄兩個東西 就是爽阿
+
 可記錄x,y座標等等
+
 *sort函式處理方便*
 
 ## 題目
@@ -44,32 +46,37 @@ vector<int> vec;
 rep(i,n){
     int a;cin>>a;
     vec.push_back(a);
-
+    //將a個數字放入vec中
+    cout<<vec[0]<<endl;
 }
 ```
+會輸出 剛剛輸入的a
+
 
 ## 輸出
 
 跟陣列一樣使用 vec[5];
 ```cpp
-vector<int> vec;
+vector<int> vec;//宣告
 for(int x:vec){
-    cout<<x<<' ';
+    //一個變數x 他會按照順序等於vec內的數字
+    cout<<x<<' ';輸出x
 }
 cout<<endl;
-
 ```
+輸出結果：按照順輸出vec裡面的元素
 
 ## 其他功能
 
 常見的:
-1. vec.begin() 開頭元素
-2. vec.end() 末端元素
-3. vec.push_back(Α) 在尾端新增Α這個數
-3. vec.emplace_back(Α) 在尾端新增Α這個數(較快)
-4. vec.size() 查大小
-5. vec.push_back(mack_pair(a,b))
-6. [更多](https://www.google.com/)
+
+* vec.begin() 開頭元素
+* vec.end() 末端元素
+* vec.push_back(Α) 在尾端新增Α這個數
+* vec.emplace_back(Α) 在尾端新增Α這個數(較快)
+* vec.size() 查大小
+* vec.push_back(mack_pair(a,b))
+* [更多](https://www.google.com/)
 
 ## 優點
 
@@ -85,7 +92,7 @@ cout<<endl;
 
 stack<型態> 資料名稱;
 ```cpp
-stack<int> st;
+stack<int> st;//宣告放盤子的空間 名稱為st
 ```
 
 ## 輸入
@@ -94,7 +101,7 @@ stack<int> st;
 stack<int> st;
 rep(i,n){
     int a;cin>>a;
-    st.push(a);   
+    st.push(a);//將數字a放入這碟盤子最上層
 }
 ```
 
@@ -103,8 +110,8 @@ rep(i,n){
 ```cpp
 stack<int> st;
 rep(i,n){
-    int r=st.top();
-    st.pop();
+    int r=st.top();//r=這碟盤子最上面的數字
+    st.pop();//從這碟盤子最上面拿掉一個盤子
     cout<<r<<' ';    
 }
 cout<<endl;
@@ -113,6 +120,7 @@ cout<<endl;
 ## 其他功能
 
 常見的:
+
 1. st.push(A) 在上面加上數字A
 2. st.pop() 移除最上面數字
 3. st.top() 回傳最上面的數字
@@ -165,6 +173,7 @@ cout<<endl;
 ## 其他功能
 
 常見的:
+
 1. qu.push(A) 在後面加上數字A
 2. qu.pop() 移除最前面數字
 3. qu.front() 回傳最前面的數字
@@ -186,8 +195,8 @@ cout<<endl;
 
 string 名稱;
 ```cpp
-string str;
-string str[10];
+string str;//宣告存放字串的結構
+string str[10];//宣告多個
 ```
 
 ## 輸入
@@ -207,16 +216,25 @@ cout<<str<<endl;
 cout<<str[a]<<endl;
 ```
 
+假設str="hello-world"
+
+cout<<str[4]<<endl;
+
+結果為o
+
 ## 其他功能
 
 ```cpp
 str.size() 輸出大小
-str1+str2 字串相加
+str3=str1+str2 字串相加
 ```
+str1="fd",str2"dc"
 
+str3="fddc"
 ## 優點
 
 不用多開未知大小的char陣列
+
 可以字串相加
 
 # map
@@ -239,6 +257,7 @@ m["hihi"]=2;
 ## 介紹
 
 不重覆元素集合
+
 按照大小排序
 
 ## 宣告
@@ -268,6 +287,7 @@ s.size() 查詢大小
 ## 遺珠之憾
 
 另外還priority_queue以及deque(ㄉㄟˋㄎㄜˇ)
+
 [Google](https://www.google.com/)
 
 ## **Q&A**

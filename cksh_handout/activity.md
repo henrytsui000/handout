@@ -49,7 +49,6 @@ title: 競賽活動
 * 免費食物+衣服
 * 免報名費
 
-
 ## ISSC國際學生程式設計賽
 * 8月比賽
 * 三人一隊 可跨校
@@ -99,3 +98,12 @@ title: 競賽活動
 * 課程困難
 * 高中大學2:1
 * 會送衣服
+
+# 網站/資源
+
+## 講義
+* TIOJ上有建中校內培訓的講義
+* [演算法筆記](http://www2.csie.ntnu.edu.tw/~u91029/?fbclid=IwAR1aARuU9JNJ2oWWsK6IFedlf7tE4IVsAqwCrqEDtE1jZXZRI5zQZTM6ays)
+* 營隊所附的講義
+* 資訊之芽講義
+* [大神整理的](https://github.com/goodjack/awesome-cs-training?fbclid=IwAR0MwWAP-puska7E_hlMRvfpoIF0349NmeGjLY5pNU9BrIu9KVnbCcrvlmU)

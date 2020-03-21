@@ -26,7 +26,7 @@ date: 2020 未知
 
 ## 
 
-可以發現若low[u]>deep[u]
+可以發現若low[u]>=deep[u]
 
 則u以及他的子孫為BCC
 
@@ -35,9 +35,25 @@ date: 2020 未知
 ## 
 
 ```c++
+const int maxn = 1e5+5;
+int deep[maxn],low[maxn];
 void dfs(int a,int pa){
-
-    
+    low[a]=deep[a]=deep[pa]+1;
+    for(int x:edge[a])if(x!=pa){
+        if(low[x])
+            low[a]=min(deep[x],low[a]);
+        else
+            dfs(x,a);
+        low[pa]=min(low[a],low[pa]);
+    } 
+    if(low[a]>=deep[pa]&&a!=0)
+        cout<<"find:"<<pa<<' '<<a<<endl;
 }
-
 ```
+
+# 題目 Q&A
+
+## 題目
+- [ZJ-e270](https://zerojudge.tw/ShowProblem?problemid=e720)
+
+## Q&A

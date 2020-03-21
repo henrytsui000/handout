@@ -105,7 +105,7 @@ x&(-x)會得到x+該數值可到達最近的維護位置
 因此從位置c開始一路修改到邊界即可
 
 ```c++
-void chg(int c,int val){
+void add(int c,int val){
     for(;c<=N;c+=lowbit(c))
         bit[c]+=val;
 }
@@ -163,6 +163,20 @@ rep(i,sz(vec))
 2. 同時開一個陣列K 紀錄離散化後的數字是否出現
 3. 遇到每一個數字只需要查看在K中 該數字的位置之前的合數字
 4. 可以BIT查詢數字!
+
+## CODE
+
+關鍵程式碼
+
+```c++
+int ans=0;
+for(int i=n-1;i>=0;i--){
+    ans+=qry(vec[i]-1);
+    //-1是因為不能算到等於自己的數字
+    add(vec[i]);
+}
+cout<<ans<<endl;
+```
 
 ## 時間複雜度
 

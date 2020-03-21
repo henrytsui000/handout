@@ -89,25 +89,25 @@ for(int i=0;i<n;i++)等價於rep(i,n)
 
 ```cpp
 #define IOS ios_base::sync_with_stdio(0); cin.tie(0)
-#define endl '\n'
-#define all(a) a.begin(),a.end()
-#define sz(a) ((int)a.size())
-#define F first
-#define S second
+#define endl '\n'//這兩行為輸入輸出優話
+#define all(a) a.begin(),a.end()//回傳資料結構的開頭跟結尾
+#define sz(a) ((int)a.size())//回傳資料結構的大小
+#define F first//給pair用
+#define S second//給pair用
 #define rep(i,n) for(int i=0;i<(int)n;i++)
 #define rep1(i,n) for(int i=1;i<(int)n;i++)
-#define pb push_back
-#define eb emplace_back
-#define mp(a,b) make_pair(a,b)
+#define pb push_back//給vector用
+#define eb emplace_back//給vector用
+#define mp(a,b) make_pair(a,b)//給vector用 暫不用到
 #define cans cout<<ans<<endl
-#define in cout<<"in lar"<<endl
+#define in cout<<"in lar"<<endl //debug方便
 #define GET_POS(c,x) (lower_bound(c.begin(),c.end(),x)-c.begin())
 ```
 
 ## using/const
 
 ```cpp
-using ll = long long;
+using ll = long long;//省下打long long時間
 using pii = pair<int,int>;
 using ld = long double;
 
@@ -123,6 +123,20 @@ int32_t main(){
     return 0;
 }
 ```
+
+## 講義公約(?
+為了方便 預設有以下範例
+```c++
+#define rep(i,n) for(int i=0;i<(int)n;i++)
+//for迴圈 變數i從0到n 
+#define sz(a) ((int)a.size())
+//回傳資料結構a的大小
+#define all(a) a.begin(),a.end()
+//資料結構a 的頭尾
+using pii = pair<int,int>;
+using ll = long long;
+```
+
 # const int maxn
 
 ## 
@@ -151,9 +165,12 @@ int32_t main(){
 會用const int
 
 ```c++
-const int maxn= xxx;
+const int maxn= 1e5+5;
 int arr[maxn],cnt[maxn],ans[maxn];
 ```
+
+同樣的 之後也會預設maxn是資料最大值
+
 # 一些建議
 
 ## 程式短!=好

@@ -201,7 +201,7 @@
 <p>觀察後可知道建立第c位置時</p>
 <p>等價於在原本更新到c-1的bit中增加位置c的值</p>
 <p>因此從位置c開始一路修改到邊界即可</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="dt">void</span> chg(<span class="dt">int</span> c,<span class="dt">int</span> val){</span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a><span class="dt">void</span> add(<span class="dt">int</span> c,<span class="dt">int</span> val){</span>
 <span id="cb1-2"><a href="#cb1-2"></a>    <span class="cf">for</span>(;c&lt;=N;c+=lowbit(c))</span>
 <span id="cb1-3"><a href="#cb1-3"></a>        bit[c]+=val;</span>
 <span id="cb1-4"><a href="#cb1-4"></a>}</span></code></pre></div>
@@ -261,6 +261,17 @@
 <li>遇到每一個數字只需要查看在K中 該數字的位置之前的合數字</li>
 <li>可以BIT查詢數字!</li>
 </ol>
+</section>
+<section id="code-2" class="slide level2">
+<h2>CODE</h2>
+<p>關鍵程式碼</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1"></a><span class="dt">int</span> ans=<span class="dv">0</span>;</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="cf">for</span>(<span class="dt">int</span> i=n-<span class="dv">1</span>;i&gt;=<span class="dv">0</span>;i--){</span>
+<span id="cb4-3"><a href="#cb4-3"></a>    ans+=qry(vec[i]-<span class="dv">1</span>);</span>
+<span id="cb4-4"><a href="#cb4-4"></a>    <span class="co">//-1是因為不能算到等於自己的數字</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a>    add(vec[i]);</span>
+<span id="cb4-6"><a href="#cb4-6"></a>}</span>
+<span id="cb4-7"><a href="#cb4-7"></a>cout&lt;&lt;ans&lt;&lt;endl;</span></code></pre></div>
 </section>
 <section id="時間複雜度-2" class="slide level2">
 <h2>時間複雜度</h2>
