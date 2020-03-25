@@ -40,7 +40,7 @@ FB:[崔浩堂](https://www.facebook.com/profile.php?id=100000962895905)
 
 ## 活動
 
-[slides](https://henrytsui000.000webhostapp.com/activity.html)
+[slides](https://henrytsui000.github.io/activity.html)
 
 2020/3/19
 
@@ -48,31 +48,31 @@ FB:[崔浩堂](https://www.facebook.com/profile.php?id=100000962895905)
 
 ## 競賽入門
 
-[slides](https://henrytsui000.000webhostapp.com/contest_basic.html)
+[slides](https://henrytsui000.github.io/contest_basic.html)
 
 2020/3/19
 
 ## 時間複雜度
 
-[slides](https://henrytsui000.000webhostapp.com/complexity.html)
+[slides](https://henrytsui000.github.io/complexity.html)
 
 2020/3/19
 
 ## searching&sort
 
-[slides](https://henrytsui000.000webhostapp.com/searching.html)
+[slides](https://henrytsui000.github.io/searching.html)
 
 2020/3/19
 
 ## 一些有的沒的
 
-[slides](https://henrytsui000.000webhostapp.com/some_tips.html)
+[slides](https://henrytsui000.github.io/some_tips.html)
 
 2020/3/19
 
 ## greedy
 
-[slides](https://henrytsui000.000webhostapp.com/greedy.html)
+[slides](https://henrytsui000.github.io/greedy.html)
 
 2020/3/19
 
@@ -80,13 +80,13 @@ FB:[崔浩堂](https://www.facebook.com/profile.php?id=100000962895905)
 
 ## STL
 
-[slides](https://henrytsui000.000webhostapp.com/STL.html)
+[slides](https://henrytsui000.github.io/STL.html)
 
 2020/3/26
 
 ## Disjoinset
 
-[slides](https://henrytsui000.000webhostapp.com/DSU.html)
+[slides](https://henrytsui000.github.io/DSU.html)
 
 2020/3/26
 
@@ -94,7 +94,7 @@ FB:[崔浩堂](https://www.facebook.com/profile.php?id=100000962895905)
 
 ## 基礎DP
 
-[slides](https://henrytsui000.000webhostapp.com/dp_basic.html)
+[slides](https://henrytsui000.github.io/dp_basic.html)
 
 2020/4/16
 
@@ -102,25 +102,25 @@ FB:[崔浩堂](https://www.facebook.com/profile.php?id=100000962895905)
 
 ## 圖論基礎
 
-[slides](https://henrytsui000.000webhostapp.com/graph.html)
+[slides](https://henrytsui000.github.io/graph.html)
 
 2020/4/23
 
 ## TREE
 
-[slides](https://henrytsui000.000webhostapp.com/tree.html)
+[slides](https://henrytsui000.github.io/tree.html)
 
 2020/4/23
 
 ## LCA
 
-[slides](https://henrytsui000.000webhostapp.com/LCA.html)
+[slides](https://henrytsui000.github.io/LCA.html)
 
 2020/4/23
 
 ## BCC
 
-[slides](https://henrytsui000.000webhostapp.com/BCC.html)
+[slides](https://henrytsui000.github.io/BCC.html)
 
 2020/4/23
 
@@ -128,37 +128,37 @@ FB:[崔浩堂](https://www.facebook.com/profile.php?id=100000962895905)
 
 ## 資料結構總覽
 
-[slides](https://henrytsui000.000webhostapp.com/datastruct.html)
+[slides](https://henrytsui000.github.io/datastruct.html)
 
 2020/4/30
 
 ## 分塊
 
-[slides](https://henrytsui000.000webhostapp.com/square.html)
+[slides](https://henrytsui000.github.io/square.html)
 
 2020/4/30
 
 ## BIT
 
-[slides](https://henrytsui000.000webhostapp.com/BIT.html)
+[slides](https://henrytsui000.github.io/BIT.html)
 
 2020/4/30
 
 ## sparse table
 
-[slides](https://henrytsui000.000webhostapp.com/sparse_table.html)
+[slides](https://henrytsui000.github.io/sparse_table.html)
 
 2020/4/30
 
 ## segment tree by pointer
 
-[slides](https://henrytsui000.000webhostapp.com/STbypointer.html)
+[slides](https://henrytsui000.github.io/STbypointer.html)
 
 2020/4/30
 
 ## segment tree by array
 
-[slides](https://henrytsui000.000webhostapp.com/STbyarray.html)
+[slides](https://henrytsui000.github.io/STbyarray.html)
 
 2020/4/30
 
@@ -166,15 +166,15 @@ FB:[崔浩堂](https://www.facebook.com/profile.php?id=100000962895905)
 
 ## 快速冪
 
-[slides](https://henrytsui000.000webhostapp.com/fast_pow.html)
+[slides](https://henrytsui000.github.io/fast_pow.html)
 
 ## 數論
 
-[slides](https://henrytsui000.000webhostapp.com/mod.html)
+[slides](https://henrytsui000.github.io/mod.html)
 
 ## 質數
 
-[slides](https://henrytsui000.000webhostapp.com/prime.html)
+[slides](https://henrytsui000.github.io/prime.html)
 
 ## 計算幾何
 
@@ -192,7 +192,7 @@ FB:[崔浩堂](https://www.facebook.com/profile.php?id=100000962895905)
 
 ## 大數
 
-[slides](https://henrytsui000.000webhostapp.com/prime.html)
+[slides](https://henrytsui000.github.io/prime.html)
 
 ## 字串
 
@@ -201,7 +201,7 @@ FB:[崔浩堂](https://www.facebook.com/profile.php?id=100000962895905)
 
 ## 
 
-[slides](https://henrytsui000.000webhostapp.com/problem.html)
+[slides](https://henrytsui000.github.io/problem.html)
 
 # 致謝
 

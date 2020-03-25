@@ -1,5 +1,5 @@
 ---
-author: oxolane
+author: 建議用firefox閱讀
 title: 進階資料結構all
 date: 2020 未知月
 ---
@@ -112,4 +112,4 @@ date: 2020 未知月
 - treap
 - BIT
 
-# QA/進入課程!
+# 進入課程吧!

@@ -1,10 +1,8 @@
 ---
-author: oxolane
+author: 建議用firefox閱讀
 title: 快速冪
 data: 未知
 ---
-
-# 因為用到latex 建議用firefox
 
 # 計算次方
 

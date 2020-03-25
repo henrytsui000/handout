@@ -109,7 +109,7 @@ in_time[u] < in_time[v]且out_time[u] ≥ out_time[v]
 
 則u為v祖先
 
-# 範例
+# [範例](https://hackmd.io/@henrytsui/H1ZZM_VL8#/)
 
 ## 
 
@@ -253,6 +253,12 @@ dfs時 紀錄子樹+自己的大小
 ## 時間複雜度
 
 找重心×次數 O(N×logN)
+
+## CODE
+
+```c++
+空啦幹
+```
 
 # 題目QA
 

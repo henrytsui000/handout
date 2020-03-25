@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="author" content="oxolane">
+  <meta name="author" content="建議用firefox閱讀">
   <title>基礎圖論</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -99,7 +99,7 @@
 
 <section id="title-slide">
   <h1 class="title">基礎圖論</h1>
-  <p class="author">oxolane</p>
+  <p class="author">建議用firefox閱讀</p>
   <p class="date">2020 未知</p>
 </section>
 
@@ -246,7 +246,8 @@
 </section>
 <section id="vector-1" class="slide level2">
 <h2>vector-1</h2>
-<p>用於邊數量&lt;點數量<sup>2</sup> *最常用 vector<int> edge[點的數量];</p>
+<p>用於邊數量&lt;點數量<sup>2</sup></p>
+<p>*最常用vector<int> edge[點的數量];</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a>vector&lt;<span class="dt">int</span>&gt; edge[maxn];</span>
 <span id="cb1-2"><a href="#cb1-2"></a></span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="dt">void</span> dfs(<span class="dt">int</span> n){ <span class="cf">for</span>(<span class="dt">int</span> x:edge[n]) dfs(x);}</span>
@@ -350,7 +351,7 @@
 <span id="cb4-7"><a href="#cb4-7"></a>        dfs(x,n);</span>
 <span id="cb4-8"><a href="#cb4-8"></a>}</span>
 <span id="cb4-9"><a href="#cb4-9"></a><span class="dt">int</span> main(){</span>
-<span id="cb4-10"><a href="#cb4-10"></a>    dfs(<span class="dv">0</span>);<span class="co">//初始</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a>    dfs(<span class="dv">0</span>);<span class="co">//開始</span></span>
 <span id="cb4-11"><a href="#cb4-11"></a>}</span></code></pre></div>
 </section>
 <section id="暴力搜尋法" class="slide level2">
@@ -362,7 +363,8 @@
 </section>
 <section id="例題" class="slide level2">
 <h2>例題</h2>
-<p>用DFS的方式輸出所有四位數字 且各個位數皆不相同</p>
+<p>用DFS的方式輸出所有四位數字</p>
+<p>且各個位數皆不相同</p>
 <p>很醜的片段</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb5-1"><a href="#cb5-1"></a><span class="dt">bool</span> vis[<span class="dv">10</span>];</span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="dt">void</span> dfs(<span class="dt">int</span> cnt,<span class="dt">int</span> ans){</span>

@@ -160,7 +160,7 @@
 <h2></h2>
 <p>我們可以預先紀錄每個點上方2的冪次的節點</p>
 <p>f[a][b]為b節點上方2<sup>a</sup>的節點</p>
-<p><img data-src="https://i.imgur.com/bpstHrx.png" /></p>
+<p><img data-src="https://i.imgur.com/qg1hyhg.png" /></p>
 <p><img data-src="https://i.imgur.com/i3CXTVh.png" /></p>
 </section>
 <section id="section-5" class="slide level2">
@@ -176,7 +176,7 @@
 <p>若要將點v往上爬13</p>
 <p>-&gt;v往上爬2<sup>3</sup>後</p>
 <p>該點再往上2<sup>2</sup>，最後在爬2<sup>0</sup></p>
-<p>deep[f[0][f[2][f[3][v]]]]=deep[u]</p>
+<p>f[0][ f[2][ f[3][v] ] ]</p>
 </section>
 <section id="深度一樣後" class="slide level2">
 <h2>深度一樣後</h2>
@@ -188,7 +188,11 @@
 </section>
 <section id="優化-1" class="slide level2">
 <h2>優化-1</h2>
-<p>因為f[x][v]=f[x-1][f[x-1][v]]</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mi>因</mi><mi>為</mi><msup><mn>2</mn><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>+</mo><msup><mn>2</mn><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><msup><mn>2</mn><mi>x</mi></msup></mrow></msub><annotation encoding="application/x-tex">_{因為2^{x-1}+2^{x-1}=2^x}</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mi>往</mi><mi>上</mi><msup><mn>2</mn><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></msup><mi>兩</mi><mi>次</mi><mo>=</mo><mi>往</mi><mi>上</mi><msup><mn>2</mn><mi>x</mi></msup></mrow></msub><annotation encoding="application/x-tex">_{往上2^{x-1}兩次=往上2^x}</annotation></semantics></math></p>
+<ul>
+<li>f[x][v]=f[x-1][f[x-1][v]]</li>
+</ul>
 <p>因此建表的時候不用每個都重新計算</p>
 </section>
 <section id="優化-2" class="slide level2">
@@ -227,8 +231,8 @@
 <p>往上爬</p>
 <p><img data-src="https://i.imgur.com/GdRUtEc.png" /></p>
 </section>
-<section id="發現21相同" class="slide level2">
-<h2>發現2<sup>1</sup>相同</h2>
+<section id="發現20相同" class="slide level2">
+<h2>發現2<sup>0</sup>相同</h2>
 <p>不做動作</p>
 <p><img data-src="https://i.imgur.com/GdRUtEc.png" /></p>
 </section>

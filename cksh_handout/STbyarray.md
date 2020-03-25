@@ -82,4 +82,5 @@ int qry(int l,int r,int L,int R,int id){
 - [SKY-39](https://pc2.tfcis.org/dev/index.php/problem/view/39/)
 - [SKY-58](https://pc2.tfcis.org/dev/index.php/problem/view/58/)
 - [SKY-86](https://pc2.tfcis.org/dev/index.php/problem/view/86/)
+
 ## Q&A

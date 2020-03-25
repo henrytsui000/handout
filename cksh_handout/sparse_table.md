@@ -1,12 +1,12 @@
 ---
-author: oxolane
+author: 建議用firefox閱讀
 title: Sparse table
 date: 2020 未知
 ---
 
 # RMQ?
 
-## Range Minimum/Maximun Query 
+## $_{Range \; Minimum/Maximun \; Query}$
 
 求區間最大/最小值
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="author" content="oxolane">
+  <meta name="author" content="建議用firefox閱讀">
   <title>分塊</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -99,7 +99,7 @@
 
 <section id="title-slide">
   <h1 class="title">分塊</h1>
-  <p class="author">oxolane</p>
+  <p class="author">建議用firefox閱讀</p>
   <p class="date">2020 未知</p>
 </section>
 
@@ -144,11 +144,11 @@
 <h2>怎麼切可以讓時間最少呢?</h2>
 <p>先來分析worst case:</p>
 <p>詢問數列第2至N-1個</p>
-<p>那我們需要省略中間的N/R-2塊</p>
+<p>那我們需要省略中間的<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>N</mi><mi>R</mi></mfrac><mo>−</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\frac{N}{R}-2</annotation></semantics></math>塊</p>
 <p>並且暴力求頭尾的部份</p>
 </section>
-<section id="section-1" class="slide level2">
-<h2></h2>
+<section id="為什麼切sqrtn塊" class="slide level2">
+<h2>為什麼切<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msqrt><mi>N</mi></msqrt><annotation encoding="application/x-tex">\sqrt{N}</annotation></semantics></math>塊</h2>
 <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mi>i</mi><mi>n</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Find</annotation></semantics></math> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mi>.</mi><mi>t</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">s.t.</annotation></semantics></math> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>R</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mi>N</mi><mi>R</mi></mfrac><mo>−</mo><mn>2</mn><mo>+</mo><mn>2</mn><mo stretchy="false" form="prefix">(</mo><mi>R</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(R)=\frac{N}{R}-2+2(R-1)</annotation></semantics></math> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>i</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">min</annotation></semantics></math></p>
 <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mi>h</mi><mi>e</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">when</annotation></semantics></math> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>N</mi><mi>R</mi></mfrac><mo>=</mo><mn>2</mn><mi>R</mi><mo>,</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>R</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\frac{N}{R}=2R,f(R)</annotation></semantics></math> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>i</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">min</annotation></semantics></math> -&gt; <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><msqrt><mfrac><mi>N</mi><mn>2</mn></mfrac></msqrt></mrow><annotation encoding="application/x-tex">R=\sqrt{\frac{N}{2}}</annotation></semantics></math></p>
 <p>為了計算方便 我們會取<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><msqrt><mi>N</mi></msqrt></mrow><annotation encoding="application/x-tex">R=\sqrt{N}</annotation></semantics></math></p>
@@ -201,7 +201,7 @@
 <h1>題外話</h1>
 
 </section>
-<section id="section-2" class="slide level2">
+<section id="section-1" class="slide level2">
 <h2></h2>
 <p>之後會線段樹 功能比分塊演算法好很多</p>
 <p>可以暫時不用到精通</p>

@@ -1,5 +1,5 @@
 ---
-author: oxolane
+author: 建議用firefox閱讀
 title: 基礎圖論
 date: 2020 未知
 ---
@@ -138,8 +138,8 @@ date: 2020 未知
 ## vector-1
 
 用於邊數量<點數量^2^
-*最常用
-vector<int> edge[點的數量];
+
+*最常用vector<int> edge[點的數量];
 
 ```cpp
 vector<int> edge[maxn];
@@ -247,7 +247,7 @@ void dfs(int n){
         dfs(x,n);
 }
 int main(){
-    dfs(0);//初始
+    dfs(0);//開始
 }
 ```
 
@@ -258,7 +258,9 @@ int main(){
 
 ## 例題
 
-用DFS的方式輸出所有四位數字 且各個位數皆不相同
+用DFS的方式輸出所有四位數字 
+
+且各個位數皆不相同
 
 很醜的片段
 

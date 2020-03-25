@@ -122,15 +122,13 @@
 </section>
 <section id="section-1" class="slide level2">
 <h2></h2>
-<p>竹中軟研社長：</p>
-<p>莫隊+treap</p>
-<p>-2018.?月?日</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mi>竹</mi><mi>中</mi><mi>軟</mi><mi>研</mi><mi>社</mi><mi>長</mi><mi>：</mi><mi>莫</mi><mi>隊</mi><mo>+</mo><mi>t</mi><mi>r</mi><mi>e</mi><mi>a</mi><mi>p</mi><mspace width="1.0em"></mspace><mo>−</mo><mn>2018</mn><mi>.</mi><mi>?</mi><mi>月</mi><mi>?</mi><mi>日</mi></mrow></msub><annotation encoding="application/x-tex">_{竹中軟研社長：莫隊+treap \quad -2018.?月?日}</annotation></semantics></math></p>
 <p><img data-src="https://i.imgur.com/fJ71V9b.jpg" /></p>
 </section>
 </section>
 <section>
 <section id="如果前面那題加上操作" class="title-slide slide level1">
-<h1>如果前面那題加上操作</h1>
+<h1><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mi>如</mi><mi>果</mi><mi>前</mi><mi>面</mi><mi>那</mi><mi>題</mi><mi>加</mi><mi>上</mi><mi>操</mi><mi>作</mi></mrow></msub><annotation encoding="application/x-tex">_{如果前面那題加上操作}</annotation></semantics></math></h1>
 
 </section>
 <section id="可將位置x更動" class="slide level2">
@@ -203,24 +201,20 @@
 </section>
 <section id="查詢" class="slide level2">
 <h2>查詢</h2>
-<p>從根節點往下走 若查詢區域跟節點一樣則回傳</p>
-<p>若區域全都在右邊就往右走//區域全左就往左走</p>
-<p>否則左右分別找答案</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mi>從</mi><mi>根</mi><mi>節</mi><mi>點</mi><mi>往</mi><mi>下</mi><mi>走</mi><mi>若</mi><mi>查</mi><mi>詢</mi><mi>區</mi><mi>域</mi><mi>跟</mi><mi>節</mi><mi>點</mi><mi>一</mi><mi>樣</mi><mi>則</mi><mi>回</mi><mi>傳</mi></mrow></msub><annotation encoding="application/x-tex">_{從根節點往下走 若查詢區域跟節點一樣則回傳}</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mi>若</mi><mi>區</mi><mi>域</mi><mi>全</mi><mi>都</mi><mi>在</mi><mi>右</mi><mi>邊</mi><mi>就</mi><mi>往</mi><mi>右</mi><mi>走</mi><mi>/</mi><mi>/</mi><mi>區</mi><mi>域</mi><mi>全</mi><mi>左</mi><mi>就</mi><mi>往</mi><mi>左</mi><mi>走</mi></mrow></msub><annotation encoding="application/x-tex">_{若區域全都在右邊就往右走//區域全左就往左走}</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mrow><mi>否</mi><mi>則</mi><mi>左</mi><mi>右</mi><mi>分</mi><mi>別</mi><mi>找</mi><mi>答</mi><mi>案</mi></mrow></msub><annotation encoding="application/x-tex">_{否則左右分別找答案}</annotation></semantics></math></p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1"></a><span class="dt">int</span> qry(<span class="dt">int</span> l,<span class="dt">int</span> r,node *nd){</span>
-<span id="cb4-2"><a href="#cb4-2"></a>    <span class="cf">if</span>(l==nd-&gt;l&amp;&amp;r==nd-&gt;r){</span>
-<span id="cb4-3"><a href="#cb4-3"></a>        <span class="cf">return</span> nd-&gt;data;</span>
-<span id="cb4-4"><a href="#cb4-4"></a>    }<span class="cf">else</span>{</span>
-<span id="cb4-5"><a href="#cb4-5"></a>        <span class="dt">int</span> mid=(nd-&gt;l+nd-&gt;r)&gt;&gt;<span class="dv">1</span>;</span>
-<span id="cb4-6"><a href="#cb4-6"></a>        <span class="cf">if</span>(l&gt;=mid){</span>
-<span id="cb4-7"><a href="#cb4-7"></a>            <span class="cf">return</span> qry(l,r,nd-&gt;rc);</span>
-<span id="cb4-8"><a href="#cb4-8"></a>        }<span class="cf">else</span> <span class="cf">if</span>(r&lt;=mid){</span>
-<span id="cb4-9"><a href="#cb4-9"></a>            <span class="cf">return</span> qry(l,r,nd-&gt;lc);</span>
-<span id="cb4-10"><a href="#cb4-10"></a>        }<span class="cf">else</span>{</span>
-<span id="cb4-11"><a href="#cb4-11"></a>            <span class="cf">return</span> max(qry(l,mid,nd-&gt;lc),</span>
-<span id="cb4-12"><a href="#cb4-12"></a>                        qry(mid,r,nd-&gt;rc));</span>
-<span id="cb4-13"><a href="#cb4-13"></a>        }</span>
-<span id="cb4-14"><a href="#cb4-14"></a>    }</span>
-<span id="cb4-15"><a href="#cb4-15"></a>}</span></code></pre></div>
+<span id="cb4-2"><a href="#cb4-2"></a>    <span class="cf">if</span>(l==nd-&gt;l&amp;&amp;r==nd-&gt;r) <span class="cf">return</span> nd-&gt;data;</span>
+<span id="cb4-3"><a href="#cb4-3"></a>    <span class="cf">else</span>{</span>
+<span id="cb4-4"><a href="#cb4-4"></a>        <span class="dt">int</span> mid=(nd-&gt;l+nd-&gt;r)&gt;&gt;<span class="dv">1</span>;</span>
+<span id="cb4-5"><a href="#cb4-5"></a>        <span class="cf">if</span>(l&gt;=mid) <span class="cf">return</span> qry(l,r,nd-&gt;rc);</span>
+<span id="cb4-6"><a href="#cb4-6"></a>        <span class="cf">else</span> <span class="cf">if</span>(r&lt;=mid) <span class="cf">return</span> qry(l,r,nd-&gt;lc);</span>
+<span id="cb4-7"><a href="#cb4-7"></a>        <span class="cf">else</span>{</span>
+<span id="cb4-8"><a href="#cb4-8"></a>            <span class="cf">return</span> max(qry(l,mid,nd-&gt;lc),qry(mid,r,nd-&gt;rc));</span>
+<span id="cb4-9"><a href="#cb4-9"></a>        }</span>
+<span id="cb4-10"><a href="#cb4-10"></a>    }</span>
+<span id="cb4-11"><a href="#cb4-11"></a>}</span></code></pre></div>
 </section>
 </section>
 <section>

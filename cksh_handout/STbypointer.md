@@ -18,16 +18,12 @@ date: 2020 未知
 ## 前綴合搞定
 
 ## 
-竹中軟研社長：
-
-莫隊+treap
-
--2018.?月?日
+$_{竹中軟研社長：莫隊+treap \quad -2018.?月?日}$
 
 ![](https://i.imgur.com/fJ71V9b.jpg)
 
 
-# 如果前面那題加上操作
+# $_{如果前面那題加上操作}$
 
 ## 可將位置x更動？
 
@@ -111,24 +107,20 @@ void add (int x, int val, node *nd) {
 
 ## 查詢
 
-從根節點往下走  若查詢區域跟節點一樣則回傳
+$_{從根節點往下走  若查詢區域跟節點一樣則回傳}$
 
-若區域全都在右邊就往右走//區域全左就往左走
+$_{若區域全都在右邊就往右走//區域全左就往左走}$
 
-否則左右分別找答案
+$_{否則左右分別找答案}$
 ```cpp
 int qry(int l,int r,node *nd){
-    if(l==nd->l&&r==nd->r){
-        return nd->data;
-    }else{
+    if(l==nd->l&&r==nd->r) return nd->data;
+    else{
         int mid=(nd->l+nd->r)>>1;
-        if(l>=mid){
-            return qry(l,r,nd->rc);
-        }else if(r<=mid){
-            return qry(l,r,nd->lc);
-        }else{
-            return max(qry(l,mid,nd->lc),
-                        qry(mid,r,nd->rc));
+        if(l>=mid) return qry(l,r,nd->rc);
+        else if(r<=mid) return qry(l,r,nd->lc);
+        else{
+            return max(qry(l,mid,nd->lc),qry(mid,r,nd->rc));
         }
     }
 }

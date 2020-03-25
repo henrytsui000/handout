@@ -1,5 +1,5 @@
 ---
-author: oxolane
+author: 建議用firefox閱讀
 title: 分塊
 date: 2020 未知
 ---
@@ -51,12 +51,12 @@ date: 2020 未知
 
 詢問數列第2至N-1個
 
-那我們需要省略中間的N/R-2塊
+那我們需要省略中間的$\frac{N}{R}-2$塊
 
 並且暴力求頭尾的部份
 
 
-## 
+## 為什麼切$\sqrt{N}$塊
 $Find$ $R$ $s.t.$ $f(R)=\frac{N}{R}-2+2(R-1)$ $min$
 
 $when$ $\frac{N}{R}=2R,f(R)$ $min$ -> $R=\sqrt{\frac{N}{2}}$
