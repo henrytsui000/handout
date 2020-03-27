@@ -163,9 +163,8 @@ int32_t main(){
 # 題目們
 
 ## 題目
-
-[SKYOJ-56](https://pc2.tfcis.org/dev/index.php/problem/view/56/)
-
-[POJ-1182](http://poj.org/problem?id=1182)
+- [CF-1249B](https://codeforces.com/problemset/problem/1249/B1)
+- [SKYOJ-56](https://pc2.tfcis.org/dev/index.php/problem/view/56/)
+- [POJ-1182](http://poj.org/problem?id=1182)
 
 ## Q&A

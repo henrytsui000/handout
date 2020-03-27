@@ -52,6 +52,10 @@ title: 競賽入門
 
 - double 15位數且可帶小數點
 
+## 例題
+
+- [ZJ-c221](https://zerojudge.tw/ShowProblem?problemid=c221)
+
 # IF判斷式
 
 
@@ -228,5 +232,11 @@ int main{
 因此muti(2)拿到muti(1)的答案而計算2*1結束
 
 最終往上完成muti(a)的遞迴計算，回傳a!到main
+
+## 例題
+
+- 不用迴圈計算1+2+...+n
+- [ZJ-b511](https://zerojudge.tw/ShowProblem?problemid=b511)
+- DFS
 
 # 可以寫題目了!
