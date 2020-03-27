@@ -124,11 +124,12 @@ int fnd(int x){
 
 void uni(int x,int y){
     x=fnd(x),y=fnd(y);
-    if(f[x]==f[y])
-        return ;
-    if(sz[x]<sz[y])
-        swap(x,y);
-    sz[x]+=sz[y];
+    //將x,y替換成領頭
+    if(f[x]==f[y]) return ;
+    //相同人則不用處理
+    if(sz[x]<sz[y]) swap(x,y);
+    //啟發式合併 保證小集合融入大的
+    sz[x]+=sz[y];//修改集合x大小
     f[y]=x;
 }
 

@@ -228,40 +228,41 @@
 <span id="cb7-12"><a href="#cb7-12"></a></span>
 <span id="cb7-13"><a href="#cb7-13"></a><span class="dt">void</span> uni(<span class="dt">int</span> x,<span class="dt">int</span> y){</span>
 <span id="cb7-14"><a href="#cb7-14"></a>    x=fnd(x),y=fnd(y);</span>
-<span id="cb7-15"><a href="#cb7-15"></a>    <span class="cf">if</span>(f[x]==f[y])</span>
-<span id="cb7-16"><a href="#cb7-16"></a>        <span class="cf">return</span> ;</span>
-<span id="cb7-17"><a href="#cb7-17"></a>    <span class="cf">if</span>(sz[x]&lt;sz[y])</span>
-<span id="cb7-18"><a href="#cb7-18"></a>        swap(x,y);</span>
-<span id="cb7-19"><a href="#cb7-19"></a>    sz[x]+=sz[y];</span>
-<span id="cb7-20"><a href="#cb7-20"></a>    f[y]=x;</span>
-<span id="cb7-21"><a href="#cb7-21"></a>}</span>
-<span id="cb7-22"><a href="#cb7-22"></a></span>
-<span id="cb7-23"><a href="#cb7-23"></a><span class="dt">void</span> init(<span class="dt">int</span> n){</span>
-<span id="cb7-24"><a href="#cb7-24"></a>    rep(i,n){</span>
-<span id="cb7-25"><a href="#cb7-25"></a>        sz[i]=<span class="dv">1</span>;</span>
-<span id="cb7-26"><a href="#cb7-26"></a>        f[i]=i;</span>
-<span id="cb7-27"><a href="#cb7-27"></a>    }</span>
-<span id="cb7-28"><a href="#cb7-28"></a>}</span>
-<span id="cb7-29"><a href="#cb7-29"></a></span>
-<span id="cb7-30"><a href="#cb7-30"></a><span class="dt">int32_t</span> main(){</span>
-<span id="cb7-31"><a href="#cb7-31"></a>    <span class="dt">int</span> n;</span>
-<span id="cb7-32"><a href="#cb7-32"></a>    cin&gt;&gt;n;</span>
-<span id="cb7-33"><a href="#cb7-33"></a>    init(n);</span>
-<span id="cb7-34"><a href="#cb7-34"></a>    rep(i,n){</span>
-<span id="cb7-35"><a href="#cb7-35"></a>        <span class="dt">int</span> a,b;</span>
-<span id="cb7-36"><a href="#cb7-36"></a>        cin&gt;&gt;a&gt;&gt;b;</span>
-<span id="cb7-37"><a href="#cb7-37"></a>        uni(a,b);<span class="co">//把集合a,b合併</span></span>
-<span id="cb7-38"><a href="#cb7-38"></a>    }</span>
-<span id="cb7-39"><a href="#cb7-39"></a>    <span class="dt">int</span> q;cin&gt;&gt;q;</span>
-<span id="cb7-40"><a href="#cb7-40"></a>    <span class="cf">while</span>(q--){</span>
-<span id="cb7-41"><a href="#cb7-41"></a>        <span class="co">//共有q比詢問 問a,b是否相同集合</span></span>
-<span id="cb7-42"><a href="#cb7-42"></a>        <span class="dt">int</span> a,b;</span>
-<span id="cb7-43"><a href="#cb7-43"></a>        <span class="cf">if</span>(f[fnd(a)]==f[fnd(b)])</span>
-<span id="cb7-44"><a href="#cb7-44"></a>            cout&lt;&lt;<span class="st">&quot;same&quot;</span>&lt;&lt;endl;</span>
-<span id="cb7-45"><a href="#cb7-45"></a>        <span class="cf">else</span> cout&lt;&lt;<span class="st">&quot;false&quot;</span>&lt;&lt;endl;</span>
-<span id="cb7-46"><a href="#cb7-46"></a>    }</span>
-<span id="cb7-47"><a href="#cb7-47"></a>    <span class="cf">return</span> <span class="dv">0</span>;</span>
-<span id="cb7-48"><a href="#cb7-48"></a>}</span></code></pre></div>
+<span id="cb7-15"><a href="#cb7-15"></a>    <span class="co">//將x,y替換成領頭</span></span>
+<span id="cb7-16"><a href="#cb7-16"></a>    <span class="cf">if</span>(f[x]==f[y]) <span class="cf">return</span> ;</span>
+<span id="cb7-17"><a href="#cb7-17"></a>    <span class="co">//相同人則不用處理</span></span>
+<span id="cb7-18"><a href="#cb7-18"></a>    <span class="cf">if</span>(sz[x]&lt;sz[y]) swap(x,y);</span>
+<span id="cb7-19"><a href="#cb7-19"></a>    <span class="co">//啟發式合併 保證小集合融入大的</span></span>
+<span id="cb7-20"><a href="#cb7-20"></a>    sz[x]+=sz[y];<span class="co">//修改集合x大小</span></span>
+<span id="cb7-21"><a href="#cb7-21"></a>    f[y]=x;</span>
+<span id="cb7-22"><a href="#cb7-22"></a>}</span>
+<span id="cb7-23"><a href="#cb7-23"></a></span>
+<span id="cb7-24"><a href="#cb7-24"></a><span class="dt">void</span> init(<span class="dt">int</span> n){</span>
+<span id="cb7-25"><a href="#cb7-25"></a>    rep(i,n){</span>
+<span id="cb7-26"><a href="#cb7-26"></a>        sz[i]=<span class="dv">1</span>;</span>
+<span id="cb7-27"><a href="#cb7-27"></a>        f[i]=i;</span>
+<span id="cb7-28"><a href="#cb7-28"></a>    }</span>
+<span id="cb7-29"><a href="#cb7-29"></a>}</span>
+<span id="cb7-30"><a href="#cb7-30"></a></span>
+<span id="cb7-31"><a href="#cb7-31"></a><span class="dt">int32_t</span> main(){</span>
+<span id="cb7-32"><a href="#cb7-32"></a>    <span class="dt">int</span> n;</span>
+<span id="cb7-33"><a href="#cb7-33"></a>    cin&gt;&gt;n;</span>
+<span id="cb7-34"><a href="#cb7-34"></a>    init(n);</span>
+<span id="cb7-35"><a href="#cb7-35"></a>    rep(i,n){</span>
+<span id="cb7-36"><a href="#cb7-36"></a>        <span class="dt">int</span> a,b;</span>
+<span id="cb7-37"><a href="#cb7-37"></a>        cin&gt;&gt;a&gt;&gt;b;</span>
+<span id="cb7-38"><a href="#cb7-38"></a>        uni(a,b);<span class="co">//把集合a,b合併</span></span>
+<span id="cb7-39"><a href="#cb7-39"></a>    }</span>
+<span id="cb7-40"><a href="#cb7-40"></a>    <span class="dt">int</span> q;cin&gt;&gt;q;</span>
+<span id="cb7-41"><a href="#cb7-41"></a>    <span class="cf">while</span>(q--){</span>
+<span id="cb7-42"><a href="#cb7-42"></a>        <span class="co">//共有q比詢問 問a,b是否相同集合</span></span>
+<span id="cb7-43"><a href="#cb7-43"></a>        <span class="dt">int</span> a,b;</span>
+<span id="cb7-44"><a href="#cb7-44"></a>        <span class="cf">if</span>(f[fnd(a)]==f[fnd(b)])</span>
+<span id="cb7-45"><a href="#cb7-45"></a>            cout&lt;&lt;<span class="st">&quot;same&quot;</span>&lt;&lt;endl;</span>
+<span id="cb7-46"><a href="#cb7-46"></a>        <span class="cf">else</span> cout&lt;&lt;<span class="st">&quot;false&quot;</span>&lt;&lt;endl;</span>
+<span id="cb7-47"><a href="#cb7-47"></a>    }</span>
+<span id="cb7-48"><a href="#cb7-48"></a>    <span class="cf">return</span> <span class="dv">0</span>;</span>
+<span id="cb7-49"><a href="#cb7-49"></a>}</span></code></pre></div>
 </section>
 </section>
 <section>
