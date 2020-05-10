@@ -240,47 +240,89 @@
 </section>
 </section>
 <section>
-<section id="儲存一張圖" class="title-slide slide level1">
-<h1>儲存一張圖</h1>
+<section id="儲存一張圖-1" class="title-slide slide level1">
+<h1>儲存一張圖-1</h1>
 
 </section>
-<section id="vector-1" class="slide level2">
-<h2>vector-1</h2>
+<section id="vectormaxn" class="slide level2">
+<h2>vector[maxn]</h2>
+<p><strong>這是最常用的紀錄法</strong></p>
 <p>用於邊數量&lt;點數量<sup>2</sup></p>
-<p>*最常用vector<int> edge[點的數量];</p>
+<p><img data-src="https://i.imgur.com/4x2H4jG.png" /></p>
+</section>
+<section id="紀錄圖" class="slide level2">
+<h2>紀錄圖</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a>vector&lt;<span class="dt">int</span>&gt; edge[maxn];</span>
 <span id="cb1-2"><a href="#cb1-2"></a></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="dt">void</span> dfs(<span class="dt">int</span> n){ <span class="cf">for</span>(<span class="dt">int</span> x:edge[n]) dfs(x);}</span>
-<span id="cb1-4"><a href="#cb1-4"></a></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="dt">int</span> a,b;cin&gt;&gt;a&gt;&gt;b;</span>
-<span id="cb1-6"><a href="#cb1-6"></a>edge[a].pb(b),edge[b].pb(a);</span></code></pre></div>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="dt">int</span> main(){</span>
+<span id="cb1-4"><a href="#cb1-4"></a>    <span class="dt">int</span> n;</span>
+<span id="cb1-5"><a href="#cb1-5"></a>    rep(i,n){</span>
+<span id="cb1-6"><a href="#cb1-6"></a>        <span class="dt">int</span> a,b;cin&gt;&gt;a&gt;&gt;b;</span>
+<span id="cb1-7"><a href="#cb1-7"></a>        edge[a].pb(b);</span>
+<span id="cb1-8"><a href="#cb1-8"></a>        edge[b].pb(a);</span>
+<span id="cb1-9"><a href="#cb1-9"></a>    }</span>
+<span id="cb1-10"><a href="#cb1-10"></a>}</span></code></pre></div>
 </section>
-<section id="vector-2" class="slide level2">
-<h2>vector-2</h2>
+<section id="dfs" class="slide level2">
+<h2>DFS</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a><span class="dt">void</span> dfs(<span class="dt">int</span> p,<span class="dt">int</span> pa){</span>
+<span id="cb2-2"><a href="#cb2-2"></a>    <span class="co">//do something</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>    <span class="cf">for</span>(<span class="dt">int</span> x:edge[p]){</span>
+<span id="cb2-4"><a href="#cb2-4"></a>        <span class="co">//do something</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>        dfs(x,p);</span>
+<span id="cb2-6"><a href="#cb2-6"></a>        <span class="co">//do something</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a>    }</span>
+<span id="cb2-8"><a href="#cb2-8"></a>}</span></code></pre></div>
+</section>
+</section>
+<section>
+<section id="儲存一張圖-2" class="title-slide slide level1">
+<h1>儲存一張圖-2</h1>
+
+</section>
+<section id="vector" class="slide level2">
+<h2>vector<pii></h2>
 <p>需要排序邊的時候會用到的結構</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1"></a>vector&lt;pair&lt;<span class="dt">int</span>,<span class="dt">int</span>&gt;&gt; edge;</span>
-<span id="cb2-2"><a href="#cb2-2"></a></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="dt">int</span> a,b;cin&gt;&gt;a&gt;&gt;b;</span>
-<span id="cb2-4"><a href="#cb2-4"></a>edge.pb(make_pair(a,b));</span></code></pre></div>
+<p><img data-src="https://i.imgur.com/vC4zDRG.png" /></p>
 </section>
-<section id="陣列" class="slide level2">
-<h2>陣列</h2>
+<section id="紀錄圖-1" class="slide level2">
+<h2>紀錄圖</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1"></a>vector&lt; pair&lt;<span class="dt">int</span>,<span class="dt">int</span>&gt; &gt; edge;</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="dt">int</span> main(){</span>
+<span id="cb3-3"><a href="#cb3-3"></a>    <span class="dt">int</span> n;cin&gt;&gt;n;</span>
+<span id="cb3-4"><a href="#cb3-4"></a>    rep(i,n){</span>
+<span id="cb3-5"><a href="#cb3-5"></a>        <span class="dt">int</span> a,b;cin&gt;&gt;a&gt;&gt;b;</span>
+<span id="cb3-6"><a href="#cb3-6"></a>        edge.pb(make_pair(a,b));</span>
+<span id="cb3-7"><a href="#cb3-7"></a>    }</span>
+<span id="cb3-8"><a href="#cb3-8"></a>}</span></code></pre></div>
+</section>
+</section>
+<section>
+<section id="儲存一張圖-3" class="title-slide slide level1">
+<h1>儲存一張圖-3</h1>
+
+</section>
+<section id="arrmaxnmaxn" class="slide level2">
+<h2>arr[maxn][maxn]</h2>
 <p>好實做，但複雜度超大</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1"></a><span class="dt">int</span> graph[maxn][maxn];</span>
-<span id="cb3-2"><a href="#cb3-2"></a></span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="dt">void</span> dfs(<span class="dt">int</span> n){ </span>
-<span id="cb3-4"><a href="#cb3-4"></a>    rep(i,maxn) <span class="cf">if</span>(graph[n][i]) dfs(i);</span>
-<span id="cb3-5"><a href="#cb3-5"></a>}</span>
-<span id="cb3-6"><a href="#cb3-6"></a></span>
-<span id="cb3-7"><a href="#cb3-7"></a><span class="dt">int</span> a,b;cin&gt;&gt;a&gt;&gt;b;</span>
-<span id="cb3-8"><a href="#cb3-8"></a>graph[a][b]=<span class="dv">1</span>;graph[b][a]=<span class="dv">1</span>;</span></code></pre></div>
+</section>
+<section id="code" class="slide level2">
+<h2>CODE</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1"></a><span class="dt">int</span> graph[maxn][maxn];</span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="dt">void</span> dfs(<span class="dt">int</span> n){ </span>
+<span id="cb4-4"><a href="#cb4-4"></a>    rep(i,maxn) <span class="cf">if</span>(graph[n][i]) dfs(i);</span>
+<span id="cb4-5"><a href="#cb4-5"></a>}</span>
+<span id="cb4-6"><a href="#cb4-6"></a></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="dt">int</span> a,b;cin&gt;&gt;a&gt;&gt;b;</span>
+<span id="cb4-8"><a href="#cb4-8"></a>graph[a][b]=<span class="dv">1</span>;graph[b][a]=<span class="dv">1</span>;</span></code></pre></div>
 </section>
 <section id="qa-2" class="slide level2">
 <h2>Q&amp;A</h2>
 </section>
 </section>
 <section>
-<section id="dfs" class="title-slide slide level1">
+<section id="dfs-1" class="title-slide slide level1">
 <h1>DFS</h1>
 
 </section>
@@ -292,6 +334,7 @@
 <li>若走到死路 或沒有尚未走過的路</li>
 <li>往回前一個點找其他路走</li>
 <li>以遞迴實作</li>
+<li><a href="https://hackmd.io/@henrytsui/HyVdSUreL#/">DFS</a></li>
 </ul>
 </section>
 <section id="section" class="slide level2">
@@ -339,20 +382,20 @@
 <p><img data-src="https://i.imgur.com/qCp2Pag.png" /></p>
 <p>順序：1-&gt;2-&gt;5-&gt;9-&gt;3-&gt;4-&gt;6-&gt;7-&gt;8</p>
 </section>
-<section id="code" class="slide level2">
+<section id="code-1" class="slide level2">
 <h2>CODE</h2>
 <p>*如果是dfs一顆樹 通常會順便紀錄父節點</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb4-1"><a href="#cb4-1"></a><span class="at">const</span> <span class="dt">int</span> maxn = <span class="dv">10</span>;<span class="co">//點的數量</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="dt">bool</span> vis[maxn];<span class="co">//紀錄該點是否走過</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>vector&lt;<span class="dt">int</span>&gt; edge[maxn];<span class="co">//存邊</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="dt">void</span> dfs(<span class="dt">int</span> n){</span>
-<span id="cb4-5"><a href="#cb4-5"></a>    vis[n]=<span class="dv">1</span>;<span class="co">//紀錄已走過</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a>    <span class="cf">for</span>(<span class="dt">int</span> x:edge[n]) <span class="cf">if</span>(!vis[x])</span>
-<span id="cb4-7"><a href="#cb4-7"></a>        dfs(x,n);</span>
-<span id="cb4-8"><a href="#cb4-8"></a>}</span>
-<span id="cb4-9"><a href="#cb4-9"></a><span class="dt">int</span> main(){</span>
-<span id="cb4-10"><a href="#cb4-10"></a>    dfs(<span class="dv">0</span>);<span class="co">//開始</span></span>
-<span id="cb4-11"><a href="#cb4-11"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb5-1"><a href="#cb5-1"></a><span class="at">const</span> <span class="dt">int</span> maxn = <span class="dv">10</span>;<span class="co">//點的數量</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="dt">bool</span> vis[maxn];<span class="co">//紀錄該點是否走過</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>vector&lt;<span class="dt">int</span>&gt; edge[maxn];<span class="co">//存邊</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="dt">void</span> dfs(<span class="dt">int</span> n){</span>
+<span id="cb5-5"><a href="#cb5-5"></a>    vis[n]=<span class="dv">1</span>;<span class="co">//紀錄已走過</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a>    <span class="cf">for</span>(<span class="dt">int</span> x:edge[n]) <span class="cf">if</span>(!vis[x])</span>
+<span id="cb5-7"><a href="#cb5-7"></a>        dfs(x,n);</span>
+<span id="cb5-8"><a href="#cb5-8"></a>}</span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="dt">int</span> main(){</span>
+<span id="cb5-10"><a href="#cb5-10"></a>    dfs(<span class="dv">0</span>);<span class="co">//開始</span></span>
+<span id="cb5-11"><a href="#cb5-11"></a>}</span></code></pre></div>
 </section>
 <section id="暴力搜尋法" class="slide level2">
 <h2>暴力搜尋法</h2>
@@ -366,16 +409,16 @@
 <p>用DFS的方式輸出所有四位數字</p>
 <p>且各個位數皆不相同</p>
 <p>很醜的片段</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb5-1"><a href="#cb5-1"></a><span class="dt">bool</span> vis[<span class="dv">10</span>];</span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="dt">void</span> dfs(<span class="dt">int</span> cnt,<span class="dt">int</span> ans){</span>
-<span id="cb5-3"><a href="#cb5-3"></a>    <span class="cf">if</span>(cnt==<span class="dv">4</span>)</span>
-<span id="cb5-4"><a href="#cb5-4"></a>        cout&lt;&lt;ans&lt;&lt;endl;</span>
-<span id="cb5-5"><a href="#cb5-5"></a>    <span class="cf">else</span> rep1(i,<span class="dv">9</span>) <span class="cf">if</span>(!vis[i]){</span>
-<span id="cb5-6"><a href="#cb5-6"></a>        vis[i]=<span class="dv">1</span>,cnt++,ans=ans*<span class="dv">10</span>+i;</span>
-<span id="cb5-7"><a href="#cb5-7"></a>        dfs(cnt,ans);</span>
-<span id="cb5-8"><a href="#cb5-8"></a>        cnt--,ans/=<span class="dv">10</span>,vis[i]=<span class="dv">0</span>;</span>
-<span id="cb5-9"><a href="#cb5-9"></a>    }</span>
-<span id="cb5-10"><a href="#cb5-10"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb6-1"><a href="#cb6-1"></a><span class="dt">bool</span> vis[<span class="dv">10</span>];</span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="dt">void</span> dfs(<span class="dt">int</span> cnt,<span class="dt">int</span> ans){</span>
+<span id="cb6-3"><a href="#cb6-3"></a>    <span class="cf">if</span>(cnt==<span class="dv">4</span>)</span>
+<span id="cb6-4"><a href="#cb6-4"></a>        cout&lt;&lt;ans&lt;&lt;endl;</span>
+<span id="cb6-5"><a href="#cb6-5"></a>    <span class="cf">else</span> rep1(i,<span class="dv">9</span>) <span class="cf">if</span>(!vis[i]){</span>
+<span id="cb6-6"><a href="#cb6-6"></a>        vis[i]=<span class="dv">1</span>,cnt++,ans=ans*<span class="dv">10</span>+i;</span>
+<span id="cb6-7"><a href="#cb6-7"></a>        dfs(cnt,ans);</span>
+<span id="cb6-8"><a href="#cb6-8"></a>        cnt--,ans/=<span class="dv">10</span>,vis[i]=<span class="dv">0</span>;</span>
+<span id="cb6-9"><a href="#cb6-9"></a>    }</span>
+<span id="cb6-10"><a href="#cb6-10"></a>}</span></code></pre></div>
 </section>
 <section id="dfs題目" class="slide level2">
 <h2>DFS題目</h2>

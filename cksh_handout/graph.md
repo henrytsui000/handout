@@ -133,35 +133,73 @@ date: 2020 未知
 
 ## Q&A
 
-# 儲存一張圖
+# 儲存一張圖-1
 
-## vector-1
+## vector[maxn]
+
+**這是最常用的紀錄法**
 
 用於邊數量<點數量^2^
 
-*最常用vector<int> edge[點的數量];
+![](https://i.imgur.com/4x2H4jG.png)
+
+
+## 紀錄圖
 
 ```cpp
 vector<int> edge[maxn];
 
-void dfs(int n){ for(int x:edge[n]) dfs(x);}
-
-int a,b;cin>>a>>b;
-edge[a].pb(b),edge[b].pb(a);
+int main(){
+    int n;
+    rep(i,n){
+        int a,b;cin>>a>>b;
+        edge[a].pb(b);
+        edge[b].pb(a);
+    }
+}
 ```
-## vector-2
+
+## DFS
+
+```cpp
+void dfs(int p,int pa){
+    //do something
+    for(int x:edge[p]){
+        //do something
+        dfs(x,p);
+        //do something
+    }
+}
+```
+
+# 儲存一張圖-2
+
+## vector<pii>
 
 需要排序邊的時候會用到的結構
 
-```cpp
-vector<pair<int,int>> edge;
+![](https://i.imgur.com/vC4zDRG.png)
 
-int a,b;cin>>a>>b;
-edge.pb(make_pair(a,b));
+## 紀錄圖
+
+```cpp
+vector< pair<int,int> > edge;
+int main(){
+    int n;cin>>n;
+    rep(i,n){
+        int a,b;cin>>a>>b;
+        edge.pb(make_pair(a,b));
+    }
+}
 ```
 
-## 陣列
+# 儲存一張圖-3
+
+## arr[maxn][maxn]
+
 好實做，但複雜度超大
+
+## CODE
 
 ```cpp
 int graph[maxn][maxn];
@@ -184,6 +222,7 @@ graph[a][b]=1;graph[b][a]=1;
 - 若走到死路 或沒有尚未走過的路
 - 往回前一個點找其他路走
 - 以遞迴實作
+- [DFS](https://hackmd.io/@henrytsui/HyVdSUreL#/)
 
 ## 
 ![](https://i.imgur.com/x3Q6r06.png)

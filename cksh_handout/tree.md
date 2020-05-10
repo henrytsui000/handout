@@ -89,6 +89,10 @@ void dfs(Node nd){
 
 5. 回到第二步 直到完成MST
 
+## 題目
+
+[ZJ-a129](https://zerojudge.tw/ShowProblem?problemid=a129)
+
 # 樹壓平
 
 ## 時間戳章
@@ -265,6 +269,5 @@ dfs時 紀錄子樹+自己的大小
 ## 題目
 
 - [POJ 2485](http://poj.org/problem?id=2485)
-
 
 ## Q&A
