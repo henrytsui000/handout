@@ -196,6 +196,7 @@ FB:[崔浩堂](https://www.facebook.com/profile.php?id=100000962895905)
 
 ## 字串
 
+[slides](https://henrytsui000.github.io/lecture/string.html)
 
 # 題庫
 
