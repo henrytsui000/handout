@@ -49,12 +49,12 @@ FB:[崔浩堂](https://www.facebook.com/profile.php?id=100000962895905)
 ## 
 
 
-| 基礎 | 資結 | DP | graph | 資結-2 | math | else |
+| 基礎 | 資料結構 | DP | graph | 資 | math | else |
 | --- | --- | --- | --- | --- | --- | --- |
-| [入門]      | [STL] | [DP] | [圖]  | [資結all] | [快速冪] | [大數] |
-| [時間複雜度] | [DSU] | adsf | [Tree]| [分塊]  | [數論] | [字串] |
-| [searching] | asdf | [LCA] | [BIT]| [prime] | --- |
-| [else]     | ---   | ---  | [BCC] | [Sparse_table]| [幾何] | --- |
+| [basic](#競賽入門)      | [STL] | [DP](基礎dp) | [圖](圖論基礎)  | [資結all](#資料結構總覽) | [fast](快速冪) | [大數] |
+| [時間](時間複雜度) | [DSU](#Disjoinset) | --- | [Tree]| [分塊]  | [數論] | [字串] |
+| [搜尋](searching&sort) | --- | --- | [LCA] | [BIT]| [prime](#質數) | --- |
+| [else](#一些有的沒的) | ---   | ---  | [BCC] | [ST](#sparse_table)| [幾何](#計算幾何) | --- |
 | [greedy]   | ---   | ---  | ---   | [ST-1]  | [FFT] | --- |
 
 # 基礎
@@ -157,7 +157,7 @@ FB:[崔浩堂](https://www.facebook.com/profile.php?id=100000962895905)
 
 2020/4/30
 
-## sparse table
+## sparse_table
 
 [slides](https://henrytsui000.github.io/lecture/sparse_table.html)
 
