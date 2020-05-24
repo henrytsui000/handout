@@ -44,6 +44,19 @@ FB:[崔浩堂](https://www.facebook.com/profile.php?id=100000962895905)
 
 2020/3/19
 
+# 總覽
+
+## 
+
+
+| 基礎 | 資結 | DP | graph | 資結-2 | math | else |
+| --- | --- | --- | --- | --- | --- | --- |
+| [入門]      | [STL] | [DP] | [圖]  | [資結all] | [快速冪] | [大數] |
+| [時間複雜度] | [DSU] | adsf | [Tree]| [分塊]  | [數論] | [字串] |
+| [searching] | asdf | [LCA] | [BIT]| [prime] | --- |
+| [else]     | ---   | ---  | [BCC] | [Sparse_table]| [幾何] | --- |
+| [greedy]   | ---   | ---  | ---   | [ST-1]  | [FFT] | --- |
+
 # 基礎
 
 ## 競賽入門

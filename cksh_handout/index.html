@@ -8,8 +8,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="/home/henrytsui/reveal.js/css/reset.css">
-  <link rel="stylesheet" href="/home/henrytsui/reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="./reveal.js/css/reset.css">
+  <link rel="stylesheet" href="./reveal.js/css/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -18,17 +18,17 @@
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
   </style>
-  <link rel="stylesheet" href="/home/henrytsui/reveal.js/css/theme/black.css" id="theme">
+  <link rel="stylesheet" href="./reveal.js/css/theme/black.css" id="theme">
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? '/home/henrytsui/reveal.js/css/print/pdf.css' : '/home/henrytsui/reveal.js/css/print/paper.css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? './reveal.js/css/print/pdf.css' : './reveal.js/css/print/paper.css';
     document.getElementsByTagName( 'head' )[0].appendChild( link );
   </script>
   <!--[if lt IE 9]>
-  <script src="/home/henrytsui/reveal.js/lib/js/html5shiv.js"></script>
+  <script src="./reveal.js/lib/js/html5shiv.js"></script>
   <![endif]-->
 </head>
 <body>
@@ -81,6 +81,75 @@
 <h2>活動</h2>
 <p><a href="https://henrytsui000.github.io/lecture/activity.html">slides</a></p>
 <p>2020/3/19</p>
+</section>
+</section>
+<section>
+<section id="總覽" class="title-slide slide level1">
+<h1>總覽</h1>
+
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<table>
+<thead>
+<tr class="header">
+<th>基礎</th>
+<th>資結</th>
+<th>DP</th>
+<th>graph</th>
+<th>資結-2</th>
+<th>math</th>
+<th>else</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>[入門]</td>
+<td><a href="#/stl">STL</a></td>
+<td>[DP]</td>
+<td>[圖]</td>
+<td>[資結all]</td>
+<td><a href="#/快速冪">快速冪</a></td>
+<td><a href="#/大數">大數</a></td>
+</tr>
+<tr class="even">
+<td><a href="#/時間複雜度">時間複雜度</a></td>
+<td>[DSU]</td>
+<td>adsf</td>
+<td><a href="#/tree">Tree</a></td>
+<td><a href="#/分塊">分塊</a></td>
+<td><a href="#/數論">數論</a></td>
+<td><a href="#/字串">字串</a></td>
+</tr>
+<tr class="odd">
+<td>[searching]</td>
+<td>asdf</td>
+<td><a href="#/lca">LCA</a></td>
+<td><a href="#/bit">BIT</a></td>
+<td>[prime]</td>
+<td>—</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>[else]</td>
+<td>—</td>
+<td>—</td>
+<td><a href="#/bcc">BCC</a></td>
+<td>[Sparse_table]</td>
+<td>[幾何]</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td><a href="#/greedy">greedy</a></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>[ST-1]</td>
+<td><a href="#/fft">FFT</a></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
 <section>
@@ -242,6 +311,7 @@
 </section>
 <section id="字串" class="slide level2">
 <h2>字串</h2>
+<p><a href="https://henrytsui000.github.io/lecture/string.html">slides</a></p>
 </section>
 </section>
 <section>
@@ -249,7 +319,7 @@
 <h1>題庫</h1>
 
 </section>
-<section id="section" class="slide level2">
+<section id="section-1" class="slide level2">
 <h2></h2>
 <p><a href="https://henrytsui000.github.io/lecture/problem.html">slides</a></p>
 </section>
@@ -259,7 +329,7 @@
 <h1>致謝</h1>
 
 </section>
-<section id="section-1" class="slide level2">
+<section id="section-2" class="slide level2">
 <h2></h2>
 <p>陳冠辰 黃迺絜 楊景遇 王彥仁</p>
 <p>實驗講義 附中講義 IONC講義</p>
@@ -270,7 +340,7 @@
     </div>
   </div>
 
-  <script src="/home/henrytsui/reveal.js/js/reveal.js"></script>
+  <script src="./reveal.js/js/reveal.js"></script>
 
   <script>
 
@@ -282,9 +352,9 @@
 
         // Optional reveal.js plugins
         dependencies: [
-          { src: '/home/henrytsui/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: '/home/henrytsui/reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: '/home/henrytsui/reveal.js/plugin/notes/notes.js', async: true }
+          { src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: './reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: './reveal.js/plugin/notes/notes.js', async: true }
         ]
       });
     </script>
