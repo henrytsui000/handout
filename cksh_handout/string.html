@@ -103,25 +103,70 @@
   <p class="date">2020 未知</p>
 </section>
 
-<section id="字" class="slide level1">
+<section>
+<section id="字" class="title-slide slide level1">
 <h1>字</h1>
-<h2 id="section"></h2>
+
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
 <p>文字分成字元和字串</p>
 <p>字元代表單一文字</p>
 <p>字串則是由多個字元所組成</p>
 </section>
-<section id="字串操作" class="slide level1">
+</section>
+<section>
+<section id="字串操作" class="title-slide slide level1">
 <h1>字串操作</h1>
-<p>儲存字串</p>
+
+</section>
+<section id="儲存字串" class="slide level2">
+<h2>儲存字串</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1"></a>string str;</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="dt">char</span> ch[];</span>
 <span id="cb1-3"><a href="#cb1-3"></a>cin&gt;&gt;str&gt;&gt;ch;</span></code></pre></div>
 </section>
-<section id="kmp" class="slide level1">
-<h1>KMP</h1>
 </section>
-<section id="z-value" class="slide level1">
+<section>
+<section id="字串匹配" class="title-slide slide level1">
+<h1>字串匹配</h1>
+
+</section>
+<section id="先來看看題目吧" class="slide level2">
+<h2>先來看看題目吧</h2>
+<p>給你兩個字串 s,t 且sz(s)&gt;sz(t)</p>
+<p>問在s字串中t的最長長度</p>
+</section>
+<section id="解法" class="slide level2">
+<h2>解法</h2>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>暴力解法</th>
+<th>KMT</th>
+<th>Z-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>時間複雜度</td>
+<td>O(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msup><mn>2</mn><mi>n</mi></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(2^n)</annotation></semantics></math>)</td>
+<td>O(M+N)</td>
+<td>(M+N)</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="kmt" class="title-slide slide level1">
+<h1>KMT</h1>
+
+</section>
+
+<section id="z-value" class="title-slide slide level1">
 <h1>Z-value</h1>
+
 </section>
     </div>
   </div>
