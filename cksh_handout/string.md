@@ -22,6 +22,10 @@ char ch[];
 cin>>str>>ch;
 ```
 
+# stoi
+
+# stringstream
+
 # 字串匹配
 
 ## 先來看看題目吧
@@ -32,11 +36,12 @@ cin>>str>>ch;
 
 ## 解法
 
-||暴力解法|KMT|Z-value|
+||暴力解法|KMP|Z-value|
 |---|---|---|---|
 |時間複雜度|O($(2^n)$)|O(M+N)|(M+N)|
 
-# KMT
+# KMP
 
 # Z-value
 
+# Trie
